@@ -1,6 +1,7 @@
 import * as Calendar from "expo-calendar";
 
 import { Session } from "@/types";
+import { useConferenceStore } from "@/store/conferenceStore";
 import conference from "../../conference.config";
 
 /** Open the system calendar UI with the session pre-filled. */
@@ -12,7 +13,7 @@ export const addSessionToCalendar = async (session: Session) => {
       location: session.room ?? conference.venue?.name,
       startDate: new Date(session.startsAt),
       endDate: new Date(session.endsAt),
-      timeZone: conference.timezone,
+      timeZone: useConferenceStore.getState().venueTimezone,
     });
   } catch (e) {
     console.warn(e);

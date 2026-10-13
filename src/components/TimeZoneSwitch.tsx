@@ -15,6 +15,10 @@ export function TimeZoneSwitch() {
     (state) => state.shouldUseLocalTz,
   );
   const toggleLocalTz = useConferenceStore((state) => state.toggleLocalTz);
+  const venueTimezone = useConferenceStore((state) => state.venueTimezone);
+  const venueTimezoneAbbreviation = useConferenceStore(
+    (state) => state.venueTimezoneAbbreviation,
+  );
 
   const handleToggleLocalTz = () => {
     Haptics.impactAsync(Haptics.ImpactFeedbackStyle.Medium);
@@ -30,7 +34,10 @@ export function TimeZoneSwitch() {
       <ThemedText fontSize={theme.fontSize12} fontWeight="semiBold">
         {shouldUseLocalTz
           ? getCurrentTimezone()
-          : getVenueTimezoneAbbreviation()}
+          : getVenueTimezoneAbbreviation(
+              venueTimezone,
+              venueTimezoneAbbreviation,
+            )}
       </ThemedText>
     </ThemedPressable>
   );

@@ -14,6 +14,7 @@ export function MiniTalkCard({ sessionId }: { sessionId: string | number }) {
   const shouldUseLocalTz = useConferenceStore(
     (state) => state.shouldUseLocalTz,
   );
+  const venueTimezone = useConferenceStore((state) => state.venueTimezone);
   const days = useConferenceStore((state) => state.days);
   const backgroundColor = useThemeColor(theme.color.backgroundSecondary);
   const textSecondaryColor = useThemeColor(theme.color.textSecondary);
@@ -45,7 +46,7 @@ export function MiniTalkCard({ sessionId }: { sessionId: string | number }) {
               color={{ light: textSecondaryColor, dark: textSecondaryColor }}
               style={{ marginBottom: theme.space8 }}
             >
-              {formatSessionTime(talk, shouldUseLocalTz)}
+              {formatSessionTime(talk, shouldUseLocalTz, venueTimezone)}
               {` `}(Day {dayIndex + 1})
             </ThemedText>
           </View>

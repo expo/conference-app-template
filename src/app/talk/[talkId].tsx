@@ -75,6 +75,7 @@ export default function TalkDetail() {
   const shouldUseLocalTz = useConferenceStore(
     (state) => state.shouldUseLocalTz,
   );
+  const venueTimezone = useConferenceStore((state) => state.venueTimezone);
   const { width, height } = useWindowDimensions();
   const drawerHeight = height * 0.8;
   const highlightColor = useThemeColor(theme.color.tint);
@@ -266,7 +267,7 @@ export default function TalkDetail() {
             />
             <Section
               title="Time"
-              value={formatSessionTime(talk, shouldUseLocalTz)}
+              value={formatSessionTime(talk, shouldUseLocalTz, venueTimezone)}
             />
             <Section title="Venue" value={talk.room} />
             <Section title="Description" value={talk.description} />

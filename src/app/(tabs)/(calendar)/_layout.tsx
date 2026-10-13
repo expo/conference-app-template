@@ -5,9 +5,11 @@ import { isLiquidGlassAvailable } from "expo-glass-effect";
 import { Stack, useRouter } from "expo-router";
 import { Platform } from "react-native";
 import conference from "../../../../conference.config";
+import { useConferenceStore } from "@/store/conferenceStore";
 
 export default function Layout() {
   const router = useRouter();
+  const displayName = useConferenceStore((state) => state.displayName);
   const tabBarBackgroundColor = useThemeColor(theme.color.background);
   const tabBarTintColor = useThemeColor({
     light: theme.colorBlack,
@@ -32,7 +34,7 @@ export default function Layout() {
           },
           headerLeft: () => (
             <ThemedText fontSize={theme.fontSize14} fontWeight="bold">
-              {conference.shortName ?? conference.name}
+              {displayName}
             </ThemedText>
           ),
           headerRight: () =>

@@ -24,6 +24,7 @@ export function TalkCard({ session, dayIndex, isBookmarked = false }: Props) {
   const shouldUseLocalTz = useConferenceStore(
     (state) => state.shouldUseLocalTz,
   );
+  const venueTimezone = useConferenceStore((state) => state.venueTimezone);
   const { width } = useWindowDimensions();
   const router = useRouter();
 
@@ -66,7 +67,7 @@ export function TalkCard({ session, dayIndex, isBookmarked = false }: Props) {
               marginBottom={theme.space8}
               style={{ marginLeft: theme.space24 }}
             >
-              {formatSessionTime(session, shouldUseLocalTz)}
+              {formatSessionTime(session, shouldUseLocalTz, venueTimezone)}
             </ThemedText>
           )}
           <ThemedView
@@ -97,7 +98,12 @@ export function TalkCard({ session, dayIndex, isBookmarked = false }: Props) {
                     fontWeight="medium"
                     color={theme.color.textSecondary}
                   >
-                    {formatSessionTime(session, shouldUseLocalTz)},
+                    {formatSessionTime(
+                      session,
+                      shouldUseLocalTz,
+                      venueTimezone,
+                    )}
+                    ,
                   </ThemedText>
                   <ThemedText
                     fontSize={theme.fontSize14}

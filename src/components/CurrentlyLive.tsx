@@ -15,8 +15,11 @@ export type CurrentlyLiveSession = {
   sessionIndex: number;
 };
 
-function getCurrentlyLive(days: ScheduleDay[]): CurrentlyLiveSession | null {
-  const dayIndex = getCurrentDayIndex(days);
+function getCurrentlyLive(
+  days: ScheduleDay[],
+  venueTimezone: string,
+): CurrentlyLiveSession | null {
+  const dayIndex = getCurrentDayIndex(days, venueTimezone);
   if (dayIndex === null) {
     return null;
   }
@@ -49,10 +52,11 @@ export function CurrentlyLive({
   const [currentlyLive, setCurrentlyLive] =
     useState<CurrentlyLiveSession | null>(null);
   const days = useConferenceStore((state) => state.days);
+  const venueTimezone = useConferenceStore((state) => state.venueTimezone);
   const checkCurrentlyLive = useCallback(() => {
-    const currentlyLive = getCurrentlyLive(days);
+    const currentlyLive = getCurrentlyLive(days, venueTimezone);
     setCurrentlyLive(currentlyLive);
-  }, [days]);
+  }, [days, venueTimezone]);
 
   useEffect(() => {
     checkCurrentlyLive();

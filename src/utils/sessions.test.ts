@@ -60,7 +60,7 @@ const normalized: NormalizedData = {
 
 describe(buildScheduleDays, () => {
   it("groups sessions into sorted days with embedded speakers", () => {
-    const days = buildScheduleDays(normalized);
+    const days = buildScheduleDays(normalized, "America/Los_Angeles");
 
     expect(days.map((day) => day.date)).toEqual(["2025-10-07", "2025-10-08"]);
     expect(days[0].sessions.map((session) => session.id)).toEqual(["1a", "1b"]);
@@ -68,7 +68,7 @@ describe(buildScheduleDays, () => {
   });
 
   it("drops speaker ids that have no matching speaker", () => {
-    const days = buildScheduleDays(normalized);
+    const days = buildScheduleDays(normalized, "America/Los_Angeles");
 
     expect(days[0].sessions[0].speakers).toEqual([]);
   });
@@ -76,7 +76,7 @@ describe(buildScheduleDays, () => {
 
 describe(findSessionInDays, () => {
   it("finds a session and its day index", () => {
-    const days = buildScheduleDays(normalized);
+    const days = buildScheduleDays(normalized, "America/Los_Angeles");
 
     expect(findSessionInDays("2", days)).toEqual({
       session: days[1].sessions[0],

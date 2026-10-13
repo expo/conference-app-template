@@ -28,6 +28,11 @@ SplashScreen.setOptions({
   fade: true,
 });
 
+if (__DEV__) {
+  // eslint-disable-next-line @typescript-eslint/no-require-imports
+  require("@/utils/devDatasets").setupDevMenu();
+}
+
 Notifications.setNotificationHandler({
   handleNotification: async () => ({
     shouldShowAlert: true,

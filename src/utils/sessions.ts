@@ -3,7 +3,10 @@ import { ScheduleDay, Session } from "@/types";
 import { toVenueDate } from "./formatDate";
 
 /** Embed speakers into sessions and group them into days, venue timezone. */
-export const buildScheduleDays = (data: NormalizedData): ScheduleDay[] => {
+export const buildScheduleDays = (
+  data: NormalizedData,
+  timezone: string,
+): ScheduleDay[] => {
   const speakersById = new Map(
     data.speakers.map((speaker) => [speaker.id, speaker]),
   );
@@ -19,7 +22,7 @@ export const buildScheduleDays = (data: NormalizedData): ScheduleDay[] => {
 
   const sessionsByDate = new Map<string, Session[]>();
   for (const session of sessions) {
-    const date = toVenueDate(session.startsAt);
+    const date = toVenueDate(session.startsAt, timezone);
     if (!date) {
       continue;
     }

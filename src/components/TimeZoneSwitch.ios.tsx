@@ -18,10 +18,6 @@ import { buttonStyle, frame } from "@expo/ui/swift-ui/modifiers";
 import { theme } from "@/theme";
 import { StyleSheet, useColorScheme } from "react-native";
 
-const options = [
-  `${getVenueTimezoneAbbreviation()} (Venue)`,
-  `${getCurrentTimezone()} (Local)`,
-];
 const isIpad = Device.osName === "iPadOS";
 
 export function TimeZoneSwitch() {
@@ -29,7 +25,20 @@ export function TimeZoneSwitch() {
     (state) => state.shouldUseLocalTz,
   );
   const toggleLocalTz = useConferenceStore((state) => state.toggleLocalTz);
+  const venueTimezone = useConferenceStore((state) => state.venueTimezone);
+  const venueTimezoneAbbreviation = useConferenceStore(
+    (state) => state.venueTimezoneAbbreviation,
+  );
   const isDarkMode = useColorScheme() === "dark";
+
+  const venueAbbreviation = getVenueTimezoneAbbreviation(
+    venueTimezone,
+    venueTimezoneAbbreviation,
+  );
+  const options = [
+    `${venueAbbreviation} (Venue)`,
+    `${getCurrentTimezone()} (Local)`,
+  ];
 
   const selectedIndex = shouldUseLocalTz ? 1 : 0;
 
@@ -74,7 +83,7 @@ export function TimeZoneSwitch() {
             >
               {shouldUseLocalTz
                 ? getCurrentTimezone().slice(0, 3)
-                : getVenueTimezoneAbbreviation()}
+                : venueAbbreviation}
             </Text>
             <Image
               systemName="chevron.down"

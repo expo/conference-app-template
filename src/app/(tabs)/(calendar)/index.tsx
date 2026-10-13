@@ -35,8 +35,9 @@ const HEADER_SCROLL_OFFSET = isLiquidGlassAvailable() ? 110 : 90;
 
 export default function Schedule() {
   const days = useConferenceStore((state) => state.days);
+  const venueTimezone = useConferenceStore((state) => state.venueTimezone);
   const [selectedDayIndex, setSelectedDayIndex] = useState(() =>
-    getInitialDayIndex(days),
+    getInitialDayIndex(days, venueTimezone),
   );
   const scrollRef = useRef<FlatList>(null);
   useScrollToTop(scrollRef as any);
@@ -69,17 +70,23 @@ export default function Schedule() {
     };
   });
 
+  // The selection can point past the end after a dev dataset switch
+  const activeDayIndex = Math.min(
+    selectedDayIndex,
+    Math.max(days.length - 1, 0),
+  );
+
   const renderItem = useCallback(
     ({ item }: { item: Session }) => {
       if (item.isServiceSession) {
         return <ActivityCard session={item} />;
       } else {
         return (
-          <TalkCard key={item.id} session={item} dayIndex={selectedDayIndex} />
+          <TalkCard key={item.id} session={item} dayIndex={activeDayIndex} />
         );
       }
     },
-    [selectedDayIndex],
+    [activeDayIndex],
   );
 
   const refreshSchedule = useConferenceStore((state) => state.refreshData);
@@ -87,7 +94,7 @@ export default function Schedule() {
   const params = useLocalSearchParams<{ q?: string }>();
   const searchText = params?.q ?? "";
 
-  const daySessions = days[selectedDayIndex]?.sessions ?? [];
+  const daySessions = days[activeDayIndex]?.sessions ?? [];
   const data = searchText
     ? daySessions.filter((session) => matchesSearch(session, searchText))
     : daySessions;
@@ -119,12 +126,12 @@ export default function Schedule() {
       <Animated.View style={stickyHeaderStyle}>
         <DayPicker
           options={dayOptions}
-          selectedIndex={selectedDayIndex}
+          selectedIndex={activeDayIndex}
           onSelectDay={handleSelectDay}
         />
       </Animated.View>
     ),
-    [dayOptions, handleSelectDay, selectedDayIndex, stickyHeaderStyle],
+    [dayOptions, handleSelectDay, activeDayIndex, stickyHeaderStyle],
   );
 
   if (!days.length) {
