@@ -13,6 +13,7 @@ const config: ConferenceConfig = {
   appIdPrefix: "com.example.myconference",
   version: "1.0.0",
   timezone: "America/Los_Angeles",
+  timezoneAbbreviation: "PDT",
   website: "https://conf.react.dev",
   theme: {
     primary: { light: "#087EA4", dark: "#58C4DC" },
@@ -50,6 +51,10 @@ const config: ConferenceConfig = {
     timezoneSwitch: true,
     currentlyLive: true,
     sessionReminders: true,
+  },
+  eas: {
+    projectId: "80167601-096d-4e95-b3d6-c6b7ee60389a",
+    owner: "expokadi",
   },
 };
 

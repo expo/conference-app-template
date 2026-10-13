@@ -73,12 +73,16 @@ const config: ExpoConfig = {
           },
         },
         owner: conference.eas.owner,
-        updates: {
-          url: conference.eas.updateUrl,
-          requestHeaders: {
-            "expo-channel-name": "local",
-          },
-        },
+        ...(conference.eas.updateUrl
+          ? {
+              updates: {
+                url: conference.eas.updateUrl,
+                requestHeaders: {
+                  "expo-channel-name": "local",
+                },
+              },
+            }
+          : {}),
       }
     : {}),
   plugins: [

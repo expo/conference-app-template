@@ -48,6 +48,11 @@ export type ConferenceConfig = {
   version: string;
   /** IANA timezone of the venue, e.g. "Europe/Berlin". */
   timezone: string;
+  /**
+   * Short label for venue time shown in the timezone switch, e.g. "PDT".
+   * Without it, the app shows a GMT offset such as "GMT-7".
+   */
+  timezoneAbbreviation?: string;
   /** Event website, appended to shared sessions. */
   website?: string;
   theme: {
@@ -83,7 +88,8 @@ export type ConferenceConfig = {
    */
   eas?: {
     projectId: string;
-    updateUrl: string;
     owner: string;
+    /** From `eas update:configure`. Leave unset to skip EAS Update. */
+    updateUrl?: string;
   };
 };

@@ -55,8 +55,11 @@ export const getCurrentTimezone = () => {
   }
 };
 
-/** Abbreviated venue timezone name right now, e.g. "PDT". */
+/** Short venue timezone label, e.g. "PDT" from config, else "GMT-7". */
 export const getVenueTimezoneAbbreviation = () => {
+  if (conference.timezoneAbbreviation) {
+    return conference.timezoneAbbreviation;
+  }
   try {
     return formatInTimeZone(new Date(), VENUE_TIMEZONE, "zzz");
   } catch {

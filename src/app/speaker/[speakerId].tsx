@@ -29,6 +29,15 @@ export default function SpeakerDetail() {
   const isPreview = useIsPreview();
   const router = useRouter();
 
+  // The screen can be the first one after a deep link, with no back stack
+  const goBack = () => {
+    if (router.canGoBack()) {
+      router.back();
+    } else {
+      router.replace("/(tabs)/speakers");
+    }
+  };
+
   const secondaryColor = useThemeColor(theme.color.textSecondary);
   const borderColor = useThemeColor(theme.color.border);
   const backgroundColorSecondary = useThemeColor(
@@ -45,7 +54,7 @@ export default function SpeakerDetail() {
               Platform.select({
                 ios: (
                   <HeaderButton
-                    buttonProps={{ onPress: router.back }}
+                    buttonProps={{ onPress: goBack }}
                     // eslint-disable-next-line react-native/no-inline-styles
                     style={{ padding: osName === "iPadOS" ? 40 : 0 }}
                   />

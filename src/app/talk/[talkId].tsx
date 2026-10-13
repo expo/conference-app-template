@@ -58,6 +58,16 @@ vec4 main(vec2 pos) {
 
 export default function TalkDetail() {
   const params = useLocalSearchParams();
+  const router = useRouter();
+
+  // The screen can be the first one after a deep link, with no back stack
+  const goBack = () => {
+    if (router.canGoBack()) {
+      router.back();
+    } else {
+      router.replace("/(tabs)/(calendar)");
+    }
+  };
   const talkId = Array.isArray(params.talkId)
     ? params.talkId[0]
     : params.talkId;
@@ -68,8 +78,6 @@ export default function TalkDetail() {
   const { width, height } = useWindowDimensions();
   const drawerHeight = height * 0.8;
   const highlightColor = useThemeColor(theme.color.tint);
-
-  const router = useRouter();
 
   const triggerHaptic = () => {
     Haptics.impactAsync(Haptics.ImpactFeedbackStyle.Light);
@@ -136,7 +144,7 @@ export default function TalkDetail() {
             Platform.select({
               ios: (
                 <HeaderButton
-                  buttonProps={{ onPress: router.back }}
+                  buttonProps={{ onPress: goBack }}
                   // eslint-disable-next-line react-native/no-inline-styles
                   style={{ padding: osName === "iPadOS" ? 40 : 0 }}
                 />
