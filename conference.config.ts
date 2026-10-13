@@ -13,6 +13,7 @@ const config: ConferenceConfig = {
   appIdPrefix: "com.example.myconference",
   version: "1.0.0",
   timezone: "America/Los_Angeles",
+  website: "https://conf.react.dev",
   theme: {
     primary: { light: "#087EA4", dark: "#58C4DC" },
     splashBackground: "#23272F",

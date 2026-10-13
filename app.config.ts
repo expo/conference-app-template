@@ -97,6 +97,13 @@ const config: ExpoConfig = {
     "expo-web-browser",
     "expo-router",
     [
+      "expo-calendar",
+      {
+        calendarPermission:
+          "Allow $(PRODUCT_NAME) to add sessions to your calendar.",
+      },
+    ],
+    [
       "expo-font",
       {
         fonts: [

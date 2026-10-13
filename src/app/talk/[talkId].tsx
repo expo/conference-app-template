@@ -23,6 +23,9 @@ import { theme } from "@/theme";
 import { Speaker } from "@/types";
 import { formatDayLong, formatSessionTime } from "@/utils/formatDate";
 import { findSessionInDays } from "@/utils/sessions";
+import { shareSession } from "@/utils/shareSession";
+import { addSessionToCalendar } from "@/utils/addSessionToCalendar";
+import { Button } from "@/components/Button";
 import { HeaderButton } from "@/components/HeaderButtons/HeaderButton";
 import { isLiquidGlassAvailable } from "expo-glass-effect";
 import { scheduleOnRN } from "react-native-worklets";
@@ -246,6 +249,16 @@ export default function TalkDetail() {
             />
             <Section title="Venue" value={talk.room} />
             <Section title="Description" value={talk.description} />
+            <View style={styles.actions}>
+              <Button
+                title="Share session"
+                onPress={() => shareSession(talk)}
+              />
+              <Button
+                title="Add to calendar"
+                onPress={() => addSessionToCalendar(talk)}
+              />
+            </View>
           </ThemedView>
         </AnimatedScrollView>
       </ThemedView>
@@ -297,6 +310,10 @@ function Section({ title, value }: { title: string; value: string | null }) {
 const styles = StyleSheet.create({
   absolute: {
     position: "absolute",
+  },
+  actions: {
+    gap: theme.space12,
+    marginBottom: theme.space24,
   },
   container: {
     flex: 1,

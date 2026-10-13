@@ -35,6 +35,7 @@
     "expo-asset": "~12.0.9",
     "expo-blur": "~15.0.6",
     "expo-build-properties": "~1.0.9",
+    "expo-calendar": "~15.0.8",
     "expo-constants": "~18.0.8",
     "expo-dev-client": "~6.0.15",
     "expo-device": "~8.0.9",

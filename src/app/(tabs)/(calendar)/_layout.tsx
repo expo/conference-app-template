@@ -2,12 +2,17 @@ import { ThemedText, useThemeColor } from "@/components/Themed";
 import { TimeZoneSwitch } from "@/components/TimeZoneSwitch";
 import { theme } from "@/theme";
 import { isLiquidGlassAvailable } from "expo-glass-effect";
-import { Stack } from "expo-router";
+import { Stack, useRouter } from "expo-router";
 import { Platform } from "react-native";
 import conference from "../../../../conference.config";
 
 export default function Layout() {
+  const router = useRouter();
   const tabBarBackgroundColor = useThemeColor(theme.color.background);
+  const tabBarTintColor = useThemeColor({
+    light: theme.colorBlack,
+    dark: theme.colorWhite,
+  });
   return (
     <Stack
       screenOptions={{
@@ -32,6 +37,18 @@ export default function Layout() {
           ),
           headerRight: () =>
             conference.features.timezoneSwitch ? <TimeZoneSwitch /> : null,
+          headerSearchBarOptions: {
+            headerIconColor: tabBarTintColor,
+            tintColor: tabBarTintColor,
+            textColor: tabBarTintColor,
+            hintTextColor: tabBarTintColor,
+            placeholder: "Search sessions",
+            onChangeText: (event) => {
+              router.setParams({
+                q: event.nativeEvent.text,
+              });
+            },
+          },
         }}
       />
     </Stack>

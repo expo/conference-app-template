@@ -48,6 +48,8 @@ export type ConferenceConfig = {
   version: string;
   /** IANA timezone of the venue, e.g. "Europe/Berlin". */
   timezone: string;
+  /** Event website, appended to shared sessions. */
+  website?: string;
   theme: {
     /** Accent color used for tabs, buttons, and highlights. */
     primary: ThemeColor;

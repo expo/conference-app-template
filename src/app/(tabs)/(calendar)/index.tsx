@@ -1,7 +1,7 @@
 import { useScrollToTop } from "@react-navigation/native";
-import { Stack, useFocusEffect } from "expo-router";
+import { Stack, useFocusEffect, useLocalSearchParams } from "expo-router";
 import React, { useCallback, useMemo, useRef, useState } from "react";
-import { Platform, RefreshControl } from "react-native";
+import { Keyboard, Platform, RefreshControl, StyleSheet } from "react-native";
 import { FlatList } from "react-native-gesture-handler";
 import Animated, {
   useAnimatedScrollHandler,
@@ -14,9 +14,10 @@ import Animated, {
 import { ActivityCard } from "@/components/ActivityCard";
 import { NotFound } from "@/components/NotFound";
 import { TalkCard } from "@/components/TalkCard";
+import { matchesSearch } from "@/utils/search";
 import { useConferenceStore } from "@/store/conferenceStore";
 import { DayPicker } from "@/components/DayPicker";
-import { useThemeColor } from "@/components/Themed";
+import { ThemedText, ThemedView, useThemeColor } from "@/components/Themed";
 import { theme } from "@/theme";
 import { Session } from "@/types";
 import { isLiquidGlassAvailable } from "expo-glass-effect";
@@ -82,7 +83,14 @@ export default function Schedule() {
   );
 
   const refreshSchedule = useConferenceStore((state) => state.refreshData);
-  const data = days[selectedDayIndex]?.sessions ?? [];
+
+  const params = useLocalSearchParams<{ q?: string }>();
+  const searchText = params?.q ?? "";
+
+  const daySessions = days[selectedDayIndex]?.sessions ?? [];
+  const data = searchText
+    ? daySessions.filter((session) => matchesSearch(session, searchText))
+    : daySessions;
 
   useFocusEffect(() => {
     refreshSchedule({ ttlMs: 60_000 });
@@ -181,12 +189,30 @@ export default function Schedule() {
         contentInsetAdjustmentBehavior="automatic"
         scrollToOverflowEnabled
         onScroll={scrollHandler}
+        onScrollBeginDrag={() => Keyboard.dismiss()}
+        keyboardShouldPersistTaps="handled"
         data={data}
         ListHeaderComponent={renderStickyHeader}
         stickyHeaderIndices={[0]}
         keyExtractor={(item: Session) => item.id}
         renderItem={renderItem}
+        ListEmptyComponent={
+          searchText ? (
+            <ThemedView style={styles.noResultsContainer}>
+              <ThemedText>
+                No sessions found for{" "}
+                <ThemedText fontWeight="bold">{searchText}</ThemedText>
+              </ThemedText>
+            </ThemedView>
+          ) : null
+        }
       />
     </>
   );
 }
+
+const styles = StyleSheet.create({
+  noResultsContainer: {
+    padding: theme.space24,
+  },
+});
