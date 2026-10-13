@@ -1,0 +1,350 @@
+{
+  "sessions": [
+    {
+      "id": "registration-breakfast",
+      "title": "Registration & Breakfast",
+      "description": "Doors open. Check in, grab breakfast, and meet the Next.js community before the keynote.",
+      "startsAt": "2024-10-24T08:30:00-07:00",
+      "endsAt": "2024-10-24T09:55:00-07:00",
+      "room": null,
+      "tags": [],
+      "isServiceSession": true,
+      "speakerIds": []
+    },
+    {
+      "id": "opening-keynote",
+      "title": "Opening Keynote",
+      "description": "Make it work, make it right, make it fast. The Next.js team covers the community's impact on the framework, a more predictable App Router, stable Turbopack for development, fewer and more powerful APIs, and commitments to self-hosting and open source.",
+      "startsAt": "2024-10-24T10:00:00-07:00",
+      "endsAt": "2024-10-24T10:45:00-07:00",
+      "room": "Main Stage",
+      "tags": ["keynote", "next.js"],
+      "isServiceSession": false,
+      "speakerIds": ["guillermo-rauch", "delba-de-oliveira", "lee-robinson"]
+    },
+    {
+      "id": "ama-nextjs-team",
+      "title": "AMA: Next.js Team",
+      "description": "An ask-me-anything with members of the Next.js team, covering questions from the community about the framework and its roadmap.",
+      "startsAt": "2024-10-24T10:50:00-07:00",
+      "endsAt": "2024-10-24T11:15:00-07:00",
+      "room": "Main Stage",
+      "tags": ["ama", "next.js"],
+      "isServiceSession": false,
+      "speakerIds": ["lee-robinson", "delba-de-oliveira", "jimmy-lai", "sebastian-markbage", "josh-story"]
+    },
+    {
+      "id": "morning-break",
+      "title": "Morning Break",
+      "description": null,
+      "startsAt": "2024-10-24T11:15:00-07:00",
+      "endsAt": "2024-10-24T11:30:00-07:00",
+      "room": null,
+      "tags": [],
+      "isServiceSession": true,
+      "speakerIds": []
+    },
+    {
+      "id": "prose-and-cons-migrating-nypl-digital-collections-to-nextjs",
+      "title": "Prose and Cons: Migrating The New York Public Library's Digital Collections to Next.js",
+      "description": "How The New York Public Library migrated its Digital Collections platform to Next.js, and the lessons learned along the way.",
+      "startsAt": "2024-10-24T11:30:00-07:00",
+      "endsAt": "2024-10-24T11:55:00-07:00",
+      "room": "Main Stage",
+      "tags": ["migration", "case-study"],
+      "isServiceSession": false,
+      "speakerIds": ["emma-mansell"]
+    },
+    {
+      "id": "react-server-components-elevating-speed-interactivity-and-user-experience",
+      "title": "React Server Components: Elevating Speed, Interactivity, and User Experience",
+      "description": "A practical look at React Server Components in Next.js and how they improve speed, interactivity, and user experience.",
+      "startsAt": "2024-10-24T12:00:00-07:00",
+      "endsAt": "2024-10-24T12:30:00-07:00",
+      "room": "Main Stage",
+      "tags": ["react", "server-components"],
+      "isServiceSession": false,
+      "speakerIds": ["aurora-scharff"]
+    },
+    {
+      "id": "lunch",
+      "title": "Lunch",
+      "description": null,
+      "startsAt": "2024-10-24T12:30:00-07:00",
+      "endsAt": "2024-10-24T13:30:00-07:00",
+      "room": null,
+      "tags": [],
+      "isServiceSession": true,
+      "speakerIds": []
+    },
+    {
+      "id": "the-long-and-winding-road-csr-to-static-export-to-ssg",
+      "title": "The Long and Winding Road: CSR to Static Export to SSG",
+      "description": "A lightning talk on Peloton's journey from client-side rendering to static export to static site generation with Next.js.",
+      "startsAt": "2024-10-24T13:30:00-07:00",
+      "endsAt": "2024-10-24T13:45:00-07:00",
+      "room": "Main Stage",
+      "tags": ["rendering", "case-study"],
+      "isServiceSession": false,
+      "speakerIds": ["nick-hess"]
+    },
+    {
+      "id": "building-user-interfaces-in-the-age-of-ai",
+      "title": "Building User Interfaces in the Age of AI",
+      "description": "How Perplexity builds user interfaces for AI-powered products with Next.js.",
+      "startsAt": "2024-10-24T13:50:00-07:00",
+      "endsAt": "2024-10-24T14:15:00-07:00",
+      "room": "Main Stage",
+      "tags": ["ai", "ui"],
+      "isServiceSession": false,
+      "speakerIds": ["oleg-akbarov"]
+    },
+    {
+      "id": "next-level-product-velocity-with-nextjs",
+      "title": "Next Level Product Velocity with Next.js",
+      "description": "How PayPal uses Next.js to ship products faster.",
+      "startsAt": "2024-10-24T14:20:00-07:00",
+      "endsAt": "2024-10-24T14:45:00-07:00",
+      "room": "Main Stage",
+      "tags": ["case-study", "developer-experience"],
+      "isServiceSession": false,
+      "speakerIds": ["ryan-magoon"]
+    },
+    {
+      "id": "afternoon-break",
+      "title": "Afternoon Break",
+      "description": null,
+      "startsAt": "2024-10-24T14:45:00-07:00",
+      "endsAt": "2024-10-24T15:00:00-07:00",
+      "room": null,
+      "tags": [],
+      "isServiceSession": true,
+      "speakerIds": []
+    },
+    {
+      "id": "live-by-default",
+      "title": "Live by Default",
+      "description": "Why balance trade-offs between fresh and stale content? The Sanity team shows how the Live Content API turns every fetch into a live-updating content source that scales without manual refreshes.",
+      "startsAt": "2024-10-24T15:00:00-07:00",
+      "endsAt": "2024-10-24T15:30:00-07:00",
+      "room": "Main Stage",
+      "tags": ["content", "data-fetching"],
+      "isServiceSession": false,
+      "speakerIds": ["simen-svale", "kapehe-sevilleja", "simeon-griggs"]
+    },
+    {
+      "id": "optimizing-lcp-partial-prerendering-deep-dive",
+      "title": "Optimizing LCP: Partial Prerendering Deep Dive",
+      "description": "A deep dive into Partial Prerendering in Next.js and how it improves Largest Contentful Paint.",
+      "startsAt": "2024-10-24T15:35:00-07:00",
+      "endsAt": "2024-10-24T16:05:00-07:00",
+      "room": "Main Stage",
+      "tags": ["performance", "partial-prerendering"],
+      "isServiceSession": false,
+      "speakerIds": ["wyatt-johnson"]
+    },
+    {
+      "id": "a-fireside-chat-with-guillermo-rauch-and-sahil-lavingia",
+      "title": "A Fireside Chat with Guillermo Rauch and Sahil Lavingia",
+      "description": "A closing conversation between Vercel CEO Guillermo Rauch and Gumroad founder Sahil Lavingia.",
+      "startsAt": "2024-10-24T16:15:00-07:00",
+      "endsAt": "2024-10-24T16:50:00-07:00",
+      "room": "Main Stage",
+      "tags": ["fireside-chat"],
+      "isServiceSession": false,
+      "speakerIds": ["guillermo-rauch", "sahil-lavingia"]
+    },
+    {
+      "id": "happy-hour",
+      "title": "Happy Hour",
+      "description": "Wind down the day with drinks and the Next.js community at The Midway.",
+      "startsAt": "2024-10-24T17:00:00-07:00",
+      "endsAt": "2024-10-24T19:00:00-07:00",
+      "room": null,
+      "tags": [],
+      "isServiceSession": true,
+      "speakerIds": []
+    }
+  ],
+  "speakers": [
+    {
+      "id": "guillermo-rauch",
+      "fullName": "Guillermo Rauch",
+      "bio": "CEO of Vercel and creator of Next.js. Previously created Socket.IO and co-founded several developer tooling companies.",
+      "tagLine": "CEO @ Vercel",
+      "profilePicture": "https://github.com/rauchg.png",
+      "links": [
+        { "title": "X", "url": "https://x.com/rauchg", "linkType": "Twitter" },
+        { "title": "Vercel", "url": "https://vercel.com", "linkType": "Company_Website" }
+      ],
+      "sessionIds": ["opening-keynote", "a-fireside-chat-with-guillermo-rauch-and-sahil-lavingia"]
+    },
+    {
+      "id": "delba-de-oliveira",
+      "fullName": "Delba de Oliveira",
+      "bio": "Developer experience engineer at Vercel working on Next.js documentation and education.",
+      "tagLine": "Developer Experience @ Vercel",
+      "profilePicture": "https://github.com/delbaoliveira.png",
+      "links": [
+        { "title": "X", "url": "https://x.com/delba_oliveira", "linkType": "Twitter" }
+      ],
+      "sessionIds": ["opening-keynote", "ama-nextjs-team"]
+    },
+    {
+      "id": "lee-robinson",
+      "fullName": "Lee Robinson",
+      "bio": "Developer experience leader at Vercel and a longtime educator in the Next.js community.",
+      "tagLine": "VP of Product @ Vercel",
+      "profilePicture": "https://github.com/leerob.png",
+      "links": [
+        { "title": "X", "url": "https://x.com/leerob", "linkType": "Twitter" },
+        { "title": "Blog", "url": "https://leerob.com", "linkType": "Blog" }
+      ],
+      "sessionIds": ["opening-keynote", "ama-nextjs-team"]
+    },
+    {
+      "id": "jimmy-lai",
+      "fullName": "Jimmy Lai",
+      "bio": "Software engineer at Vercel on the Next.js core team.",
+      "tagLine": "Next.js Team @ Vercel",
+      "profilePicture": "https://github.com/huozhi.png",
+      "links": [
+        { "title": "X", "url": "https://x.com/huozhi", "linkType": "Twitter" }
+      ],
+      "sessionIds": ["ama-nextjs-team"]
+    },
+    {
+      "id": "sebastian-markbage",
+      "fullName": "Sebastian Markbåge",
+      "bio": "React core contributor at Vercel. Previously spent many years on the React team at Meta.",
+      "tagLine": "React Core @ Vercel",
+      "profilePicture": "https://github.com/sebmarkbage.png",
+      "links": [
+        { "title": "X", "url": "https://x.com/sebmarkbage", "linkType": "Twitter" }
+      ],
+      "sessionIds": ["ama-nextjs-team"]
+    },
+    {
+      "id": "josh-story",
+      "fullName": "Josh Story",
+      "bio": "Software engineer at Vercel working on React and Next.js.",
+      "tagLine": "Next.js Team @ Vercel",
+      "profilePicture": "https://github.com/gnoff.png",
+      "links": [
+        { "title": "X", "url": "https://x.com/joshcstory", "linkType": "Twitter" }
+      ],
+      "sessionIds": ["ama-nextjs-team"]
+    },
+    {
+      "id": "emma-mansell",
+      "fullName": "Emma Mansell",
+      "bio": "Engineer at The New York Public Library. Worked on the migration of the library's Digital Collections to Next.js.",
+      "tagLine": "Engineer @ New York Public Library",
+      "profilePicture": null,
+      "links": [
+        { "title": "NYPL", "url": "https://www.nypl.org", "linkType": "Company_Website" }
+      ],
+      "sessionIds": ["prose-and-cons-migrating-nypl-digital-collections-to-nextjs"]
+    },
+    {
+      "id": "aurora-scharff",
+      "fullName": "Aurora Scharff",
+      "bio": "Consultant at Inmeta and a frequent speaker on React Server Components and modern React patterns.",
+      "tagLine": "Consultant @ Inmeta",
+      "profilePicture": "https://github.com/aurorascharff.png",
+      "links": [
+        { "title": "X", "url": "https://x.com/aurorascharff", "linkType": "Twitter" },
+        { "title": "Blog", "url": "https://aurorascharff.no", "linkType": "Blog" }
+      ],
+      "sessionIds": ["react-server-components-elevating-speed-interactivity-and-user-experience"]
+    },
+    {
+      "id": "nick-hess",
+      "fullName": "Nick Hess",
+      "bio": "Engineer at Peloton. Spoke about Peloton's rendering journey with Next.js.",
+      "tagLine": "Engineer @ Peloton",
+      "profilePicture": null,
+      "links": [],
+      "sessionIds": ["the-long-and-winding-road-csr-to-static-export-to-ssg"]
+    },
+    {
+      "id": "oleg-akbarov",
+      "fullName": "Oleg Akbarov",
+      "bio": "Engineer at Perplexity building user interfaces for AI products.",
+      "tagLine": "Engineer @ Perplexity",
+      "profilePicture": null,
+      "links": [
+        { "title": "Perplexity", "url": "https://www.perplexity.ai", "linkType": "Company_Website" }
+      ],
+      "sessionIds": ["building-user-interfaces-in-the-age-of-ai"]
+    },
+    {
+      "id": "ryan-magoon",
+      "fullName": "Ryan Magoon",
+      "bio": "Engineering leader at PayPal. Spoke about product velocity with Next.js.",
+      "tagLine": "Engineering @ PayPal",
+      "profilePicture": null,
+      "links": [],
+      "sessionIds": ["next-level-product-velocity-with-nextjs"]
+    },
+    {
+      "id": "simen-svale",
+      "fullName": "Simen Svale",
+      "bio": "Co-founder and CTO of Sanity.",
+      "tagLine": "CTO & Co-founder @ Sanity",
+      "profilePicture": "https://github.com/simen.png",
+      "links": [
+        { "title": "X", "url": "https://x.com/svale", "linkType": "Twitter" },
+        { "title": "Sanity", "url": "https://www.sanity.io", "linkType": "Company_Website" }
+      ],
+      "sessionIds": ["live-by-default"]
+    },
+    {
+      "id": "kapehe-sevilleja",
+      "fullName": "Kapehe Sevilleja",
+      "bio": "Developer Community Enablement Manager at Sanity.",
+      "tagLine": "Developer Community Enablement Manager @ Sanity",
+      "profilePicture": null,
+      "links": [
+        { "title": "X", "url": "https://x.com/kapjax", "linkType": "Twitter" },
+        { "title": "Sanity", "url": "https://www.sanity.io", "linkType": "Company_Website" }
+      ],
+      "sessionIds": ["live-by-default"]
+    },
+    {
+      "id": "simeon-griggs",
+      "fullName": "Simeon Griggs",
+      "bio": "Principal Educator at Sanity.",
+      "tagLine": "Principal Educator @ Sanity",
+      "profilePicture": "https://github.com/simeongriggs.png",
+      "links": [
+        { "title": "X", "url": "https://x.com/simeonGriggs", "linkType": "Twitter" },
+        { "title": "Blog", "url": "https://www.simeongriggs.dev", "linkType": "Blog" }
+      ],
+      "sessionIds": ["live-by-default"]
+    },
+    {
+      "id": "wyatt-johnson",
+      "fullName": "Wyatt Johnson",
+      "bio": "Software engineer at Vercel on the Next.js team, working on Partial Prerendering and performance.",
+      "tagLine": "Next.js Team @ Vercel",
+      "profilePicture": "https://github.com/wyattjoh.png",
+      "links": [
+        { "title": "Vercel", "url": "https://vercel.com", "linkType": "Company_Website" }
+      ],
+      "sessionIds": ["optimizing-lcp-partial-prerendering-deep-dive"]
+    },
+    {
+      "id": "sahil-lavingia",
+      "fullName": "Sahil Lavingia",
+      "bio": "Founder and CEO of Gumroad, and author of The Minimalist Entrepreneur.",
+      "tagLine": "Founder & CEO @ Gumroad",
+      "profilePicture": "https://github.com/slavingia.png",
+      "links": [
+        { "title": "X", "url": "https://x.com/shl", "linkType": "Twitter" },
+        { "title": "Gumroad", "url": "https://gumroad.com", "linkType": "Company_Website" }
+      ],
+      "sessionIds": ["a-fireside-chat-with-guillermo-rauch-and-sahil-lavingia"]
+    }
+  ]
+}

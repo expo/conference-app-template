@@ -33,7 +33,7 @@ export default function Info() {
         <InfoCard key={section.id} section={section} />
       ))}
       <Sponsors />
-      <PoweredByExpo />
+      {conference.features.poweredByExpo !== false && <PoweredByExpo />}
     </ScrollView>
   );
 }

@@ -11,6 +11,7 @@
     "test": "jest",
     "typecheck": "tsc --noEmit",
     "sync-data": "bun ./scripts/syncData.ts",
+    "use-example": "bun ./scripts/useExample.ts",
     "generate-brand-assets": "node ./scripts/generateBrandAssets.mjs",
     "postinstall": "patch-package",
     "lint": "expo lint"
@@ -69,6 +70,7 @@
   },
   "devDependencies": {
     "@babel/core": "^7.20.0",
+    "@expo/ngrok": "^4.1.3",
     "@types/jest": "^29.5.12",
     "@types/react": "~19.1.10",
     "eslint": "^9.25.1",

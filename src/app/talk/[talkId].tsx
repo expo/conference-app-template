@@ -133,7 +133,20 @@ export default function TalkDetail() {
   }));
 
   if (!talk) {
-    return <NotFound message="Talk not found" />;
+    return (
+      <>
+        <Stack.Screen
+          options={{
+            headerLeft: () =>
+              Platform.select({
+                ios: <HeaderButton buttonProps={{ onPress: goBack }} />,
+                default: undefined,
+              }),
+          }}
+        />
+        <NotFound message="Talk not found" />
+      </>
+    );
   }
 
   return (

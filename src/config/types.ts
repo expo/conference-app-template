@@ -62,6 +62,16 @@ export type ConferenceConfig = {
     splashBackground: string;
     /** Android adaptive icon background color. */
     androidIconBackground: string;
+    /** Optional overrides for the neutral palette. */
+    colors?: Partial<{
+      text: ThemeColor;
+      textSecondary: ThemeColor;
+      background: ThemeColor;
+      backgroundSecondary: ThemeColor;
+      backgroundTertiary: ThemeColor;
+      backgroundElement: ThemeColor;
+      border: ThemeColor;
+    }>;
   };
   data: DataSource;
   venue?: {
@@ -69,6 +79,11 @@ export type ConferenceConfig = {
     address: string;
     /** Defaults to a Google Maps search for name + address. */
     mapsUrl?: string;
+    /**
+     * Remote venue photo URL. Without it, the app shows the bundled
+     * assets/brand/venue.png.
+     */
+    image?: string;
   };
   /** Cards shown on the Info tab, e.g. livestream or community links. */
   infoSections: InfoSection[];
@@ -81,6 +96,8 @@ export type ConferenceConfig = {
     currentlyLive: boolean;
     /** Local notification before a bookmarked session starts. */
     sessionReminders: boolean;
+    /** "Powered by Expo" badge on the Info tab. Defaults to true. */
+    poweredByExpo?: boolean;
   };
   /**
    * EAS project values. Leave undefined, then run `eas init` and

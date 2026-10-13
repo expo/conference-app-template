@@ -46,7 +46,11 @@ export function VenueInfo() {
       <View>
         <View style={styles.imageContainer}>
           <Image
-            source={require("@/assets/brand/venue.png")}
+            source={
+              venue.image
+                ? { uri: venue.image }
+                : require("@/assets/brand/venue.png")
+            }
             style={imageStyle}
           />
         </View>

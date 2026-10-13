@@ -2,7 +2,7 @@
 // Replace these with your own brand assets; this script only exists so the
 // template builds before you do.
 //
-// Usage: node scripts/generateBrandAssets.mjs [--force]
+// Usage: node scripts/generateBrandAssets.mjs [--force] [--color "#0a7ea4"]
 
 import { deflateSync } from "node:zlib";
 import { writeFileSync, existsSync, mkdirSync } from "node:fs";
@@ -67,7 +67,20 @@ const hexToRgba = (hex, alpha = 255) => {
   ];
 };
 
-const primary = "#087EA4";
+const colorFlagIndex = process.argv.indexOf("--color");
+const primary =
+  colorFlagIndex === -1 ? "#087EA4" : process.argv[colorFlagIndex + 1];
+
+const darken = (hex, factor = 0.5) => {
+  const [r, g, b] = hexToRgba(hex);
+  return [
+    Math.round(r * factor),
+    Math.round(g * factor),
+    Math.round(b * factor),
+    255,
+  ];
+};
+
 const assets = [
   { name: "icon.png", size: [1024, 1024], color: hexToRgba(primary) },
   { name: "adaptive-icon.png", size: [1024, 1024], color: hexToRgba(primary) },
@@ -78,7 +91,7 @@ const assets = [
   },
   { name: "splash-icon.png", size: [512, 512], color: hexToRgba(primary) },
   { name: "favicon.png", size: [48, 48], color: hexToRgba(primary) },
-  { name: "venue.png", size: [1200, 1200], color: hexToRgba("#606060") },
+  { name: "venue.png", size: [1200, 1200], color: darken(primary) },
 ];
 
 mkdirSync(brandDir, { recursive: true });

@@ -1,0 +1,841 @@
+{
+  "sessions": [
+    {
+      "id": "registration-workshop-day",
+      "title": "Registration – Workshop Day",
+      "description": null,
+      "startsAt": "2025-05-28T08:30:00+02:00",
+      "endsAt": "2025-05-28T09:00:00+02:00",
+      "room": null,
+      "tags": [],
+      "isServiceSession": true,
+      "speakerIds": []
+    },
+    {
+      "id": "workshop-animations-and-interactions-intro",
+      "title": "Workshop: Animations and Interactions – Intro",
+      "description": "This workshop is designed to get you up and running with animations and interactions in React Native. You'll learn how to implement subtle microinteractions that can make all the difference in terms of the user experience.",
+      "startsAt": "2025-05-28T09:00:00+02:00",
+      "endsAt": "2025-05-28T12:30:00+02:00",
+      "room": null,
+      "tags": ["workshop", "animations"],
+      "isServiceSession": false,
+      "speakerIds": ["kacper-kapusciak", "catalin-miron"]
+    },
+    {
+      "id": "workshop-performance-analysis-and-optimization",
+      "title": "Workshop: Performance – Analysis & Optimization Techniques",
+      "description": "Identify bottlenecks and enhance the performance of your application by joining our in-depth workshop on profiling and optimization for React Native apps.",
+      "startsAt": "2025-05-28T09:00:00+02:00",
+      "endsAt": "2025-05-28T12:30:00+02:00",
+      "room": null,
+      "tags": ["workshop", "performance"],
+      "isServiceSession": false,
+      "speakerIds": ["bartek-bloniarz", "tomasz-zawadzki"]
+    },
+    {
+      "id": "workshop-mobile-and-web-with-react-native",
+      "title": "Workshop: Mobile & Web with React Native",
+      "description": "Discover strategies for building universal apps with React Native that target both mobile and web platforms. Covers repository structure, routing, styling frameworks, animations, DOM components, and more.",
+      "startsAt": "2025-05-28T09:00:00+02:00",
+      "endsAt": "2025-05-28T12:30:00+02:00",
+      "room": null,
+      "tags": ["workshop", "web"],
+      "isServiceSession": false,
+      "speakerIds": ["blazej-kustra", "mateusz-titz"]
+    },
+    {
+      "id": "workshop-production-ready-patterns-for-eas-update",
+      "title": "Workshop: Production-ready Patterns for EAS Update",
+      "description": "Explore the inner workings of over-the-air updates and learn best practices to help you get the most out of EAS Update, including native fingerprints, preview deployments, and the expo-updates JS API.",
+      "startsAt": "2025-05-28T09:00:00+02:00",
+      "endsAt": "2025-05-28T12:30:00+02:00",
+      "room": null,
+      "tags": ["workshop", "eas"],
+      "isServiceSession": false,
+      "speakerIds": ["quinlan-jung", "gabriel-donadel"]
+    },
+    {
+      "id": "lunch-workshop-day",
+      "title": "Lunch Break",
+      "description": null,
+      "startsAt": "2025-05-28T12:30:00+02:00",
+      "endsAt": "2025-05-28T13:30:00+02:00",
+      "room": null,
+      "tags": [],
+      "isServiceSession": true,
+      "speakerIds": []
+    },
+    {
+      "id": "workshop-animations-and-interactions-advanced",
+      "title": "Workshop: Animations and Interactions – Advanced",
+      "description": "It's where you become an animation expert in React Native. We're going to dive deep into more advanced Reanimated concepts: discrete and continuous style properties, the Reanimated threading model, scroll-based interactions, gestures, layout measurements, and interpolations.",
+      "startsAt": "2025-05-28T13:30:00+02:00",
+      "endsAt": "2025-05-28T17:00:00+02:00",
+      "room": null,
+      "tags": ["workshop", "animations"],
+      "isServiceSession": false,
+      "speakerIds": ["kacper-kapusciak", "catalin-miron"]
+    },
+    {
+      "id": "workshop-3d-graphics-with-webgpu-threejs-reanimated",
+      "title": "Workshop: 3D Graphics with WebGPU, Three.js & Reanimated",
+      "description": "Efficient 3D graphics in React Native is now possible thanks to WebGPU. Learn to build it with a powerful combo of WebGPU, Three.js, Reanimated, and Worklets, and learn how to write shaders like a game engine developer.",
+      "startsAt": "2025-05-28T13:30:00+02:00",
+      "endsAt": "2025-05-28T17:00:00+02:00",
+      "room": null,
+      "tags": ["workshop", "3d", "webgpu"],
+      "isServiceSession": false,
+      "speakerIds": ["krzysztof-piaskowy"]
+    },
+    {
+      "id": "workshop-fine-tuning-for-the-native-feel",
+      "title": "Workshop: Fine-tuning for the “Native Feel”",
+      "description": "Learn how to employ platform-appropriate components, styles, UX, navigation patterns, and more to create cross-platform apps that feel cohesive within Android, iOS and Web.",
+      "startsAt": "2025-05-28T13:30:00+02:00",
+      "endsAt": "2025-05-28T17:00:00+02:00",
+      "room": null,
+      "tags": ["workshop", "ux"],
+      "isServiceSession": false,
+      "speakerIds": ["kadi-kraman", "cedric-van-putten"]
+    },
+    {
+      "id": "registration-day-1",
+      "title": "Registration",
+      "description": null,
+      "startsAt": "2025-05-29T09:00:00+02:00",
+      "endsAt": "2025-05-29T09:30:00+02:00",
+      "room": null,
+      "tags": [],
+      "isServiceSession": true,
+      "speakerIds": []
+    },
+    {
+      "id": "keynote",
+      "title": "Keynote",
+      "description": null,
+      "startsAt": "2025-05-29T09:30:00+02:00",
+      "endsAt": "2025-05-29T10:00:00+02:00",
+      "room": "Main Stage",
+      "tags": ["keynote", "expo"],
+      "isServiceSession": false,
+      "speakerIds": ["charlie-cheever", "jon-samp"]
+    },
+    {
+      "id": "deploy-everywhere-with-expo-router",
+      "title": "Deploy everywhere with Expo Router",
+      "description": null,
+      "startsAt": "2025-05-29T10:00:00+02:00",
+      "endsAt": "2025-05-29T10:30:00+02:00",
+      "room": "Main Stage",
+      "tags": ["expo", "web"],
+      "isServiceSession": false,
+      "speakerIds": ["evan-bacon"]
+    },
+    {
+      "id": "expo-on-orbit",
+      "title": "Expo on Orbit",
+      "description": "How SpaceX is using React Native and Expo to enable lean teams to deliver results—serving users across the globe and beyond.",
+      "startsAt": "2025-05-29T10:30:00+02:00",
+      "endsAt": "2025-05-29T11:00:00+02:00",
+      "room": "Main Stage",
+      "tags": ["expo", "case-study"],
+      "isServiceSession": false,
+      "speakerIds": ["aaron-grider"]
+    },
+    {
+      "id": "coffee-break-day-1-morning",
+      "title": "Coffee Break",
+      "description": null,
+      "startsAt": "2025-05-29T11:00:00+02:00",
+      "endsAt": "2025-05-29T11:30:00+02:00",
+      "room": null,
+      "tags": [],
+      "isServiceSession": true,
+      "speakerIds": []
+    },
+    {
+      "id": "life-after-legacy-the-new-architecture-future",
+      "title": "Life After Legacy: The New Architecture Future",
+      "description": "The New React Native Architecture has been enabled by default for several months now. Now what? We'll take a deep dive into the world beyond Legacy Architecture, explore the benefits of dropping the old code, the plan to sunset the Legacy Architecture, and the roadmap for a seamless transition to the new era of React Native.",
+      "startsAt": "2025-05-29T11:30:00+02:00",
+      "endsAt": "2025-05-29T12:00:00+02:00",
+      "room": "Main Stage",
+      "tags": ["react-native", "architecture"],
+      "isServiceSession": false,
+      "speakerIds": ["nico-corti", "riccardo-cipolleschi"]
+    },
+    {
+      "id": "legend-list-optimizing-for-peak-list-performance",
+      "title": "Legend List: Optimizing for Peak List Performance",
+      "description": "Legend List makes React Native lists much faster while enabling bidirectional infinite lists and better chat UIs. We'll explore the performance improvements, the tradeoffs of recycling, and how we can render infinitely long dynamic chat UIs without any compromises.",
+      "startsAt": "2025-05-29T12:00:00+02:00",
+      "endsAt": "2025-05-29T12:30:00+02:00",
+      "room": "Main Stage",
+      "tags": ["performance", "lists"],
+      "isServiceSession": false,
+      "speakerIds": ["jay-meistrich"]
+    },
+    {
+      "id": "mozart-never-had-react-native-you-do",
+      "title": "Mozart Never Had React Native: You Do",
+      "description": "How to use new tools like expo-audio and react-native-audio-api to unleash the untapped power of sounds in React Native apps. Whether you're building a meditation app, a game or just looking to elevate your app's UX, practical techniques to make your app sound as good as it looks!",
+      "startsAt": "2025-05-29T12:30:00+02:00",
+      "endsAt": "2025-05-29T13:00:00+02:00",
+      "room": "Main Stage",
+      "tags": ["audio"],
+      "isServiceSession": false,
+      "speakerIds": ["kim-chouard"]
+    },
+    {
+      "id": "lunch-day-1",
+      "title": "Lunch Break",
+      "description": null,
+      "startsAt": "2025-05-29T13:00:00+02:00",
+      "endsAt": "2025-05-29T14:30:00+02:00",
+      "room": null,
+      "tags": [],
+      "isServiceSession": true,
+      "speakerIds": []
+    },
+    {
+      "id": "radon-ide-code-with-glee",
+      "title": "Radon IDE - Code with Glee",
+      "description": "Radon IDE is the next step in development tools for React Native and Expo developers. It integrates directly into VS Code and Cursor, aiming to provide a seamless and focused development experience.",
+      "startsAt": "2025-05-29T14:30:00+02:00",
+      "endsAt": "2025-05-29T14:48:00+02:00",
+      "room": "Main Stage",
+      "tags": ["tooling"],
+      "isServiceSession": false,
+      "speakerIds": ["krzysztof-magiera"]
+    },
+    {
+      "id": "webgpu-high-performant-3d-animations-in-react-native",
+      "title": "WebGPU === High performant 3D animations in React Native",
+      "description": "Efficient 3D graphics in React Native is now possible thanks to WebGPU. WebGPU, combined with tools like Three.js, Reanimated, and Worklets, makes breaking limits and achieving the previously impossible a reality.",
+      "startsAt": "2025-05-29T14:48:00+02:00",
+      "endsAt": "2025-05-29T15:06:00+02:00",
+      "room": "Main Stage",
+      "tags": ["webgpu", "3d"],
+      "isServiceSession": false,
+      "speakerIds": ["krzysztof-piaskowy"]
+    },
+    {
+      "id": "scaling-enterprise-ci-cd-a-migration-success-story",
+      "title": "Scaling Enterprise CI/CD: A Migration Success Story",
+      "description": "From legacy CI/CD infrastructure to lightning-fast Expo EAS: how we transformed our enterprise React Native build system while dramatically reducing both build times and infrastructure costs.",
+      "startsAt": "2025-05-29T15:06:00+02:00",
+      "endsAt": "2025-05-29T15:24:00+02:00",
+      "room": "Main Stage",
+      "tags": ["ci-cd", "eas"],
+      "isServiceSession": false,
+      "speakerIds": ["michael-blanchard"]
+    },
+    {
+      "id": "the-next-evolution-of-the-party-invite-is-an-app-clip",
+      "title": "The Next Evolution of the Party Invite is an App Clip",
+      "description": "Hear about Partiful's journey in building the modern day party invite, and how they leveraged App Clips to break through conventional app boundaries to reach a wider audience.",
+      "startsAt": "2025-05-29T15:24:00+02:00",
+      "endsAt": "2025-05-29T15:42:00+02:00",
+      "room": "Main Stage",
+      "tags": ["app-clips", "ios"],
+      "isServiceSession": false,
+      "speakerIds": ["alex-chou"]
+    },
+    {
+      "id": "the-bigger-picture",
+      "title": "The Bigger Picture",
+      "description": "In today's React Native development landscape, we are no longer building for just mobile. We have the capability to develop for web, automotive, VR and TV.",
+      "startsAt": "2025-05-29T15:42:00+02:00",
+      "endsAt": "2025-05-29T16:00:00+02:00",
+      "room": "Main Stage",
+      "tags": ["tv", "multi-platform"],
+      "isServiceSession": false,
+      "speakerIds": ["anisha-malde", "lukasz-chludzinski"]
+    },
+    {
+      "id": "coffee-break-day-1-afternoon",
+      "title": "Coffee Break",
+      "description": null,
+      "startsAt": "2025-05-29T16:00:00+02:00",
+      "endsAt": "2025-05-29T16:30:00+02:00",
+      "room": null,
+      "tags": [],
+      "isServiceSession": true,
+      "speakerIds": []
+    },
+    {
+      "id": "running-small-language-models-on-your-phone",
+      "title": "Running Small Language Models on Your Phone: Bringing AI to Mobile with React Native and ExecuTorch",
+      "description": "The benefits of Edge AI—privacy, lower latency, and offline support—and how to integrate on-device conversational AI into a React Native app using ExecuTorch.",
+      "startsAt": "2025-05-29T16:30:00+02:00",
+      "endsAt": "2025-05-29T16:50:00+02:00",
+      "room": "Main Stage",
+      "tags": ["ai", "on-device"],
+      "isServiceSession": false,
+      "speakerIds": ["mateusz-kopcinski"]
+    },
+    {
+      "id": "building-react-native-apps-with-premium-feel-and-quality-ux",
+      "title": "Building React Native Apps with Premium Feel and Quality UX",
+      "description": "Practical React Native techniques to instill a 'premium feel' across the entire user journey: polished animations and intuitive gestures, effective navigation patterns, optimized perceived performance, and meaningful haptics.",
+      "startsAt": "2025-05-29T16:50:00+02:00",
+      "endsAt": "2025-05-29T17:15:00+02:00",
+      "room": "Main Stage",
+      "tags": ["ux", "animations"],
+      "isServiceSession": false,
+      "speakerIds": ["saul-sharma"]
+    },
+    {
+      "id": "registration-day-2",
+      "title": "Registration",
+      "description": null,
+      "startsAt": "2025-05-30T09:30:00+02:00",
+      "endsAt": "2025-05-30T10:00:00+02:00",
+      "room": null,
+      "tags": [],
+      "isServiceSession": true,
+      "speakerIds": []
+    },
+    {
+      "id": "large-scale-react-native-development-in-the-age-of-ai",
+      "title": "Large-Scale React Native Development in the Age of AI",
+      "description": "Practical strategies for managing the transition to AI-assisted development in a large engineering organization: developer productivity, CI, technical writing, project planning, and tooling for growing codebase complexity.",
+      "startsAt": "2025-05-30T10:00:00+02:00",
+      "endsAt": "2025-05-30T10:20:00+02:00",
+      "room": "Main Stage",
+      "tags": ["ai", "scale"],
+      "isServiceSession": false,
+      "speakerIds": ["rafael-mendiola"]
+    },
+    {
+      "id": "brownfield-react-native-at-scale",
+      "title": "Brownfield React Native at Scale: Ship Dozens of Micro-Apps Daily",
+      "description": "Toss, South Korea's leading fintech app, runs 40+ micro React Native apps inside a brownfield super-app with 20+ daily deployments. How we customized the bundling pipeline to achieve sub-10s builds and sub-200KB bundles.",
+      "startsAt": "2025-05-30T10:20:00+02:00",
+      "endsAt": "2025-05-30T10:40:00+02:00",
+      "room": "Main Stage",
+      "tags": ["brownfield", "scale"],
+      "isServiceSession": false,
+      "speakerIds": ["sojin-park"]
+    },
+    {
+      "id": "embracing-native-code-and-capabilities-in-your-expo-app",
+      "title": "Embracing Native Code and Capabilities in Your Expo App",
+      "description": null,
+      "startsAt": "2025-05-30T10:40:00+02:00",
+      "endsAt": "2025-05-30T11:00:00+02:00",
+      "room": "Main Stage",
+      "tags": ["expo", "native"],
+      "isServiceSession": false,
+      "speakerIds": ["keith-kurak"]
+    },
+    {
+      "id": "coffee-break-day-2-morning",
+      "title": "Coffee Break",
+      "description": null,
+      "startsAt": "2025-05-30T11:00:00+02:00",
+      "endsAt": "2025-05-30T11:30:00+02:00",
+      "room": null,
+      "tags": [],
+      "isServiceSession": true,
+      "speakerIds": []
+    },
+    {
+      "id": "towards-a-stable-javascript-api",
+      "title": "Towards a Stable JavaScript API",
+      "description": "The React team has been doubling down on foundational improvements to React Native's APIs: an overhaul of how React Native's JavaScript API is modeled in TypeScript, motivated by improving type safety, stability, and developer experience.",
+      "startsAt": "2025-05-30T11:30:00+02:00",
+      "endsAt": "2025-05-30T11:55:00+02:00",
+      "room": "Main Stage",
+      "tags": ["react-native", "api"],
+      "isServiceSession": false,
+      "speakerIds": ["alex-hunt"]
+    },
+    {
+      "id": "le-chat-and-a-brief-history-of-streaming",
+      "title": "Le Chat and a Brief History of Streaming",
+      "description": "Le Chat is the app developed by Mistral AI. Like ChatGPT or DeepSeek, Le Chat allows everyone, everywhere, to chat with Mistral's models. The app is powered by React Native and Expo.",
+      "startsAt": "2025-05-30T11:55:00+02:00",
+      "endsAt": "2025-05-30T12:20:00+02:00",
+      "room": "Main Stage",
+      "tags": ["ai", "streaming"],
+      "isServiceSession": false,
+      "speakerIds": ["delphine-bugner"]
+    },
+    {
+      "id": "everybody-can-cook-with-react-native",
+      "title": "Everybody can cook with React Native",
+      "description": "How to move beyond defaults and craft immersive animations by combining Reanimated and Skia: simple yet powerful techniques for refining motion, optimizing performance, and adding a few 'secret ingredients' to surprise your users.",
+      "startsAt": "2025-05-30T12:20:00+02:00",
+      "endsAt": "2025-05-30T12:40:00+02:00",
+      "room": "Main Stage",
+      "tags": ["animations"],
+      "isServiceSession": false,
+      "speakerIds": ["enzo-manuel-mangano"]
+    },
+    {
+      "id": "tanstack-query-in-expo-apps",
+      "title": "TanStack Query in Expo apps: Improving DX and UX like no other",
+      "description": "A dive into the core functionalities of TanStack Query: how it optimizes data fetching, caching, and synchronization in Expo applications, with real-world examples and best practices.",
+      "startsAt": "2025-05-30T12:40:00+02:00",
+      "endsAt": "2025-05-30T13:00:00+02:00",
+      "room": "Main Stage",
+      "tags": ["data-fetching", "expo"],
+      "isServiceSession": false,
+      "speakerIds": ["devlin-duldulao"]
+    },
+    {
+      "id": "lunch-day-2",
+      "title": "Lunch Break",
+      "description": null,
+      "startsAt": "2025-05-30T13:00:00+02:00",
+      "endsAt": "2025-05-30T14:30:00+02:00",
+      "room": null,
+      "tags": [],
+      "isServiceSession": true,
+      "speakerIds": []
+    },
+    {
+      "id": "lets-go-live-react-native-live-streaming",
+      "title": "Let's Go Live: React Native live streaming with zero WebRTC knowledge",
+      "description": "Video streaming is hard - no doubt about it! But with the right tools, you don't need to understand every detail. Skip the internals, get a quick intro to the basics, and walk away with everything you need to start streaming.",
+      "startsAt": "2025-05-30T14:30:00+02:00",
+      "endsAt": "2025-05-30T14:55:00+02:00",
+      "room": "Main Stage",
+      "tags": ["streaming", "webrtc"],
+      "isServiceSession": false,
+      "speakerIds": ["milosz-filimowski"]
+    },
+    {
+      "id": "building-secure-react-native-apps",
+      "title": "Building Secure React Native Apps",
+      "description": "The essential security technologies available to React Native engineers, key security concepts, and how you can build truly secure mobile applications without sacrificing the benefits of React Native.",
+      "startsAt": "2025-05-30T14:55:00+02:00",
+      "endsAt": "2025-05-30T15:20:00+02:00",
+      "room": "Main Stage",
+      "tags": ["security"],
+      "isServiceSession": false,
+      "speakerIds": ["jacob-arvidsson"]
+    },
+    {
+      "id": "the-future-of-authentication-in-react-native",
+      "title": "The Future of Authentication in React Native",
+      "description": "Modern methods such as passkeys, TOTP, and biometrics, along with advanced patterns like offline authentication for mobile apps, implemented with React Native primitives.",
+      "startsAt": "2025-05-30T15:20:00+02:00",
+      "endsAt": "2025-05-30T15:40:00+02:00",
+      "room": "Main Stage",
+      "tags": ["auth"],
+      "isServiceSession": false,
+      "speakerIds": ["laura-beatris"]
+    },
+    {
+      "id": "software-composing-expo-development-for-your-pm",
+      "title": "Software Composing: Expo development for your PM",
+      "description": "Coding is difficult, but streamlined app creators are too limiting. AI helps bring these two extremes together. How we can utilize AI app composers to increase efficiency, whether you are a developer or not.",
+      "startsAt": "2025-05-30T15:40:00+02:00",
+      "endsAt": "2025-05-30T16:00:00+02:00",
+      "room": "Main Stage",
+      "tags": ["tooling", "expo"],
+      "isServiceSession": false,
+      "speakerIds": ["tomasz-sulkowski"]
+    },
+    {
+      "id": "coffee-break-day-2-afternoon",
+      "title": "Coffee Break",
+      "description": null,
+      "startsAt": "2025-05-30T16:00:00+02:00",
+      "endsAt": "2025-05-30T16:30:00+02:00",
+      "room": null,
+      "tags": [],
+      "isServiceSession": true,
+      "speakerIds": []
+    },
+    {
+      "id": "keyboard-management-evolution-in-react-native",
+      "title": "Keyboard management evolution in React Native",
+      "description": "A journey through the evolution of keyboard management in React Native—from clunky default behaviors to cutting-edge solutions that power fluid, native-like experiences.",
+      "startsAt": "2025-05-30T16:30:00+02:00",
+      "endsAt": "2025-05-30T16:50:00+02:00",
+      "room": "Main Stage",
+      "tags": ["keyboard", "ux"],
+      "isServiceSession": false,
+      "speakerIds": ["kiryl-ziusko"]
+    },
+    {
+      "id": "unlocking-revenue-monetizing-with-in-app-purchases",
+      "title": "Unlocking Revenue: Monetizing Your React Native App with In-App Purchases",
+      "description": "How to turn your app into a business: the in-app purchase flow across the App Store and Play Store, setup, and seamless purchase integration in your React Native app.",
+      "startsAt": "2025-05-30T16:50:00+02:00",
+      "endsAt": "2025-05-30T17:15:00+02:00",
+      "room": "Main Stage",
+      "tags": ["monetization"],
+      "isServiceSession": false,
+      "speakerIds": ["perttu-lahteenlahti"]
+    },
+    {
+      "id": "afterparty",
+      "title": "Afterparty",
+      "description": null,
+      "startsAt": "2025-05-30T19:00:00+02:00",
+      "endsAt": "2025-05-30T23:00:00+02:00",
+      "room": null,
+      "tags": ["party"],
+      "isServiceSession": true,
+      "speakerIds": []
+    }
+  ],
+  "speakers": [
+    {
+      "id": "charlie-cheever",
+      "fullName": "Charlie Cheever",
+      "bio": "Founder of Expo",
+      "tagLine": "Expo",
+      "profilePicture": "https://cdn.prod.website-files.com/63e224097d9e035595f5483e/67d461941b7c8955090d3c08_charlieCheever%20(1).png",
+      "links": [{ "title": "X", "url": "https://x.com/ccheever", "linkType": "Twitter" }],
+      "sessionIds": ["keynote"]
+    },
+    {
+      "id": "jon-samp",
+      "fullName": "Jon Samp",
+      "bio": "Jon Samp is a software developer and product manager leading the EAS Update team at Expo. He loves designing UIs, making pour over coffee, and running all around New York City.",
+      "tagLine": "Expo",
+      "profilePicture": "https://cdn.prod.website-files.com/63e224097d9e035595f5483e/67d461f678b5e0cbf8f3e4cf_jon-samp%20(1).jpg",
+      "links": [{ "title": "X", "url": "https://x.com/jonsamp", "linkType": "Twitter" }],
+      "sessionIds": ["keynote"]
+    },
+    {
+      "id": "evan-bacon",
+      "fullName": "Evan Bacon",
+      "bio": null,
+      "tagLine": "Expo",
+      "profilePicture": "https://cdn.prod.website-files.com/63e224097d9e035595f5483e/67d46226cd3d4512a48f2239_evan_new.png",
+      "links": [{ "title": "X", "url": "https://x.com/baconbrix", "linkType": "Twitter" }],
+      "sessionIds": ["deploy-everywhere-with-expo-router"]
+    },
+    {
+      "id": "aaron-grider",
+      "fullName": "Aaron Grider",
+      "bio": "Formerly Tesla, and currently SpaceX, Aaron has contributed and led React Native development at scale, with a focus on strong product integration.",
+      "tagLine": "SpaceX",
+      "profilePicture": "https://cdn.prod.website-files.com/63e224097d9e035595f5483e/67dd57797662f57e72634c78_Screenshot%202025-03-21%20at%2013.11.29.png",
+      "links": [{ "title": "X", "url": "https://x.com/aarongrider", "linkType": "Twitter" }],
+      "sessionIds": ["expo-on-orbit"]
+    },
+    {
+      "id": "nico-corti",
+      "fullName": "Nico Corti",
+      "bio": null,
+      "tagLine": "Meta",
+      "profilePicture": "https://cdn.prod.website-files.com/63e224097d9e035595f5483e/681b20b03d6606fae24a87e6_nicola_corti%20(1).jpeg",
+      "links": [{ "title": "X", "url": "https://x.com/cortinico", "linkType": "Twitter" }],
+      "sessionIds": ["life-after-legacy-the-new-architecture-future"]
+    },
+    {
+      "id": "riccardo-cipolleschi",
+      "fullName": "Riccardo Cipolleschi",
+      "bio": "Riccardo is a Software Engineer at Meta. He currently works on React Native, with a focus on the iOS side of things.",
+      "tagLine": "Meta",
+      "profilePicture": "https://cdn.prod.website-files.com/63e224097d9e035595f5483e/681b21249d590afe63574de2_riccardo.jpeg",
+      "links": [{ "title": "X", "url": "https://x.com/CipolleschiR", "linkType": "Twitter" }],
+      "sessionIds": ["life-after-legacy-the-new-architecture-future"]
+    },
+    {
+      "id": "jay-meistrich",
+      "fullName": "Jay Meistrich",
+      "bio": "Jay is the CTO of Bravely.io and CEO of LegendApp.com. He's developing Legend List and Legend State to try to make React Native and React apps faster and easier to build.",
+      "tagLine": "Bravely",
+      "profilePicture": "https://cdn.prod.website-files.com/63e224097d9e035595f5483e/67dbf5e74f0cd9471818f179_Jay.jpeg",
+      "links": [{ "title": "X", "url": "https://x.com/jmeistrich", "linkType": "Twitter" }],
+      "sessionIds": ["legend-list-optimizing-for-peak-list-performance"]
+    },
+    {
+      "id": "kim-chouard",
+      "fullName": "Kim Chouard",
+      "bio": "Kim started building Web apps professionally at 13 years old, eventually leading worldwide teams from San Francisco for major tech companies like Adobe and Salesforce.",
+      "tagLine": "Odisei Music",
+      "profilePicture": "https://cdn.prod.website-files.com/63e224097d9e035595f5483e/67d46700ace9711453efb74b_Kim-Chouard-Profile-Photo_sq.jpg",
+      "links": [{ "title": "X", "url": "https://x.com/kimchouard", "linkType": "Twitter" }],
+      "sessionIds": ["mozart-never-had-react-native-you-do"]
+    },
+    {
+      "id": "krzysztof-magiera",
+      "fullName": "Krzysztof Magiera",
+      "bio": "Co-founder and Director of Engineering in Software Mansion, ex-React Native Core in Facebook, author of React Native Reanimated and React Native Gesture Handler.",
+      "tagLine": "Software Mansion",
+      "profilePicture": "https://cdn.prod.website-files.com/63e224097d9e035595f5483e/6835dcebc9dce46c82dee583_Screenshot%202025-05-27%20at%2017.39.06.png",
+      "links": [{ "title": "X", "url": "https://x.com/kzzzf", "linkType": "Twitter" }],
+      "sessionIds": ["radon-ide-code-with-glee"]
+    },
+    {
+      "id": "krzysztof-piaskowy",
+      "fullName": "Krzysztof Piaskowy",
+      "bio": null,
+      "tagLine": "Software Mansion",
+      "profilePicture": "https://cdn.prod.website-files.com/63e224097d9e035595f5483e/675af7f2883f5c1e2bce4906_krzysiek.png",
+      "links": [{ "title": "X", "url": "https://x.com/piaskowyk", "linkType": "Twitter" }],
+      "sessionIds": ["workshop-3d-graphics-with-webgpu-threejs-reanimated", "webgpu-high-performant-3d-animations-in-react-native"]
+    },
+    {
+      "id": "michael-blanchard",
+      "fullName": "Michael Blanchard",
+      "bio": null,
+      "tagLine": "NFL",
+      "profilePicture": "https://cdn.prod.website-files.com/63e224097d9e035595f5483e/67f51fe98dde813f1732e6f0_Headshot%20for%20Portrait%20Drawing.jpeg",
+      "links": [{ "title": "X", "url": "https://x.com/miblanchard", "linkType": "Twitter" }],
+      "sessionIds": ["scaling-enterprise-ci-cd-a-migration-success-story"]
+    },
+    {
+      "id": "alex-chou",
+      "fullName": "Alex Chou",
+      "bio": null,
+      "tagLine": "Partiful",
+      "profilePicture": "https://cdn.prod.website-files.com/63e224097d9e035595f5483e/67ebb2f324d3de8c2441a011_AlexProfile.png",
+      "links": [],
+      "sessionIds": ["the-next-evolution-of-the-party-invite-is-an-app-clip"]
+    },
+    {
+      "id": "anisha-malde",
+      "fullName": "Anisha Malde",
+      "bio": null,
+      "tagLine": "Amazon",
+      "profilePicture": "https://cdn.prod.website-files.com/63e224097d9e035595f5483e/67efc768893c515012038300_Anisha.jpg",
+      "links": [{ "title": "X", "url": "https://x.com/anisha_malde", "linkType": "Twitter" }],
+      "sessionIds": ["the-bigger-picture"]
+    },
+    {
+      "id": "lukasz-chludzinski",
+      "fullName": "Łukasz Chludziński",
+      "bio": null,
+      "tagLine": "Callstack",
+      "profilePicture": "https://cdn.prod.website-files.com/63e224097d9e035595f5483e/67efc81af8a682cf45e363bf_Screenshot%202025-04-04%20at%2013.52.54.png",
+      "links": [{ "title": "X", "url": "https://x.com/lukasz_app", "linkType": "Twitter" }],
+      "sessionIds": ["the-bigger-picture"]
+    },
+    {
+      "id": "mateusz-kopcinski",
+      "fullName": "Mateusz Kopciński",
+      "bio": null,
+      "tagLine": "Software Mansion",
+      "profilePicture": "https://cdn.prod.website-files.com/63e224097d9e035595f5483e/67d465bc7cf935bf78a69671_Mateusz.jpeg",
+      "links": [{ "title": "X", "url": "https://x.com/mkopcins", "linkType": "Twitter" }],
+      "sessionIds": ["running-small-language-models-on-your-phone"]
+    },
+    {
+      "id": "saul-sharma",
+      "fullName": "Saúl Sharma",
+      "bio": null,
+      "tagLine": "Louisville Geek",
+      "profilePicture": "https://cdn.prod.website-files.com/63e224097d9e035595f5483e/67ea6ac9e4296966f186edba_Saul.jpeg",
+      "links": [{ "title": "X", "url": "https://x.com/saul_sharma", "linkType": "Twitter" }],
+      "sessionIds": ["building-react-native-apps-with-premium-feel-and-quality-ux"]
+    },
+    {
+      "id": "rafael-mendiola",
+      "fullName": "Rafael Mendiola",
+      "bio": "Rafael cares about engineering, design, and operational excellence, and uses AI to push all three further.",
+      "tagLine": "Hinge Health",
+      "profilePicture": "https://cdn.prod.website-files.com/63e224097d9e035595f5483e/6800edf02541b0b2177a6419_Screenshot%202025-04-17%20at%2014.02.51.png",
+      "links": [{ "title": "X", "url": "https://x.com/groundcontrol", "linkType": "Twitter" }],
+      "sessionIds": ["large-scale-react-native-development-in-the-age-of-ai"]
+    },
+    {
+      "id": "sojin-park",
+      "fullName": "Sojin Park",
+      "bio": null,
+      "tagLine": "Toss",
+      "profilePicture": "https://cdn.prod.website-files.com/63e224097d9e035595f5483e/67ea6921711f22932a5c47a9_sojinPark.png",
+      "links": [],
+      "sessionIds": ["brownfield-react-native-at-scale"]
+    },
+    {
+      "id": "keith-kurak",
+      "fullName": "Keith Kurak",
+      "bio": null,
+      "tagLine": "Expo",
+      "profilePicture": "https://cdn.prod.website-files.com/63e224097d9e035595f5483e/67d464c1ff65dba45f17ce06_Screenshot%202025-03-14%20at%2018.17.49.png",
+      "links": [{ "title": "X", "url": "https://x.com/llamaluvr", "linkType": "Twitter" }],
+      "sessionIds": ["embracing-native-code-and-capabilities-in-your-expo-app"]
+    },
+    {
+      "id": "alex-hunt",
+      "fullName": "Alex Hunt",
+      "bio": "Alex Hunt is a Software Engineer at Meta working on React Native Developer Experience.",
+      "tagLine": "Meta",
+      "profilePicture": "https://cdn.prod.website-files.com/63e224097d9e035595f5483e/680223f59e30850cad10ea5b_alexhunt.jpg",
+      "links": [{ "title": "X", "url": "https://x.com/huntie", "linkType": "Twitter" }],
+      "sessionIds": ["towards-a-stable-javascript-api"]
+    },
+    {
+      "id": "delphine-bugner",
+      "fullName": "Delphine Bugner",
+      "bio": "Delphine is a mobile software engineer who has been developing React Native apps for years. She especially likes digging into weird native bugs.",
+      "tagLine": "Mistral",
+      "profilePicture": "https://cdn.prod.website-files.com/63e224097d9e035595f5483e/67d801bdf12d2942bbaaf158_DelphineB.jpg",
+      "links": [{ "title": "X", "url": "https://x.com/delphinebugner", "linkType": "Twitter" }],
+      "sessionIds": ["le-chat-and-a-brief-history-of-streaming"]
+    },
+    {
+      "id": "enzo-manuel-mangano",
+      "fullName": "Enzo Manuel Mangano",
+      "bio": null,
+      "tagLine": "Reactiive",
+      "profilePicture": "https://cdn.prod.website-files.com/63e224097d9e035595f5483e/67d464646c60938a746aa9f8_Screenshot%202025-03-14%20at%2018.16.12.png",
+      "links": [{ "title": "X", "url": "https://x.com/reactiive_", "linkType": "Twitter" }],
+      "sessionIds": ["everybody-can-cook-with-react-native"]
+    },
+    {
+      "id": "devlin-duldulao",
+      "fullName": "Devlin Duldulao",
+      "bio": null,
+      "tagLine": "Crayon Consulting",
+      "profilePicture": "https://cdn.prod.website-files.com/63e224097d9e035595f5483e/67ea6a76d040d8d6350cd544_Screenshot%202025-03-31%20at%2010.51.04.png",
+      "links": [{ "title": "X", "url": "https://x.com/DevlinDuldulao", "linkType": "Twitter" }],
+      "sessionIds": ["tanstack-query-in-expo-apps"]
+    },
+    {
+      "id": "milosz-filimowski",
+      "fullName": "Miłosz Filimowski",
+      "bio": null,
+      "tagLine": "Software Mansion",
+      "profilePicture": "https://cdn.prod.website-files.com/63e224097d9e035595f5483e/67d4661503b69d41f27b2568_1675251904194.jpeg",
+      "links": [{ "title": "X", "url": "https://x.com/miloproelo", "linkType": "Twitter" }],
+      "sessionIds": ["lets-go-live-react-native-live-streaming"]
+    },
+    {
+      "id": "jacob-arvidsson",
+      "fullName": "Jacob Arvidsson",
+      "bio": "Jacob is a Swedish front-end developer, living in London, with a passion for React and React Native.",
+      "tagLine": "JPMorganChase",
+      "profilePicture": "https://cdn.prod.website-files.com/63e224097d9e035595f5483e/67d932cd6283eb669e9df156_Screenshot%202025-03-18%20at%2009.45.44.png",
+      "links": [{ "title": "X", "url": "https://x.com/theurbancoder", "linkType": "Twitter" }],
+      "sessionIds": ["building-secure-react-native-apps"]
+    },
+    {
+      "id": "laura-beatris",
+      "fullName": "Laura Beatris",
+      "bio": null,
+      "tagLine": "Clerk",
+      "profilePicture": "https://cdn.prod.website-files.com/63e224097d9e035595f5483e/67d802b6833b0e228c16f69f_Laura.jpg",
+      "links": [{ "title": "X", "url": "https://x.com/lauradotjs", "linkType": "Twitter" }],
+      "sessionIds": ["the-future-of-authentication-in-react-native"]
+    },
+    {
+      "id": "tomasz-sulkowski",
+      "fullName": "Tomasz Sułkowski",
+      "bio": null,
+      "tagLine": "StackBlitz",
+      "profilePicture": "https://cdn.prod.website-files.com/63e224097d9e035595f5483e/6811e3c4744065770044ce57_avatar.jpg",
+      "links": [{ "title": "X", "url": "https://x.com/sulco", "linkType": "Twitter" }],
+      "sessionIds": ["software-composing-expo-development-for-your-pm"]
+    },
+    {
+      "id": "kiryl-ziusko",
+      "fullName": "Kiryl Ziusko",
+      "bio": "Senior React Native developer at Margelo",
+      "tagLine": "Margelo",
+      "profilePicture": "https://cdn.prod.website-files.com/63e224097d9e035595f5483e/67ea6813bd902f0023279141_Screenshot%202025-03-31%20at%2011.22.17.png",
+      "links": [{ "title": "X", "url": "https://x.com/ziusko", "linkType": "Twitter" }],
+      "sessionIds": ["keyboard-management-evolution-in-react-native"]
+    },
+    {
+      "id": "perttu-lahteenlahti",
+      "fullName": "Perttu Lähteenlahti",
+      "bio": "Perttu is a Senior Developer Advocate at RevenueCat, where he helps developers grow revenue with in-app purchases and subscriptions.",
+      "tagLine": "RevenueCat",
+      "profilePicture": "https://cdn.prod.website-files.com/63e224097d9e035595f5483e/67f393a91efdf053327d979e_Screenshot%202025-04-07%20at%2010.58.13.png",
+      "links": [{ "title": "X", "url": "https://x.com/plahteenlahti", "linkType": "Twitter" }],
+      "sessionIds": ["unlocking-revenue-monetizing-with-in-app-purchases"]
+    },
+    {
+      "id": "kacper-kapusciak",
+      "fullName": "Kacper Kapuściak",
+      "bio": null,
+      "tagLine": "Software Mansion",
+      "profilePicture": null,
+      "links": [{ "title": "X", "url": "https://x.com/kacperkapusciak", "linkType": "Twitter" }],
+      "sessionIds": ["workshop-animations-and-interactions-intro", "workshop-animations-and-interactions-advanced"]
+    },
+    {
+      "id": "catalin-miron",
+      "fullName": "Catalin Miron",
+      "bio": null,
+      "tagLine": "AnimateReactNative",
+      "profilePicture": null,
+      "links": [{ "title": "X", "url": "https://x.com/mironcatalin", "linkType": "Twitter" }],
+      "sessionIds": ["workshop-animations-and-interactions-intro", "workshop-animations-and-interactions-advanced"]
+    },
+    {
+      "id": "bartek-bloniarz",
+      "fullName": "Bartek Błoniarz",
+      "bio": null,
+      "tagLine": "Software Mansion",
+      "profilePicture": null,
+      "links": [],
+      "sessionIds": ["workshop-performance-analysis-and-optimization"]
+    },
+    {
+      "id": "tomasz-zawadzki",
+      "fullName": "Tomasz Zawadzki",
+      "bio": null,
+      "tagLine": "Software Mansion",
+      "profilePicture": null,
+      "links": [],
+      "sessionIds": ["workshop-performance-analysis-and-optimization"]
+    },
+    {
+      "id": "blazej-kustra",
+      "fullName": "Błażej Kustra",
+      "bio": null,
+      "tagLine": "Software Mansion",
+      "profilePicture": null,
+      "links": [],
+      "sessionIds": ["workshop-mobile-and-web-with-react-native"]
+    },
+    {
+      "id": "mateusz-titz",
+      "fullName": "Mateusz Titz",
+      "bio": null,
+      "tagLine": "Software Mansion",
+      "profilePicture": null,
+      "links": [],
+      "sessionIds": ["workshop-mobile-and-web-with-react-native"]
+    },
+    {
+      "id": "quinlan-jung",
+      "fullName": "Quinlan Jung",
+      "bio": null,
+      "tagLine": "Expo",
+      "profilePicture": null,
+      "links": [],
+      "sessionIds": ["workshop-production-ready-patterns-for-eas-update"]
+    },
+    {
+      "id": "gabriel-donadel",
+      "fullName": "Gabriel Donadel",
+      "bio": null,
+      "tagLine": "Expo",
+      "profilePicture": null,
+      "links": [],
+      "sessionIds": ["workshop-production-ready-patterns-for-eas-update"]
+    },
+    {
+      "id": "kadi-kraman",
+      "fullName": "Kadi Kraman",
+      "bio": null,
+      "tagLine": "Expo",
+      "profilePicture": null,
+      "links": [],
+      "sessionIds": ["workshop-fine-tuning-for-the-native-feel"]
+    },
+    {
+      "id": "cedric-van-putten",
+      "fullName": "Cedric van Putten",
+      "bio": null,
+      "tagLine": "Expo",
+      "profilePicture": null,
+      "links": [],
+      "sessionIds": ["workshop-fine-tuning-for-the-native-feel"]
+    }
+  ]
+}
