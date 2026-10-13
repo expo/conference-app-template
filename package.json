@@ -10,7 +10,7 @@
     "web": "expo start --web",
     "test": "jest",
     "typecheck": "tsc --noEmit",
-    "sync-data": "node ./scripts/syncData.ts",
+    "sync-data": "bun ./scripts/syncData.ts",
     "generate-brand-assets": "node ./scripts/generateBrandAssets.mjs",
     "postinstall": "patch-package",
     "lint": "expo lint"

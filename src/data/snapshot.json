@@ -1,0 +1,1268 @@
+{
+  "sessions": [
+    {
+      "id": "953918",
+      "title": "Master of ceremonies",
+      "description": null,
+      "startsAt": "2025-10-07T16:00:00Z",
+      "endsAt": "2025-10-07T16:05:00Z",
+      "room": "Casablanca Ballroom ",
+      "tags": [],
+      "isServiceSession": false,
+      "speakerIds": [
+        "5462e025-bd3a-44dc-bd23-cbf67676a4ee"
+      ]
+    },
+    {
+      "id": "947078",
+      "title": "Conference Introduction",
+      "description": null,
+      "startsAt": "2025-10-07T16:05:00Z",
+      "endsAt": "2025-10-07T16:10:00Z",
+      "room": "Casablanca Ballroom ",
+      "tags": [],
+      "isServiceSession": false,
+      "speakerIds": [
+        "128186d7-b81d-460e-954c-921d463516a1"
+      ]
+    },
+    {
+      "id": "947085",
+      "title": "React Keynote",
+      "description": null,
+      "startsAt": "2025-10-07T16:10:00Z",
+      "endsAt": "2025-10-07T17:05:00Z",
+      "room": "Casablanca Ballroom ",
+      "tags": [],
+      "isServiceSession": false,
+      "speakerIds": [
+        "fd4c6b7c-8de2-4bf4-9d16-dae5be7093d1",
+        "90f2d599-df38-40b7-9878-ff82d16ce353",
+        "df4b8483-aae5-43c4-bc8f-5031ae12dbc1",
+        "15e35252-bf2a-4905-94d9-3f144006a2ae"
+      ]
+    },
+    {
+      "id": "987035",
+      "title": "View Transitions and Activity",
+      "description": null,
+      "startsAt": "2025-10-07T17:10:00Z",
+      "endsAt": "2025-10-07T17:30:00Z",
+      "room": "Casablanca Ballroom ",
+      "tags": [],
+      "isServiceSession": false,
+      "speakerIds": [
+        "d045d470-4db4-4e95-a8f5-3db58316a23c"
+      ]
+    },
+    {
+      "id": "987043",
+      "title": "Profiling with React Performance tracks",
+      "description": null,
+      "startsAt": "2025-10-07T18:10:00Z",
+      "endsAt": "2025-10-07T18:30:00Z",
+      "room": "Casablanca Ballroom ",
+      "tags": [],
+      "isServiceSession": false,
+      "speakerIds": [
+        "49d925c3-1e2c-4551-86ae-10d55b3633d4"
+      ]
+    },
+    {
+      "id": "987059",
+      "title": "In case you missed the memo",
+      "description": null,
+      "startsAt": "2025-10-07T18:35:00Z",
+      "endsAt": "2025-10-07T18:55:00Z",
+      "room": "Casablanca Ballroom ",
+      "tags": [],
+      "isServiceSession": false,
+      "speakerIds": [
+        "0c977919-9d9e-437f-8207-3c2c5749527d"
+      ]
+    },
+    {
+      "id": "987045",
+      "title": "Async React",
+      "description": null,
+      "startsAt": "2025-10-07T19:00:00Z",
+      "endsAt": "2025-10-07T19:20:00Z",
+      "room": "Casablanca Ballroom ",
+      "tags": [],
+      "isServiceSession": false,
+      "speakerIds": [
+        "ba57ae45-2082-4143-b829-4a2bd88db7c0"
+      ]
+    },
+    {
+      "id": "987054",
+      "title": "React and AI",
+      "description": null,
+      "startsAt": "2025-10-07T21:05:00Z",
+      "endsAt": "2025-10-07T21:25:00Z",
+      "room": "Casablanca Ballroom ",
+      "tags": [],
+      "isServiceSession": false,
+      "speakerIds": [
+        "0d17aad6-33ce-4d6b-b31c-1ad2573841cc",
+        "75da261e-612c-4869-a111-3475bffb99f0",
+        "36b91385-6cdc-4c3c-891f-d6236172918b",
+        "20c73cd8-a317-40a4-833d-a9fe5d44cb62",
+        "bff6ab1a-a360-4cb1-95d0-939839915dfb"
+      ]
+    },
+    {
+      "id": "987060",
+      "title": "Exploring React Performance",
+      "description": null,
+      "startsAt": "2025-10-07T21:30:00Z",
+      "endsAt": "2025-10-07T21:50:00Z",
+      "room": "Casablanca Ballroom ",
+      "tags": [],
+      "isServiceSession": false,
+      "speakerIds": [
+        "90f2d599-df38-40b7-9878-ff82d16ce353"
+      ]
+    },
+    {
+      "id": "1020626",
+      "title": "The invisible craft of great UX",
+      "description": null,
+      "startsAt": "2025-10-07T22:25:00Z",
+      "endsAt": "2025-10-07T22:35:00Z",
+      "room": "Casablanca Ballroom ",
+      "tags": [],
+      "isServiceSession": false,
+      "speakerIds": [
+        "82d451c5-a405-46a1-a881-85e8a103d45a"
+      ]
+    },
+    {
+      "id": "1020627",
+      "title": "Building an MCP Server for a React Component",
+      "description": "Model Context Protocol, or MCP, is an emergent open-source standard, proposed by Anthropic, that is designed to provide a secure, standardized, and simple way to give AI systems the context they need. As this is a new standard, lots of things are still being defined. In this talk, we'll peel back the layers on MCP and leave you with everything you need to start building your own MCP server based on our own learnings at AG Grid.",
+      "startsAt": "2025-10-07T22:40:00Z",
+      "endsAt": "2025-10-07T22:50:00Z",
+      "room": "Casablanca Ballroom ",
+      "tags": [],
+      "isServiceSession": false,
+      "speakerIds": [
+        "3a9bc435-1f20-4c8e-b5c7-aaa96a27e28f"
+      ]
+    },
+    {
+      "id": "1020628",
+      "title": "Why React Native apps make all the money",
+      "description": "React Native apps make more money than native and other cross-platform apps. This talk explains why, and shows how easy it is to add monetization to a React Native app.\r\n",
+      "startsAt": "2025-10-07T22:50:00Z",
+      "endsAt": "2025-10-07T23:00:00Z",
+      "room": "Casablanca Ballroom ",
+      "tags": [],
+      "isServiceSession": false,
+      "speakerIds": [
+        "270e9993-0b3c-486a-bd87-f4f3d8682282"
+      ]
+    },
+    {
+      "id": "1020629",
+      "title": "Modern emails using React",
+      "description": null,
+      "startsAt": "2025-10-07T23:05:00Z",
+      "endsAt": "2025-10-07T23:15:00Z",
+      "room": "Casablanca Ballroom ",
+      "tags": [],
+      "isServiceSession": false,
+      "speakerIds": [
+        "54360cfe-17e7-477f-b593-39a463a34057"
+      ]
+    },
+    {
+      "id": "947073",
+      "title": "React team Q&A",
+      "description": null,
+      "startsAt": "2025-10-07T23:20:00Z",
+      "endsAt": "2025-10-08T00:00:00Z",
+      "room": "Casablanca Ballroom ",
+      "tags": [],
+      "isServiceSession": false,
+      "speakerIds": [
+        "49d925c3-1e2c-4551-86ae-10d55b3633d4",
+        "90f2d599-df38-40b7-9878-ff82d16ce353",
+        "ddf8b8bf-4806-46ea-bca4-df4591df7805",
+        "df4b8483-aae5-43c4-bc8f-5031ae12dbc1",
+        "fd4c6b7c-8de2-4bf4-9d16-dae5be7093d1",
+        "ba57ae45-2082-4143-b829-4a2bd88db7c0",
+        "15e35252-bf2a-4905-94d9-3f144006a2ae",
+        "128186d7-b81d-460e-954c-921d463516a1"
+      ]
+    },
+    {
+      "id": "987065",
+      "title": "React Native Keynote",
+      "description": "Join us for the React Native Keynote @ ReactConf 2025, where the React team will share what we've been building for React Native and where the framework is headed next.\r\n\r\nFrom major improvements to the core architecture to new tools that make building native apps faster and more seamless—we're excited to show you what’s coming. \r\n\r\nWhether you're shipping apps at scale or just curious to learn more about React Native, this is a keynote you don’t want to miss.",
+      "startsAt": "2025-10-08T16:35:00Z",
+      "endsAt": "2025-10-08T17:25:00Z",
+      "room": "Casablanca Ballroom ",
+      "tags": [],
+      "isServiceSession": false,
+      "speakerIds": [
+        "25e71513-d3cf-4ff5-9a5a-a269ca18596f",
+        "8730d40b-3fb7-450d-ab71-08c9dd81a48a",
+        "4b7d63cb-b57a-4b5c-9f26-ff5a1e90fab0",
+        "bcfb1ef0-a6f5-46ad-a478-98832c048f11",
+        "41f205c7-3886-41f7-9b56-d8bf4a830490"
+      ]
+    },
+    {
+      "id": "1020630",
+      "title": "React Native, Amplified",
+      "description": null,
+      "startsAt": "2025-10-08T17:30:00Z",
+      "endsAt": "2025-10-08T17:50:00Z",
+      "room": "Casablanca Ballroom ",
+      "tags": [],
+      "isServiceSession": false,
+      "speakerIds": [
+        "106dc281-fe8b-40ac-b16b-240832b27b47",
+        "15396036-b5c8-4f29-963d-397aff66d118"
+      ]
+    },
+    {
+      "id": "1026080",
+      "title": "React Strict DOM",
+      "description": null,
+      "startsAt": "2025-10-08T18:30:00Z",
+      "endsAt": "2025-10-08T18:50:00Z",
+      "room": "Casablanca Ballroom ",
+      "tags": [],
+      "isServiceSession": false,
+      "speakerIds": [
+        "ef1f98f9-def0-4d1a-9113-dce3574f0fa4"
+      ]
+    },
+    {
+      "id": "947089",
+      "title": "Reimagining Lists in React Native",
+      "description": null,
+      "startsAt": "2025-10-08T18:55:00Z",
+      "endsAt": "2025-10-08T19:15:00Z",
+      "room": "Casablanca Ballroom ",
+      "tags": [],
+      "isServiceSession": false,
+      "speakerIds": [
+        "5e2a84eb-e66a-411b-be9d-b5a40881eb15"
+      ]
+    },
+    {
+      "id": "1020631",
+      "title": "React Everywhere: Bringing React Into Native Apps",
+      "description": null,
+      "startsAt": "2025-10-08T21:05:00Z",
+      "endsAt": "2025-10-08T21:25:00Z",
+      "room": "Casablanca Ballroom ",
+      "tags": [],
+      "isServiceSession": false,
+      "speakerIds": [
+        "940af1e0-60fe-4fee-9b8b-e0bce667b93a"
+      ]
+    },
+    {
+      "id": "987076",
+      "title": "How Parcel Bundles React Server Components",
+      "description": null,
+      "startsAt": "2025-10-08T21:30:00Z",
+      "endsAt": "2025-10-08T21:40:00Z",
+      "room": "Casablanca Ballroom ",
+      "tags": [],
+      "isServiceSession": false,
+      "speakerIds": [
+        "7777627c-dba5-44b3-81c4-fb4207a3ee95"
+      ]
+    },
+    {
+      "id": "1020632",
+      "title": "Designing Page Transitions",
+      "description": "Learn how to use React’s new View Transitions APIs to make page navigations feel clean, fast, and polished. We will start with a simple Next.js page, add crossfade, direction, shared elements, speed, blur, accessibility, and more! In 10 minutes, you will leave with animation patterns you can reuse in any app.",
+      "startsAt": "2025-10-08T21:40:00Z",
+      "endsAt": "2025-10-08T21:50:00Z",
+      "room": "Casablanca Ballroom ",
+      "tags": [],
+      "isServiceSession": false,
+      "speakerIds": [
+        "60719040-bfe7-47f1-9716-67b45ef712f9"
+      ]
+    },
+    {
+      "id": "1020634",
+      "title": "Build Fast, Deploy Faster—Expo in 2025",
+      "description": null,
+      "startsAt": "2025-10-08T21:55:00Z",
+      "endsAt": "2025-10-08T22:05:00Z",
+      "room": "Casablanca Ballroom ",
+      "tags": [],
+      "isServiceSession": false,
+      "speakerIds": [
+        "18f91aa7-3667-42ba-9019-9c0f468f34d7"
+      ]
+    },
+    {
+      "id": "987074",
+      "title": "The React Router take on RSC",
+      "description": "A lightning talk where Kent shows how React Router is embracing React Server Components to simplify its architecture, unlock new patterns for data loading, streaming, and code splitting, and make building full-stack React apps faster and more seamless.",
+      "startsAt": "2025-10-08T22:05:00Z",
+      "endsAt": "2025-10-08T22:15:00Z",
+      "room": "Casablanca Ballroom ",
+      "tags": [],
+      "isServiceSession": false,
+      "speakerIds": [
+        "75da261e-612c-4869-a111-3475bffb99f0"
+      ]
+    },
+    {
+      "id": "1020635",
+      "title": "RedwoodSDK: Web Standards Meet Full-Stack React",
+      "description": null,
+      "startsAt": "2025-10-08T22:55:00Z",
+      "endsAt": "2025-10-08T23:05:00Z",
+      "room": "Casablanca Ballroom ",
+      "tags": [],
+      "isServiceSession": false,
+      "speakerIds": [
+        "49646fe1-5d94-4fa4-9f89-c75a87cc799d",
+        "d8b2a235-8716-4966-9f5f-3f2b647dc53c"
+      ]
+    },
+    {
+      "id": "987084",
+      "title": "TanStack Start",
+      "description": null,
+      "startsAt": "2025-10-08T23:05:00Z",
+      "endsAt": "2025-10-08T23:15:00Z",
+      "room": "Casablanca Ballroom ",
+      "tags": [],
+      "isServiceSession": false,
+      "speakerIds": [
+        "bf06ba9f-78c6-4c71-be1e-85848b8464f5"
+      ]
+    },
+    {
+      "id": "947075",
+      "title": "What's The Framework of the React Future?",
+      "description": "The React ecosystem is at a crossroads. With Server Components reshaping how we think about full-stack development, meta-frameworks multiplying faster than JavaScript build tools, and new paradigms emerging weekly, developers are asking: Where is this all heading? What React framework will reign supreme in 2026 and beyond!",
+      "startsAt": "2025-10-08T23:20:00Z",
+      "endsAt": "2025-10-08T23:55:00Z",
+      "room": "Casablanca Ballroom ",
+      "tags": [],
+      "isServiceSession": false,
+      "speakerIds": [
+        "75da261e-612c-4869-a111-3475bffb99f0",
+        "7777627c-dba5-44b3-81c4-fb4207a3ee95",
+        "b1a79d71-f37a-4a6f-b403-00608c2a2a20",
+        "bf06ba9f-78c6-4c71-be1e-85848b8464f5",
+        "efa31704-d0ae-416f-99d9-a30bd1a8a71c",
+        "49646fe1-5d94-4fa4-9f89-c75a87cc799d",
+        "18f91aa7-3667-42ba-9019-9c0f468f34d7",
+        "8bdaf79d-0c18-49fa-8aeb-e08eb8c91e9f"
+      ]
+    },
+    {
+      "id": "1050799",
+      "title": "Async React (continued)",
+      "description": null,
+      "startsAt": "2025-10-09T00:00:00Z",
+      "endsAt": "2025-10-09T00:15:00Z",
+      "room": "Casablanca Ballroom ",
+      "tags": [],
+      "isServiceSession": false,
+      "speakerIds": [
+        "ba57ae45-2082-4143-b829-4a2bd88db7c0"
+      ]
+    }
+  ],
+  "speakers": [
+    {
+      "id": "bcfb1ef0-a6f5-46ad-a478-98832c048f11",
+      "fullName": "Alex Hunt",
+      "bio": "Alex Hunt is a Software Engineer at Meta working on React Native Developer Experience. He is passionate about developer tooling and productivity.\r\n\r\nPrior to Meta, Alex worked in several product teams and startups making use of React Native, and he hopes to keep this user-centric view in mind when contributing to React Native's future.\r\n\r\nIn his free time, he enjoys rock climbing, snowboarding, plugging Notion, and makes amateur YouTube travel vlogs.",
+      "tagLine": "React Team @ Meta",
+      "profilePicture": "https://cdn.sessionize.com/image/bbc6-400o400o1-QyWogLi244bPWuinwwnyzN.jpeg",
+      "links": [
+        {
+          "title": "Twitter",
+          "url": "https://x.com/huntie",
+          "linkType": "Twitter"
+        },
+        {
+          "title": "alexhunt.dev",
+          "url": "https://alexhunt.dev/",
+          "linkType": "Other"
+        },
+        {
+          "title": "Sessionize",
+          "url": "https://sessionize.com/alexhunt",
+          "linkType": "Sessionize"
+        }
+      ],
+      "sessionIds": [
+        "987065"
+      ]
+    },
+    {
+      "id": "d8b2a235-8716-4966-9f5f-3f2b647dc53c",
+      "fullName": "Aurora Scharff",
+      "bio": "Aurora Scharff is a Software Engineer from Norway and Microsoft MVP in Web Techologies. She serves as a consultant at Crayon Consulting, while also contributing as React Certification Lead at certificates.dev. She focuses on web development with extensive experience in React and Next.js, including active use of React Server Components.\r\n\r\nAurora shares her knowledge through workshops, technical blog posts, social media, demo applications, and supporting fellow developers. She regularly presents internationally at recognized conferences, contributing to the global developer community through both her speaking engagements and educational content creation.",
+      "tagLine": "Web developer and consultant @ Crayon Consulting",
+      "profilePicture": "https://cdn.sessionize.com/image/426f-400o400o1-Yb9KDo22nfV77pQZFqYNT2.jpg",
+      "links": [
+        {
+          "title": "X (Twitter)",
+          "url": "https://x.com/aurorascharff",
+          "linkType": "Twitter"
+        },
+        {
+          "title": "LinkedIn",
+          "url": "https://www.linkedin.com/in/aurora-scharff-a86b88188/",
+          "linkType": "LinkedIn"
+        },
+        {
+          "title": "Blog",
+          "url": "https://aurorascharff.no/",
+          "linkType": "Blog"
+        },
+        {
+          "title": "Company Website",
+          "url": "https://vercel.com/",
+          "linkType": "Company_Website"
+        },
+        {
+          "title": "GitHub",
+          "url": "https://github.com/aurorascharff",
+          "linkType": "Other"
+        },
+        {
+          "title": "Bluesky",
+          "url": "https://bsky.app/profile/aurorascharff.no",
+          "linkType": "Other"
+        },
+        {
+          "title": "Sessionize",
+          "url": "https://sessionize.com/aurora-scharff",
+          "linkType": "Sessionize"
+        }
+      ],
+      "sessionIds": [
+        "1020635"
+      ]
+    },
+    {
+      "id": "d045d470-4db4-4e95-a8f5-3db58316a23c",
+      "fullName": "Chance Strickland",
+      "bio": "Chance Strickland is a software engineer with years of experience working on some of the most widely used React projects on the web, including Radix UI, React Router, and Remix. He has taught developers at top tech companies while leading workshops at React Training. Outside of work he enjoys cooking for friends, playing guitar, and surfing at home in sunny San Diego.",
+      "tagLine": "Software Engineer @ WorkOS",
+      "profilePicture": "https://cdn.sessionize.com/image/ce76-400o400o1-RGZmpBb41pEG26oF62EzjD.jpg",
+      "links": [
+        {
+          "title": "LinkedIn",
+          "url": "https://www.linkedin.com/in/chaance",
+          "linkType": "LinkedIn"
+        },
+        {
+          "title": "Blog",
+          "url": "https://chance.dev",
+          "linkType": "Blog"
+        },
+        {
+          "title": "Company Website",
+          "url": "https://remix.run",
+          "linkType": "Company_Website"
+        },
+        {
+          "title": "Bluesky",
+          "url": "https://bsky.app/profile/chance.dev",
+          "linkType": "Other"
+        },
+        {
+          "title": "Sessionize",
+          "url": "https://sessionize.com/chancethedev",
+          "linkType": "Sessionize"
+        }
+      ],
+      "sessionIds": [
+        "987035"
+      ]
+    },
+    {
+      "id": "0d17aad6-33ce-4d6b-b31c-1ad2573841cc",
+      "fullName": "Christopher Chedeau",
+      "bio": "Co-creator of React Native and Prettier. Creator of Excalidraw, \"CSS-in-JS\", Yoga and React Conf.",
+      "tagLine": "Software Engineer @ Meta",
+      "profilePicture": "https://cdn.sessionize.com/image/0b95-400o400o1-VjraN3pfkhHCkuBeyawne7.jpg",
+      "links": [
+        {
+          "title": "X (Twitter)",
+          "url": "https://www.twitter.com/vjeux",
+          "linkType": "Twitter"
+        },
+        {
+          "title": "Blog",
+          "url": "https://vjeux.com",
+          "linkType": "Blog"
+        },
+        {
+          "title": "Sessionize",
+          "url": "https://sessionize.com/christopher-chedeau",
+          "linkType": "Sessionize"
+        }
+      ],
+      "sessionIds": [
+        "987054"
+      ]
+    },
+    {
+      "id": "0c977919-9d9e-437f-8207-3c2c5749527d",
+      "fullName": "Cody Olsen",
+      "bio": "Cody Olsen has been building with React for a decade and contributes to the ecosystem through open-source libraries like scroll-into-view-if-needed, use-effect-event, and the @sanity/styled-components fork. His focus on frontend performance, motion design, and snappy, accessible interfaces led him to become an early adopter of the React Compiler and a participant in the React Compiler working group.",
+      "tagLine": "Staff Engineer @ Sanity Studio team",
+      "profilePicture": "https://cdn.sessionize.com/image/6674-400o400o1-LxMxgfnu1xD1NBbm2m18ks.jpg",
+      "links": [],
+      "sessionIds": [
+        "987059"
+      ]
+    },
+    {
+      "id": "60719040-bfe7-47f1-9716-67b45ef712f9",
+      "fullName": "Delba de Oliveira",
+      "bio": "Delba de Oliveira is a DX Engineer at Vercel, where she focuses on making Next.js and Vercel easier to learn and use. She works on documentation and builds tools that make complex ideas easier to grasp. Her hope is to help developers understand not just the \"how\", but also the \"why\" certain decisions matter. ",
+      "tagLine": "DX Engineer @ Vercel",
+      "profilePicture": "https://cdn.sessionize.com/image/3394-400o400o1-7r4rrE8gHHAvziqMiydPWv.jpg",
+      "links": [
+        {
+          "title": "Sessionize",
+          "url": "https://sessionize.com/delba-de-oliveira",
+          "linkType": "Sessionize"
+        }
+      ],
+      "sessionIds": [
+        "1020632"
+      ]
+    },
+    {
+      "id": "7777627c-dba5-44b3-81c4-fb4207a3ee95",
+      "fullName": "Devon Govett",
+      "bio": "Creator of the Parcel bundler, and lead engineer on React Aria and React Spectrum at Adobe.",
+      "tagLine": "Software Architect @ Adobe",
+      "profilePicture": "https://cdn.sessionize.com/image/b08f-400o400o1-RXEQJfURuprDUEsqjLjqLp.jpg",
+      "links": [],
+      "sessionIds": [
+        "987076",
+        "947075"
+      ]
+    },
+    {
+      "id": "15396036-b5c8-4f29-963d-397aff66d118",
+      "fullName": "Eric Fahsl",
+      "bio": "Eric Fahsl is a Principal Product Manager at Amazon, where he leads new tech initiatives for Amazon app partners. Previously he was an Alexa Solutions Architect where he helped build voice experiences and integrate “Alexa Built In” to Connected TV devices (e.g.LG/Samsung). When not in front of a computer, you can find Eric trail running in the mountains. ",
+      "tagLine": "Principal Product Manager @ Amazon",
+      "profilePicture": "https://cdn.sessionize.com/image/1021-400o400o1-9e2y7bX5jhq1b23P7aBAqy.png",
+      "links": [],
+      "sessionIds": [
+        "1020630"
+      ]
+    },
+    {
+      "id": "18f91aa7-3667-42ba-9019-9c0f468f34d7",
+      "fullName": "Evan Bacon",
+      "bio": "Creator of Expo Router",
+      "tagLine": "Software Engineer @ Expo",
+      "profilePicture": "https://cdn.sessionize.com/image/fd4c-400o400o1-wxBDQgKZDNFCLsRV6bGB9P.png",
+      "links": [],
+      "sessionIds": [
+        "1020634",
+        "947075"
+      ]
+    },
+    {
+      "id": "106dc281-fe8b-40ac-b16b-240832b27b47",
+      "fullName": "Giovanni Laquidara",
+      "bio": "Giovanni Laquidara is a Senior Dev Advocate at Amazon, where he works on supporting developers around the world using the Amazon Appstore across many devices. Previously, Giovanni worked as a software engineer building mobile apps, real-time defense systems, and VR/AR experiences. For fun, Giovanni enjoys low level programming, IoT hacking, and Dancing Bachata around the world 🕺\r\n",
+      "tagLine": "Sr Developer Evangelist @ Amazon",
+      "profilePicture": "https://cdn.sessionize.com/image/c475-400o400o1-Haj3caztGcQiLkzuzvsKiM.png",
+      "links": [
+        {
+          "title": "X (Twitter)",
+          "url": "https://twitter.com/giolaq",
+          "linkType": "Twitter"
+        },
+        {
+          "title": "LinkedIn",
+          "url": "https://www.linkedin.com/in/glaquidara/",
+          "linkType": "LinkedIn"
+        },
+        {
+          "title": "Instagram",
+          "url": "https://www.instagram.com/giolaqdev/",
+          "linkType": "Instagram"
+        },
+        {
+          "title": "Blog",
+          "url": "https://giolaq.dev/",
+          "linkType": "Blog"
+        },
+        {
+          "title": "Company Website",
+          "url": "https://developer.amazon.com/apps-and-games/blogs",
+          "linkType": "Company_Website"
+        },
+        {
+          "title": "Sessionize",
+          "url": "https://sessionize.com/glaquidara",
+          "linkType": "Sessionize"
+        }
+      ],
+      "sessionIds": [
+        "1020630"
+      ]
+    },
+    {
+      "id": "efa31704-d0ae-416f-99d9-a30bd1a8a71c",
+      "fullName": "Jack Herrington",
+      "bio": "React and NextJS YouTuber, Host of Frontend Fire as well as a Principal Fullstack Developer",
+      "tagLine": "Blue Collar Coder",
+      "profilePicture": "https://cdn.sessionize.com/image/ae0f-400o400o1-fKJURrpLzGUE88Na2KXBMe.jpg",
+      "links": [
+        {
+          "title": "X (Twitter)",
+          "url": "https://x.com/jherr",
+          "linkType": "Twitter"
+        },
+        {
+          "title": "LinkedIn",
+          "url": "https://www.linkedin.com/in/jherr/",
+          "linkType": "LinkedIn"
+        },
+        {
+          "title": "Instagram",
+          "url": "https://www.instagram.com/jherr2014/",
+          "linkType": "Instagram"
+        },
+        {
+          "title": "Blog",
+          "url": "https://jackherrington.com",
+          "linkType": "Blog"
+        },
+        {
+          "title": "Company Website",
+          "url": "https://youtube.com/@jherr",
+          "linkType": "Company_Website"
+        }
+      ],
+      "sessionIds": [
+        "947075"
+      ]
+    },
+    {
+      "id": "15e35252-bf2a-4905-94d9-3f144006a2ae",
+      "fullName": "Jack Pope",
+      "bio": null,
+      "tagLine": "React Team @ Meta",
+      "profilePicture": "https://cdn.sessionize.com/image/2797-400o400o1-USw8rGM9VYReUMWdNKVxiu.jpg",
+      "links": [],
+      "sessionIds": [
+        "947085",
+        "947073"
+      ]
+    },
+    {
+      "id": "3a9bc435-1f20-4c8e-b5c7-aaa96a27e28f",
+      "fullName": "James Swinton",
+      "bio": "James Swinton-Bland is the Developer Relations Lead for AG Grid, specializing in JavaScript and React. They work at the intersection of engineering and community, focusing on developer experience and practical adoption of modern front-end tooling. At React Conf, James will share how to build an MCP Server for React integrations, using AG Grid as a case study, and highlight patterns that extend React applications with custom developer infrastructure.",
+      "tagLine": "Developer Relations Lead @ AG Grid",
+      "profilePicture": "https://cdn.sessionize.com/image/b618-400o400o1-LJCfst59cMQqCG7iLhGTsS.png",
+      "links": [],
+      "sessionIds": [
+        "1020627"
+      ]
+    },
+    {
+      "id": "90f2d599-df38-40b7-9878-ff82d16ce353",
+      "fullName": "Joe Savona",
+      "bio": "Joe was planning to major in math and philosophy but got into computer science after writing physics simulations in Matlab. Prior to React, he worked on Relay, RSocket JS, and the Skip programming language. While he’s not building some sort of reactive system he enjoys running, studying Japanese, and spending time with his family.",
+      "tagLine": "React Team @ Meta",
+      "profilePicture": "https://cdn.sessionize.com/image/55e7-400o400o1-wmggZzWJLjukZtCy6AYgNm.jpg",
+      "links": [
+        {
+          "title": "Twitter",
+          "url": "https://twitter.com/en_js",
+          "linkType": "Twitter"
+        },
+        {
+          "title": "Company Website",
+          "url": "https://facebook.com",
+          "linkType": "Company_Website"
+        }
+      ],
+      "sessionIds": [
+        "947085",
+        "987060",
+        "947073"
+      ]
+    },
+    {
+      "id": "25e71513-d3cf-4ff5-9a5a-a269ca18596f",
+      "fullName": "Jorge Cohen",
+      "bio": "Jorge is an Engineering Manager on the React team at Meta, where he supports the developer experience and open source efforts, working on projects like React Native's stability, Metro, React DevTools, and the React Native DevTools. He has a background in cross-platform mobile development and has previously led engineering teams at Citymapper and Meta Reality Labs, working on products that explore new interaction paradigms and emergent platforms. With over 20 years of experience, Jorge is passionate about building software that empowers developers. In his free time, he enjoys cycling, tinkering with old hardware and emulators.",
+      "tagLine": "React Team @ Meta",
+      "profilePicture": "https://cdn.sessionize.com/image/413d-400o400o1-7EfCncoKyg8F95NrKk5y1g.jpg",
+      "links": [
+        {
+          "title": "Sessionize",
+          "url": "https://sessionize.com/jorge-cohen",
+          "linkType": "Sessionize"
+        }
+      ],
+      "sessionIds": [
+        "987065"
+      ]
+    },
+    {
+      "id": "8bdaf79d-0c18-49fa-8aeb-e08eb8c91e9f",
+      "fullName": "Josh Story",
+      "bio": "Josh majored in Mathematics and discovered programming while in college. His first professional developer job was to program insurance rate calculations in Microsoft Excel, the paragon of Reactive Programming which must be why he now works on React. In between that time Josh has been an IC, Manager, and Executive at a few startups. outside of work he likes to push his limits with cooking.",
+      "tagLine": "Engineer @ Vercel",
+      "profilePicture": "https://cdn.sessionize.com/image/1f35-400o400o1-7CPpWpLJNLikzNbbt4kBxd.jpg",
+      "links": [],
+      "sessionIds": [
+        "947075"
+      ]
+    },
+    {
+      "id": "75da261e-612c-4869-a111-3475bffb99f0",
+      "fullName": "Kent C. Dodds",
+      "bio": "Kent C. Dodds is a world renowned web development educator and engineer. He's actively involved in the open source community. He is the creator of EpicWeb.dev, EpicAI.pro, the Epic Stack, EpicReact.dev, and TestingJavaScript.com. He's a Microsoft MVP, instructor on egghead.io and Frontend Masters, live streamer, and podcaster. Kent is married and the father of five kids and he lives in Utah.",
+      "tagLine": "Software Engineer Educator",
+      "profilePicture": "https://cdn.sessionize.com/image/c4e3-400o400o1-BMT43t5kd2U1XstaNnM6Ax.jpg",
+      "links": [
+        {
+          "title": "X (Twitter)",
+          "url": "https://x.com/kentcdodds",
+          "linkType": "Twitter"
+        },
+        {
+          "title": "LinkedIn",
+          "url": "https://www.linkedin.com/in/kentcdodds/",
+          "linkType": "LinkedIn"
+        },
+        {
+          "title": "Blog",
+          "url": "https://kentcdodds.com/blog",
+          "linkType": "Blog"
+        },
+        {
+          "title": "Company Website",
+          "url": "https://kentcdodds.com",
+          "linkType": "Company_Website"
+        },
+        {
+          "title": "Talks",
+          "url": "https://kentcdodds.com/talks",
+          "linkType": "Other"
+        },
+        {
+          "title": "Sessionize",
+          "url": "https://sessionize.com/kentcdodds",
+          "linkType": "Sessionize"
+        }
+      ],
+      "sessionIds": [
+        "987054",
+        "987074",
+        "947075"
+      ]
+    },
+    {
+      "id": "fd4c6b7c-8de2-4bf4-9d16-dae5be7093d1",
+      "fullName": "Lauren Tan",
+      "bio": "Lauren’s programming career peaked when she first discovered the marquee tag. She’s been chasing that high ever since. She studied Finance instead of CS in college, so she learned to code using Excel. Lauren enjoys dropping cheeky memes in chat, playing video games with her partner, learning Korean, and petting her dog Zelda.",
+      "tagLine": "React Team @ Meta",
+      "profilePicture": "https://cdn.sessionize.com/image/d517-400o400o1-Twxj3zcKrybd6Z6RjRsKHN.jpg",
+      "links": [
+        {
+          "title": "Twitter",
+          "url": "https://twitter.com/potetotes",
+          "linkType": "Twitter"
+        },
+        {
+          "title": "LinkedIn",
+          "url": "https://www.linkedin.com/in/laurenelizabethtan/",
+          "linkType": "LinkedIn"
+        },
+        {
+          "title": "Blog",
+          "url": "https://www.no.lol",
+          "linkType": "Blog"
+        },
+        {
+          "title": "Company Website",
+          "url": "https://www.react.dev",
+          "linkType": "Company_Website"
+        }
+      ],
+      "sessionIds": [
+        "947085",
+        "947073"
+      ]
+    },
+    {
+      "id": "20c73cd8-a317-40a4-833d-a9fe5d44cb62",
+      "fullName": "Lee Robinson",
+      "bio": "VP of DX at Cursor",
+      "tagLine": "VP of DX @ Cursor",
+      "profilePicture": "https://cdn.sessionize.com/image/2138-400o400o1-8kKp7hjU3WTUBhh7RWkKU.jpg",
+      "links": [],
+      "sessionIds": [
+        "987054"
+      ]
+    },
+    {
+      "id": "5e2a84eb-e66a-411b-be9d-b5a40881eb15",
+      "fullName": "Luna Wei",
+      "bio": "Working on React Native",
+      "tagLine": "React Team @ Meta",
+      "profilePicture": "https://cdn.sessionize.com/image/413c-400o400o1-PZgv68PMKx9NaBMScq32yy.jpg",
+      "links": [],
+      "sessionIds": [
+        "947089"
+      ]
+    },
+    {
+      "id": "5462e025-bd3a-44dc-bd23-cbf67676a4ee",
+      "fullName": "Michael Chan",
+      "bio": null,
+      "tagLine": "Enthusiast",
+      "profilePicture": "https://cdn.sessionize.com/image/fa1c-400o400o1-pRHcKFFUQPd3j27vtC87rT.jpg",
+      "links": [],
+      "sessionIds": [
+        "953918"
+      ]
+    },
+    {
+      "id": "82d451c5-a405-46a1-a881-85e8a103d45a",
+      "fullName": "Michał Dudak",
+      "bio": "Michał has been a professional software developer for over 17 years. Throughout his career, he has worked with a wide range of technologies, from full-stack web development to mobile and embedded systems, ultimately specializing in web frontends.\r\nCurrently, he works from his home office in Poland, building Base UI at MUI. When he's not at his keyboard, Michał enjoys tinkering in his garage or traveling with his wife and two daughters.",
+      "tagLine": "Base UI Developer @ MUI",
+      "profilePicture": "https://cdn.sessionize.com/image/5a1f-400o400o1-EEX2HKubAasMECt9HShaWF.jpg",
+      "links": [
+        {
+          "title": "Twitter",
+          "url": "https://twitter.com/@michaldudak",
+          "linkType": "Twitter"
+        },
+        {
+          "title": "LinkedIn",
+          "url": "https://www.linkedin.com/in/michaldudak/",
+          "linkType": "LinkedIn"
+        },
+        {
+          "title": "Company Website",
+          "url": "https://mui.com",
+          "linkType": "Company_Website"
+        },
+        {
+          "title": "Sessionize",
+          "url": "https://sessionize.com/michaldudak",
+          "linkType": "Sessionize"
+        }
+      ],
+      "sessionIds": [
+        "1020626"
+      ]
+    },
+    {
+      "id": "b1a79d71-f37a-4a6f-b403-00608c2a2a20",
+      "fullName": "Michał Pierzchała",
+      "bio": "Passionate about building mobile and web experiences, high quality JS tooling and Open Source. Core React Native Community & Jest contributor. Space exploration enthusiast.",
+      "tagLine": "Principal Engineer @ Callstack",
+      "profilePicture": "https://cdn.sessionize.com/image/7662-400o400o1-ioiqeMNwZWFZZLNMm3n4g.jpg",
+      "links": [],
+      "sessionIds": [
+        "947075"
+      ]
+    },
+    {
+      "id": "940af1e0-60fe-4fee-9b8b-e0bce667b93a",
+      "fullName": "Mike Grabowski",
+      "bio": "Passionate about cross-platform technologies. When not working, you can find him on a race track.",
+      "tagLine": "Founder & CTO @ Callstack",
+      "profilePicture": "https://cdn.sessionize.com/image/0249-400o400o1-RX9uq7bbeRQrsipuqY6bTy.jpg",
+      "links": [],
+      "sessionIds": [
+        "1020631"
+      ]
+    },
+    {
+      "id": "df4b8483-aae5-43c4-bc8f-5031ae12dbc1",
+      "fullName": "Mofei Zhang",
+      "bio": "Engineer at Meta",
+      "tagLine": "React Team @ Meta",
+      "profilePicture": "https://cdn.sessionize.com/image/b5ef-400o400o1-h73xcPPJMKBJTDpCqEB94H.jpg",
+      "links": [],
+      "sessionIds": [
+        "947085",
+        "947073"
+      ]
+    },
+    {
+      "id": "8730d40b-3fb7-450d-ab71-08c9dd81a48a",
+      "fullName": "Nicola Corti",
+      "bio": "Nicola Corti is a Software Engineer in the React Core team at Meta, working on React Native.\r\n\r\nHe's also an Android GDE and maintainer of several open-source libraries and tools for mobile developers.\r\n\r\nHis involvement in the developer ecosystem goes from speaking at international conferences to being a member of CFP committees and supporting community growth across Europe.\r\n\r\nIn his free time, he also loves podcasting and running.",
+      "tagLine": "React Team @ Meta",
+      "profilePicture": "https://cdn.sessionize.com/image/2c35-400o400o1-0b-3fb7-450d-ab71-08c9dd81a48a.14d46ff0-032b-4678-8d21-f712d4a97457.jpeg",
+      "links": [
+        {
+          "title": "X (Twitter)",
+          "url": "https://twitter.com/cortinico",
+          "linkType": "Twitter"
+        },
+        {
+          "title": "LinkedIn",
+          "url": "https://linkedin.com/in/cortinico",
+          "linkType": "LinkedIn"
+        },
+        {
+          "title": "Blog",
+          "url": "http://ncorti.com",
+          "linkType": "Blog"
+        },
+        {
+          "title": "Company Website",
+          "url": "https://www.reactnative.dev",
+          "linkType": "Company_Website"
+        },
+        {
+          "title": "Sessionize",
+          "url": "https://sessionize.com/cortinico",
+          "linkType": "Sessionize"
+        }
+      ],
+      "sessionIds": [
+        "987065"
+      ]
+    },
+    {
+      "id": "ef1f98f9-def0-4d1a-9113-dce3574f0fa4",
+      "fullName": "Nicolas Gallagher",
+      "bio": "Creator of React Strict DOM",
+      "tagLine": "Software Engineer @ Meta",
+      "profilePicture": "https://cdn.sessionize.com/image/fe67-400o400o1-Xw4DepyZ4yH1bwN27xj6Ex.jpg",
+      "links": [],
+      "sessionIds": [
+        "1026080"
+      ]
+    },
+    {
+      "id": "270e9993-0b3c-486a-bd87-f4f3d8682282",
+      "fullName": "Perttu Lähteenlahti",
+      "bio": "Building and monetizing mobile apps.",
+      "tagLine": "Senior Developer Advocate @ RevenueCat",
+      "profilePicture": "https://cdn.sessionize.com/image/407a-400o400o1-4xH7xhqy5qpS6Qt1UYbhix.jpg",
+      "links": [
+        {
+          "title": "X (Twitter)",
+          "url": "https://twitter.com/plahteenlahti",
+          "linkType": "Twitter"
+        },
+        {
+          "title": "LinkedIn",
+          "url": "https://linkedin.com/in/plahteenlahti",
+          "linkType": "LinkedIn"
+        },
+        {
+          "title": "Blog",
+          "url": "https://perttu.dev",
+          "linkType": "Blog"
+        },
+        {
+          "title": "Company Website",
+          "url": "https://revenuecat.com",
+          "linkType": "Company_Website"
+        },
+        {
+          "title": "Sessionize",
+          "url": "https://sessionize.com/perttu",
+          "linkType": "Sessionize"
+        }
+      ],
+      "sessionIds": [
+        "1020628"
+      ]
+    },
+    {
+      "id": "49646fe1-5d94-4fa4-9f89-c75a87cc799d",
+      "fullName": "Peter Pistorius",
+      "bio": "I co-created RedwoodJS with Tom Preston-Werner. Earlier this year, Tom asked me to take over stewardship of the project. That gave me the chance to pivot it into the framework I’ve always wanted to build—RedwoodSDK: the React framework for Cloudflare.",
+      "tagLine": "Co-creator @ RedwoodSDK",
+      "profilePicture": "https://cdn.sessionize.com/image/8c8a-400o400o1-BzEhc8t6aFTuHJcSKWUws5.jpg",
+      "links": [],
+      "sessionIds": [
+        "1020635",
+        "947075"
+      ]
+    },
+    {
+      "id": "41f205c7-3886-41f7-9b56-d8bf4a830490",
+      "fullName": "Riccardo Cipolleschi",
+      "bio": "iOS Engineer @ Meta, working toward bringing the New React Native Architecture to OSS. ",
+      "tagLine": "React Team @ Meta",
+      "profilePicture": "https://cdn.sessionize.com/image/a90c-400o400o1-shAhsMHhhLK6xSPCKFgyhP.jpg",
+      "links": [
+        {
+          "title": "Twitter",
+          "url": "https://twitter.com/CipolleschiR",
+          "linkType": "Twitter"
+        },
+        {
+          "title": "LinkedIn",
+          "url": "https://www.linkedin.com/in/cipolleschir/",
+          "linkType": "LinkedIn"
+        },
+        {
+          "title": "Blog",
+          "url": "https://medium.com/@riccardocipolleschi",
+          "linkType": "Blog"
+        },
+        {
+          "title": "Company Website",
+          "url": "https://meta.com",
+          "linkType": "Company_Website"
+        },
+        {
+          "title": "Sessionize",
+          "url": "https://sessionize.com/cipolleschi",
+          "linkType": "Sessionize"
+        }
+      ],
+      "sessionIds": [
+        "987065"
+      ]
+    },
+    {
+      "id": "ba57ae45-2082-4143-b829-4a2bd88db7c0",
+      "fullName": "Ricky Hanlon",
+      "bio": "Ricky majored in theoretical math and somehow found himself on the React Native team for a couple years before joining the React team. When he’s not programming you can find him snowboarding, biking, climbing, golfing, or closing GitHub issues that do not match the issue template.",
+      "tagLine": "React Team @ Meta",
+      "profilePicture": "https://cdn.sessionize.com/image/4a5f-400o400o1-HBNDe4SZzxmxd2tQ1SJKG9.jpg",
+      "links": [],
+      "sessionIds": [
+        "987045",
+        "947073",
+        "1050799"
+      ]
+    },
+    {
+      "id": "4b7d63cb-b57a-4b5c-9f26-ff5a1e90fab0",
+      "fullName": "Ruben Norte",
+      "bio": "Rubén Norte is a Software Engineer on the React team at Meta. He works on the React Native runtime and renderer, focusing on performance and Web convergence. He is very passionate about JavaScript, and has more recently started loving and hating C++.\r\n\r\nWhen not working, you might find him watching movies and TV shows, playing sports like soccer, working out or playing poker.",
+      "tagLine": "React Team @ Meta",
+      "profilePicture": "https://cdn.sessionize.com/image/9279-400o400o1-MqoduB2fP2Q461ToizK5L3.jpg",
+      "links": [
+        {
+          "title": "LinkedIn",
+          "url": "https://www.linkedin.com/in/rubennorte/",
+          "linkType": "LinkedIn"
+        },
+        {
+          "title": "Bluesky",
+          "url": "https://bsky.app/profile/rubennorte.bsky.social",
+          "linkType": "Other"
+        },
+        {
+          "title": "Sessionize",
+          "url": "https://sessionize.com/rubennorte",
+          "linkType": "Sessionize"
+        }
+      ],
+      "sessionIds": [
+        "987065"
+      ]
+    },
+    {
+      "id": "49d925c3-1e2c-4551-86ae-10d55b3633d4",
+      "fullName": "Ruslan Lesiutin",
+      "bio": " Ruslan’s introduction to UI programming started when he was a kid by manually editing HTML templates for his custom gaming forums. Somehow, he ended up majoring in Computer Science. He enjoys music, games, and memes. Mostly memes.",
+      "tagLine": "React Team @ Meta",
+      "profilePicture": "https://cdn.sessionize.com/image/f585-400o400o1-akyNgLgEWkh8VHka2UwaaP.jpg",
+      "links": [],
+      "sessionIds": [
+        "987043",
+        "947073"
+      ]
+    },
+    {
+      "id": "128186d7-b81d-460e-954c-921d463516a1",
+      "fullName": "Seth Webster",
+      "bio": null,
+      "tagLine": "Head of React @ Meta",
+      "profilePicture": "https://cdn.sessionize.com/image/5ff2-400o400o1-sUDyMF2fxutiLA3UXXu5fB.jpg",
+      "links": [],
+      "sessionIds": [
+        "947078",
+        "947073"
+      ]
+    },
+    {
+      "id": "36b91385-6cdc-4c3c-891f-d6236172918b",
+      "fullName": "Shawn (swyx) Wang",
+      "bio": null,
+      "tagLine": "Cognition",
+      "profilePicture": "https://cdn.sessionize.com/image/c094-400o400o1-5976eb09-124e-447c-9ec5-657dd47419e5.jpg",
+      "links": [
+        {
+          "title": "Twitter",
+          "url": "https://twitter.com/swyx",
+          "linkType": "Twitter"
+        },
+        {
+          "title": "Blog",
+          "url": "http://swyx.io",
+          "linkType": "Blog"
+        }
+      ],
+      "sessionIds": [
+        "987054"
+      ]
+    },
+    {
+      "id": "ddf8b8bf-4806-46ea-bca4-df4591df7805",
+      "fullName": "Shruti Kapoor",
+      "bio": "Shruti is a Software Engineer and a YouTuber. She is passionate about teaching Shruti Kapoor is a seasoned frontend engineer, educator, and speaker who's been leet-heatin' her way through the dev world for over a decade. Formerly at PayPal and Slack, and a full-time content creator, she's best known for breaking down complex topics like React 18 and 19 with clarity, humor, and the occasional DevJoke (aka: *Hip Hip Array!*).\r\n\r\nShruti is an Egghead and O’Reilly instructor, international speaker, and the creator of [*This Week in React and AI*](https://shrutikapoor.substack.com/) - a newsletter packed with sharp insights and terrible puns. She’s been featured on global stages, and built a community of developers who genuinely enjoy learning about accessibility, AI, and React—sometimes all at once.\r\n\r\nWhen she’s not deep in code or keynoting a conference, you’ll probably find her traveling the world, sipping coffee, and being effortlessly cooler than your favorite devand sharing knowledge in JavaScript, React, GraphQL and front-end technologies. She creates technical content and shares at shrutikapoor.dev. She is also an ardent #DevJoke fan.\r\n",
+      "tagLine": "Software Engineer, Educator, YouTuber",
+      "profilePicture": "https://cdn.sessionize.com/image/6a10-400o400o1-91B4jPotvtgyrSYN2w9oHp.jpg",
+      "links": [
+        {
+          "title": "X (Twitter)",
+          "url": "https://twitter.com/shrutikapoor08",
+          "linkType": "Twitter"
+        },
+        {
+          "title": "LinkedIn",
+          "url": "https://www.linkedin.com/in/shrutikapoor08/",
+          "linkType": "LinkedIn"
+        },
+        {
+          "title": "Blog",
+          "url": "https://shrutikapoor.dev/",
+          "linkType": "Blog"
+        },
+        {
+          "title": "Company Website",
+          "url": "https://www.youtube.com/@shrutikapoor08",
+          "linkType": "Company_Website"
+        },
+        {
+          "title": "YouTube",
+          "url": "https://www.youtube.com/@shrutikapoor08",
+          "linkType": "Other"
+        },
+        {
+          "title": "Sessionize",
+          "url": "https://sessionize.com/shrutikapoor",
+          "linkType": "Sessionize"
+        }
+      ],
+      "sessionIds": [
+        "947073"
+      ]
+    },
+    {
+      "id": "bf06ba9f-78c6-4c71-be1e-85848b8464f5",
+      "fullName": "Tanner Linsley",
+      "bio": "Tanner Linsley is a software engineer and creator of TanStack, the open-source toolkit behind libraries like React Query, React Table, and TanStack Router. With a focus on type safety, performance, and developer experience, his work powers millions of applications and has become a cornerstone of modern web development. Tanner is passionate about building tools that simplify complex problems and help developers ship better software faster.\r\n",
+      "tagLine": "Owner @ TanStack",
+      "profilePicture": "https://cdn.sessionize.com/image/2ca2-400o400o1-XBTWKxVHKqbgszxy2yBXxc.jpg",
+      "links": [
+        {
+          "title": "X (Twitter)",
+          "url": "https://twitter.com/tannerlinsley",
+          "linkType": "Twitter"
+        },
+        {
+          "title": "LinkedIn",
+          "url": "https://www.linkedin.com/in/tannerlinsley/",
+          "linkType": "LinkedIn"
+        },
+        {
+          "title": "Instagram",
+          "url": "https://www.instagram.com/tannerlinsley",
+          "linkType": "Instagram"
+        },
+        {
+          "title": "Blog",
+          "url": "https://tanstack.com/blog",
+          "linkType": "Blog"
+        },
+        {
+          "title": "Company Website",
+          "url": "https://tanstack.com",
+          "linkType": "Company_Website"
+        },
+        {
+          "title": "Sessionize",
+          "url": "https://sessionize.com/tannerlinsley",
+          "linkType": "Sessionize"
+        }
+      ],
+      "sessionIds": [
+        "987084",
+        "947075"
+      ]
+    },
+    {
+      "id": "bff6ab1a-a360-4cb1-95d0-939839915dfb",
+      "fullName": "Theo Browne",
+      "bio": "Guy who used to write code, now known mostly for ranting on YouTube about AI.",
+      "tagLine": "Youtuber?",
+      "profilePicture": "https://cdn.sessionize.com/image/958d-400o400o1-Ger58dZKsDXYT9LbfY9R7s.jpg",
+      "links": [],
+      "sessionIds": [
+        "987054"
+      ]
+    },
+    {
+      "id": "54360cfe-17e7-477f-b593-39a463a34057",
+      "fullName": "Zeno Rocha",
+      "bio": "Zeno Rocha is the Founder & CEO at Resend. His lifelong appreciation for building software and sharing knowledge led him to speak at over 110 conferences worldwide. His passion for open source put him in the top 20 most active users on GitHub at age 22. He's also the creator of the Dracula Theme (6M users on VSCode) and Clipboard.js (30k stars on GitHub).",
+      "tagLine": "Founder & CEO @ Resend",
+      "profilePicture": "https://cdn.sessionize.com/image/5046-400o400o1-SjYNmHAhrwhsK1hiMQXjJ1.jpg",
+      "links": [
+        {
+          "title": "Twitter",
+          "url": "https://twitter.com/zenorocha",
+          "linkType": "Twitter"
+        },
+        {
+          "title": "LinkedIn",
+          "url": "https://linkedin.com/in/zenorocha",
+          "linkType": "LinkedIn"
+        },
+        {
+          "title": "Instagram",
+          "url": "https://instagram.com/zenorocha",
+          "linkType": "Instagram"
+        },
+        {
+          "title": "Blog",
+          "url": "https://zenorocha.com",
+          "linkType": "Blog"
+        },
+        {
+          "title": "Company Website",
+          "url": "https://resend.com",
+          "linkType": "Company_Website"
+        }
+      ],
+      "sessionIds": [
+        "1020629"
+      ]
+    }
+  ]
+}

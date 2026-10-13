@@ -24,7 +24,7 @@ import { osName } from "expo-device";
 
 export default function SpeakerDetail() {
   const params = useLocalSearchParams();
-  const speakers = useConferenceStore((state) => state.allSessions.speakers);
+  const speakers = useConferenceStore((state) => state.speakers);
   const speaker = speakers.find((speaker) => speaker.id === params.speakerId);
   const isPreview = useIsPreview();
   const router = useRouter();
@@ -108,7 +108,7 @@ export default function SpeakerDetail() {
                 {speaker.bio}
               </ThemedText>
             ) : null}
-            {speaker.sessions.map((sessionId) => (
+            {speaker.sessionIds.map((sessionId) => (
               <MiniTalkCard sessionId={sessionId} key={sessionId} />
             ))}
           </ScrollView>

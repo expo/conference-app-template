@@ -34,8 +34,8 @@ Based on the [React Conf 2025 app](https://expo.dev/blog/the-architecture-of-a-c
 Set `data` in the config to one of:
 
 - `{ source: "sessionize", sessionizeId: "..." }` — your [Sessionize](https://sessionize.com) API ID
-- `{ source: "json", url: "https://..." }` — a JSON file that matches the Sessionize "All" view shape
-- `{ source: "bundled" }` — only the snapshot in `src/data/allSessions.json`, no runtime refresh
+- `{ source: "json", url: "https://..." }` — a JSON file in the normalized shape, see [docs/DATA.md](docs/DATA.md)
+- `{ source: "bundled" }` — only the snapshot in `src/data/snapshot.json`, no runtime refresh
 
 Run `bun run sync-data` before a release so the app has fresh data on first launch without a network connection.
 

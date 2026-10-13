@@ -2,34 +2,18 @@ import AsyncStorage from "@react-native-async-storage/async-storage";
 import { create } from "zustand";
 import { persist, createJSONStorage } from "zustand/middleware";
 
-import initialAllSessions from "@/data/allSessions.json";
-import { ApiAllSessions, ScheduleDay } from "@/types";
-import { formatSessions } from "@/utils/sessions";
+import snapshot from "@/data/snapshot.json";
+import { getAdapter } from "@/data/adapters";
+import { NormalizedData } from "@/data/schema";
+import { ScheduleDay, Speaker } from "@/types";
+import { buildScheduleDays } from "@/utils/sessions";
 import conference from "../../conference.config";
 
-const getDataUrl = () => {
-  switch (conference.data.source) {
-    case "sessionize":
-      return `https://sessionize.com/api/v2/${conference.data.sessionizeId}/view/All`;
-    case "json":
-      return conference.data.url;
-    case "bundled":
-      return null;
-  }
-};
-
-const doFetch = async (url: string) => {
-  try {
-    const result = await fetch(url);
-    return await result.json();
-  } catch {
-    return null;
-  }
-};
+const adapter = getAdapter(conference.data);
 
 type ConfState = {
   days: ScheduleDay[];
-  allSessions: ApiAllSessions;
+  speakers: Speaker[];
   isRefreshing?: boolean;
   lastRefreshed: string | null;
   refreshData: (options?: { ttlMs?: number }) => Promise<void>;
@@ -38,9 +22,10 @@ type ConfState = {
 };
 
 const getInitialSchedule = () => {
+  const data = snapshot as unknown as NormalizedData;
   return {
-    days: formatSessions(initialAllSessions),
-    allSessions: initialAllSessions as ApiAllSessions,
+    days: buildScheduleDays(data),
+    speakers: data.speakers,
   };
 };
 
@@ -55,10 +40,8 @@ export const useConferenceStore = create(
         const ttlMs = options?.ttlMs || 0;
         const { isRefreshing, lastRefreshed } = get();
 
-        const dataUrl = getDataUrl();
-
         // Bail out if the app only uses the bundled snapshot
-        if (!dataUrl) {
+        if (!adapter.fetchAll) {
           return;
         }
 
@@ -78,12 +61,12 @@ export const useConferenceStore = create(
         try {
           set({ isRefreshing: true });
 
-          const allSessions = await doFetch(dataUrl);
+          const data = await adapter.fetchAll();
 
-          if (allSessions) {
+          if (data) {
             set({
-              days: formatSessions(allSessions),
-              allSessions,
+              days: buildScheduleDays(data),
+              speakers: data.speakers,
               lastRefreshed: new Date().toISOString(),
             });
           }

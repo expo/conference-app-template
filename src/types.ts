@@ -1,14 +1,18 @@
-import { allSessions } from "@/utils/testData/allSessions";
+import { NormalizedSpeaker } from "@/data/schema";
 
+export type Speaker = NormalizedSpeaker;
+
+/** A session with its speakers embedded, as the UI consumes it. */
 export type Session = {
   id: string;
   title: string;
   description: string | null;
   startsAt: string;
   endsAt: string;
-  speakers: Speaker[];
-  room: string;
+  room: string | null;
+  tags: string[];
   isServiceSession: boolean;
+  speakers: Speaker[];
 };
 
 /** One conference day, derived from the session data. */
@@ -17,20 +21,3 @@ export type ScheduleDay = {
   date: string;
   sessions: Session[];
 };
-
-export type Speaker = {
-  id: string;
-  firstName: string;
-  lastName: string;
-  bio: string | null;
-  tagLine: string | null;
-  profilePicture: string | null;
-  links: { title: string; url: string; linkType: string }[];
-  sessions: number[];
-  fullName: string;
-  categoryItems: number[];
-};
-
-export type ApiAllSessions = typeof allSessions;
-
-export type ApiSpeaker = (typeof allSessions)["speakers"][number];

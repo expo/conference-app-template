@@ -6,14 +6,14 @@ import { isPast, subMinutes } from "date-fns";
 import { useBookmarkStore } from "@/store/bookmarkStore";
 import { useConferenceStore } from "@/store/conferenceStore";
 import { registerForPushNotificationsAsync } from "@/utils/registerForPushNotificationsAsync";
-import { formatSession } from "@/utils/sessions";
+import { findSessionInDays } from "@/utils/sessions";
 import { Session } from "@/types";
 import conference from "../../conference.config";
 
 export function useBookmark() {
   const toggleBookmarked = useBookmarkStore((state) => state.toggleBookmarked);
   const bookmarks = useBookmarkStore((state) => state.bookmarks);
-  const allSessions = useConferenceStore((state) => state.allSessions);
+  const days = useConferenceStore((state) => state.days);
 
   const scheduleNotification = async (session: Session) => {
     if (!conference.features.sessionReminders) {
@@ -75,13 +75,7 @@ export function useBookmark() {
   };
 
   const getSessionById = (sessionId: string): Session | undefined => {
-    const apiSession = allSessions.sessions.find(
-      (session) => session.id === sessionId,
-    );
-    if (apiSession) {
-      return formatSession(apiSession, allSessions);
-    }
-    return undefined;
+    return findSessionInDays(sessionId, days).session ?? undefined;
   };
 
   const toggleBookmarkById = async (sessionId: string, withHaptics = true) => {

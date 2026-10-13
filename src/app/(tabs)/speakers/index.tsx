@@ -24,7 +24,7 @@ import Animated, {
 } from "react-native-reanimated";
 
 export default function Speakers() {
-  const speakers = useConferenceStore((state) => state.allSessions.speakers);
+  const speakers = useConferenceStore((state) => state.speakers);
   const { width, height } = useWindowDimensions();
   const { bottom, top } = useSafeAreaInsets();
   const { toggleBookmarkById, isBookmarked, getSessionById } = useBookmark();
@@ -70,7 +70,7 @@ export default function Speakers() {
             </Link.Trigger>
             <Link.Preview style={{ ...styles.preview, width: width }} />
             <Link.Menu title={`Talks by ${item.fullName}`}>
-              {item.sessions
+              {item.sessionIds
                 .map((sessionId) => {
                   const sessionIdStr = sessionId.toString();
                   const session = getSessionById(sessionIdStr);
