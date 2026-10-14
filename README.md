@@ -4,6 +4,26 @@ A whitelabel conference app built with [Expo](https://expo.dev). Edit one config
 
 Based on the [React Conf 2025 app](https://expo.dev/blog/the-architecture-of-a-conference-application-built-with-expo).
 
+## Screenshots
+
+The template out of the box, with the bundled sample conference.
+
+### iOS
+
+| Schedule | Session | Speakers | Info |
+| --- | --- | --- | --- |
+| ![Schedule on iOS](.github/screenshots/ios-schedule-light.png) | ![Session details on iOS](.github/screenshots/ios-talk.png) | ![Speakers on iOS](.github/screenshots/ios-speakers.png) | ![Info tab on iOS](.github/screenshots/ios-info.png) |
+
+### Android
+
+| Schedule | Session | Info |
+| --- | --- | --- |
+| ![Schedule on Android](.github/screenshots/android-schedule.png) | ![Session details on Android](.github/screenshots/android-talk.png) | ![Info tab on Android](.github/screenshots/android-info.png) |
+
+### Dark mode
+
+<img src=".github/screenshots/ios-schedule-dark.png" alt="Schedule in dark mode on iOS" width="260" />
+
 ## Features
 
 - Schedule grouped by day, derived from your data (any number of days)
