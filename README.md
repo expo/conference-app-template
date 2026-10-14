@@ -6,23 +6,21 @@ Based on the [React Conf 2025 app](https://expo.dev/blog/the-architecture-of-a-c
 
 ## Screenshots
 
-The template out of the box, with the bundled sample conference.
+The template out of the box, with the bundled sample conference. Every screen follows the system light and dark mode.
 
 ### iOS
 
 | Schedule | Session | Speakers | Info |
 | --- | --- | --- | --- |
-| ![Schedule on iOS](.github/screenshots/ios-schedule-light.png) | ![Session details on iOS](.github/screenshots/ios-talk.png) | ![Speakers on iOS](.github/screenshots/ios-speakers.png) | ![Info tab on iOS](.github/screenshots/ios-info.png) |
+| ![Schedule on iOS](.github/screenshots/ios-schedule-light.png) | ![Session details on iOS](.github/screenshots/ios-talk-light.png) | ![Speakers on iOS](.github/screenshots/ios-speakers-light.png) | ![Info tab on iOS](.github/screenshots/ios-info-light.png) |
+| ![Schedule on iOS, dark mode](.github/screenshots/ios-schedule-dark.png) | ![Session details on iOS, dark mode](.github/screenshots/ios-talk-dark.png) | ![Speakers on iOS, dark mode](.github/screenshots/ios-speakers-dark.png) | ![Info tab on iOS, dark mode](.github/screenshots/ios-info-dark.png) |
 
 ### Android
 
 | Schedule | Session | Info |
 | --- | --- | --- |
-| ![Schedule on Android](.github/screenshots/android-schedule.png) | ![Session details on Android](.github/screenshots/android-talk.png) | ![Info tab on Android](.github/screenshots/android-info.png) |
-
-### Dark mode
-
-<img src=".github/screenshots/ios-schedule-dark.png" alt="Schedule in dark mode on iOS" width="260" />
+| ![Schedule on Android](.github/screenshots/android-schedule-light.png) | ![Session details on Android](.github/screenshots/android-talk-light.png) | ![Info tab on Android](.github/screenshots/android-info-light.png) |
+| ![Schedule on Android, dark mode](.github/screenshots/android-schedule-dark.png) | ![Session details on Android, dark mode](.github/screenshots/android-talk-dark.png) | ![Info tab on Android, dark mode](.github/screenshots/android-info-dark.png) |
 
 ## Features
 
