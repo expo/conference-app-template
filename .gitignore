@@ -35,6 +35,9 @@ yarn-error.*
 .env*.local
 .env.eas-simulator
 
+# local working notes
+docs/PLAN.md
+
 # typescript
 *.tsbuildinfo
 

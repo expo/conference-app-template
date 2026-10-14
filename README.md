@@ -34,6 +34,17 @@ The template out of the box, with the bundled sample conference. Every screen fo
 - Offline first: a bundled data snapshot plus runtime refresh
 - Light and dark mode
 
+### Planned features
+
+Not built yet, on the roadmap:
+
+- Announcements feed from a static JSON file
+- Guide for sending push notifications
+- Filter chips for tracks, rooms, and tags
+- Multi-track grid view for large events
+- Live Activity and home screen widget for the current talk
+- Interactive setup script for new conferences
+
 ## Quick start
 
 1. Click "Use this template" on GitHub and clone your copy.
@@ -51,9 +62,9 @@ The template out of the box, with the bundled sample conference. Every screen fo
 
 Set `data` in the config to one of:
 
-- `{ source: "sessionize", sessionizeId: "..." }` — your [Sessionize](https://sessionize.com) API ID
-- `{ source: "json", url: "https://..." }` — a JSON file in the normalized shape, see [docs/DATA.md](docs/DATA.md)
-- `{ source: "bundled" }` — only the snapshot in `src/data/snapshot.json`, no runtime refresh
+- `{ source: "sessionize", sessionizeId: "..." }`: your [Sessionize](https://sessionize.com) API ID
+- `{ source: "json", url: "https://..." }`: a JSON file in the normalized shape, see [docs/DATA.md](docs/DATA.md)
+- `{ source: "bundled" }`: only the snapshot in `src/data/snapshot.json`, no runtime refresh
 
 Run `bun run sync-data` before a release so the app has fresh data on first launch without a network connection.
 
@@ -70,7 +81,7 @@ Run `bun run sync-data` before a release so the app has fresh data on first laun
 | `favicon.png` | 48×48 | Web favicon |
 | `venue.png` | 1200×1200 | Venue photo on the Info tab |
 
-`bun run generate-brand-assets` regenerates solid-color placeholders for any missing file.
+`bun run generate-brand-assets` regenerates the placeholder artwork for any missing file.
 
 ### Builds and updates
 
@@ -82,9 +93,9 @@ Each conference needs its own EAS project:
 
 ## Development
 
-- `bun run test` — unit tests
-- `bun run lint` — ESLint
-- `bun run typecheck` — TypeScript
+- `bun run test`: unit tests
+- `bun run lint`: ESLint
+- `bun run typecheck`: TypeScript
 
 ## License
 
