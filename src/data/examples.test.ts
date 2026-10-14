@@ -1,10 +1,12 @@
 import { formatInTimeZone } from "date-fns-tz";
 
 import { isNormalizedData, NormalizedData } from "./schema";
+import snapshot from "./snapshot.json";
 import appjsConfig from "../../examples/appjs-conf-2025/conference.config";
 import appjsData from "../../examples/appjs-conf-2025/data.json";
 import nextjsConfig from "../../examples/nextjs-conf-2024/conference.config";
 import nextjsData from "../../examples/nextjs-conf-2024/data.json";
+import conference from "../../conference.config";
 
 const examples: {
   name: string;
@@ -12,6 +14,12 @@ const examples: {
   data: unknown;
   days: number;
 }[] = [
+  {
+    name: "bundled snapshot",
+    timezone: conference.timezone,
+    data: snapshot,
+    days: 2,
+  },
   {
     name: "nextjs-conf-2024",
     timezone: nextjsConfig.timezone,

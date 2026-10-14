@@ -136,9 +136,10 @@ export const useConferenceStore = create(
     {
       name: `${conference.slug}-store`,
       storage: createJSONStorage(() => AsyncStorage),
-      version: 1,
+      version: 2,
       migrate: (persisted) => {
-        // Strip config-derived fields that older versions persisted
+        // Strip config-derived fields and cached schedules that older
+        // versions persisted; both re-initialize on launch.
         const {
           venueTimezone: _venueTimezone,
           venueTimezoneAbbreviation: _venueTimezoneAbbreviation,
@@ -147,6 +148,8 @@ export const useConferenceStore = create(
           infoSections: _infoSections,
           sponsorTiers: _sponsorTiers,
           devDatasetId: _devDatasetId,
+          days: _days,
+          speakers: _speakers,
           ...rest
         } = (persisted ?? {}) as Record<string, unknown>;
         return rest as ConfState;
@@ -166,8 +169,10 @@ export const useConferenceStore = create(
           ...rest
         } = state;
 
-        if (devDatasetId) {
-          // Don't persist a dev dataset's schedule over the real one
+        // Persist the schedule only when it comes from a remote source:
+        // a dev dataset must not overwrite the real cache, and with the
+        // bundled source the snapshot is already the source of truth.
+        if (devDatasetId || conference.data.source === "bundled") {
           const { days: _days, speakers: _speakers, ...withoutData } = rest;
           return withoutData as ConfState;
         }

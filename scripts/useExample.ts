@@ -21,7 +21,9 @@ if (!name || !available.includes(name)) {
     console.error(`❌ unknown example "${name}"`);
   }
   console.info(`Usage: bun run use-example <name>\n`);
-  console.info(`Available examples:\n${available.map((n) => `  - ${n}`).join("\n")}`);
+  console.info(
+    `Available examples:\n${available.map((n) => `  - ${n}`).join("\n")}`,
+  );
   process.exit(name ? 1 : 0);
 }
 

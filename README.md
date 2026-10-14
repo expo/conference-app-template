@@ -20,10 +20,10 @@ Based on the [React Conf 2025 app](https://expo.dev/blog/the-architecture-of-a-c
 
 1. Click "Use this template" on GitHub and clone your copy.
 2. Install dependencies: `bun install` (or `npm install`).
-3. Edit `conference.config.ts` with your event name, dates, colors, and data source.
-4. Replace the placeholder images in `assets/brand/` with your own.
-5. Pull your schedule into the bundled snapshot: `bun run sync-data`.
-6. Run the app: `bun run ios` or `bun run android`.
+3. Run the app: `bun run ios` or `bun run android`. It starts with a fictional sample conference.
+4. Edit `conference.config.ts` with your event name, colors, venue, and data source.
+5. Replace the placeholder images in `assets/brand/` with your own.
+6. If your data source is `sessionize` or `json`, pull your schedule into the offline snapshot: `bun run sync-data`.
 
 ## Configuration
 

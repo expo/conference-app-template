@@ -2,8 +2,9 @@ import type { ConferenceConfig } from "./src/config/types";
 
 // This file is the single source of truth for your conference.
 // Edit the values below and replace the images in assets/brand/.
-// The sample values point at React Conf 2025 public data so the
-// app runs out of the box.
+//
+// Everything here is fictional sample content so the app runs out of the
+// box. See examples/ for configs filled with real conference data.
 
 const config: ConferenceConfig = {
   name: "My Conference",
@@ -14,19 +15,22 @@ const config: ConferenceConfig = {
   version: "1.0.0",
   timezone: "America/Los_Angeles",
   timezoneAbbreviation: "PDT",
-  website: "https://conf.react.dev",
+  website: "https://example.com",
   theme: {
     primary: { light: "#087EA4", dark: "#58C4DC" },
     splashBackground: "#23272F",
     androidIconBackground: "#087EA4",
   },
+  // Point this at your own schedule:
+  //   { source: "sessionize", sessionizeId: "your-api-id" }
+  //   { source: "json", url: "https://example.com/schedule.json" }
+  // With "bundled", the app only uses src/data/snapshot.json.
   data: {
-    source: "sessionize",
-    sessionizeId: "7l5wob2t",
+    source: "bundled",
   },
   venue: {
-    name: "The Westin Lake Las Vegas Resort & Spa",
-    address: "101 Montelago Blvd, Henderson, NV 89011",
+    name: "Harborview Conference Center",
+    address: "500 Seaside Avenue, San Francisco, CA 94111",
   },
   infoSections: [
     {
@@ -35,15 +39,15 @@ const config: ConferenceConfig = {
       description:
         "Join from anywhere with our free live stream. Watch all the talks remotely.",
       buttonTitle: "Sign up",
-      url: "https://conf.react.dev/#newsletter",
+      url: "https://example.com/livestream",
     },
     {
       id: "community",
-      icon: "discord",
+      icon: "forum",
       description:
-        "Chat with other folks at the conference via the dedicated Discord server.",
-      buttonTitle: "Join us on Discord",
-      url: "https://discord.gg/reactconf",
+        "Chat with other attendees before, during, and after the conference in our community space.",
+      buttonTitle: "Join the community",
+      url: "https://example.com/community",
     },
   ],
   sponsorTiers: [],
