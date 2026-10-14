@@ -12,7 +12,6 @@ const config: ConferenceConfig = {
   appIdPrefix: "com.example.appjsconf",
   version: "1.0.0",
   timezone: "Europe/Warsaw",
-  timezoneAbbreviation: "CEST",
   website: "https://appjs.co",
   theme: {
     primary: { light: "#0033CC", dark: "#6688FF" },
@@ -38,7 +37,6 @@ const config: ConferenceConfig = {
   ],
   sponsorTiers: [],
   features: {
-    timezoneSwitch: true,
     currentlyLive: true,
     sessionReminders: true,
   },

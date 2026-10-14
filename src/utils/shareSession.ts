@@ -10,7 +10,7 @@ export const shareSession = async (session: Session) => {
   const { venueTimezone } = useConferenceStore.getState();
   const message = [
     `${session.title} at ${conference.name}`,
-    formatSessionTime(session, false, venueTimezone),
+    formatSessionTime(session, venueTimezone),
     conference.website,
   ]
     .filter(Boolean)

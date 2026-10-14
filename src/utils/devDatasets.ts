@@ -22,7 +22,6 @@ const toDataset = (
   id: config.slug,
   name: config.shortName ?? config.name,
   timezone: config.timezone,
-  timezoneAbbreviation: config.timezoneAbbreviation,
   venue: config.venue,
   infoSections: config.infoSections,
   sponsorTiers: config.sponsorTiers,

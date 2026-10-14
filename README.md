@@ -11,7 +11,7 @@ Based on the [React Conf 2025 app](https://expo.dev/blog/the-architecture-of-a-c
 - Speakers list with search and speaker details
 - Bookmarks with optional local reminders before a session starts
 - "Currently live" indicator in the schedule header
-- Timezone toggle between venue time and device time
+- All times display in the venue timezone
 - Venue, sponsors, and custom info cards on the Info tab
 - Offline first: a bundled data snapshot plus runtime refresh
 - Light and dark mode

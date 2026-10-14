@@ -17,7 +17,6 @@ export type DevDataset = {
   id: string;
   name: string;
   timezone: string;
-  timezoneAbbreviation?: string;
   venue?: ConferenceConfig["venue"];
   infoSections: ConferenceConfig["infoSections"];
   sponsorTiers: ConferenceConfig["sponsorTiers"];
@@ -29,7 +28,6 @@ type ConfState = {
   speakers: Speaker[];
   /** Venue timezone of the data on screen. Matches the config normally. */
   venueTimezone: string;
-  venueTimezoneAbbreviation?: string;
   /** Name shown in the schedule header. */
   displayName: string;
   venue?: ConferenceConfig["venue"];
@@ -41,8 +39,6 @@ type ConfState = {
   lastRefreshed: string | null;
   refreshData: (options?: { ttlMs?: number }) => Promise<void>;
   loadDevDataset: (dataset: DevDataset | null) => void;
-  shouldUseLocalTz: boolean;
-  toggleLocalTz: () => void;
 };
 
 const getInitialSchedule = () => {
@@ -51,7 +47,6 @@ const getInitialSchedule = () => {
     days: buildScheduleDays(data, conference.timezone),
     speakers: data.speakers,
     venueTimezone: conference.timezone,
-    venueTimezoneAbbreviation: conference.timezoneAbbreviation,
     displayName: conference.shortName ?? conference.name,
     venue: conference.venue,
     infoSections: conference.infoSections,
@@ -66,7 +61,6 @@ export const useConferenceStore = create(
       ...getInitialSchedule(),
       isRefreshing: false,
       lastRefreshed: null,
-      shouldUseLocalTz: false,
       refreshData: async (options) => {
         const ttlMs = options?.ttlMs || 0;
         const { isRefreshing, lastRefreshed, devDatasetId } = get();
@@ -121,7 +115,6 @@ export const useConferenceStore = create(
           days: buildScheduleDays(dataset.data, dataset.timezone),
           speakers: dataset.data.speakers,
           venueTimezone: dataset.timezone,
-          venueTimezoneAbbreviation: dataset.timezoneAbbreviation,
           displayName: dataset.name,
           venue: dataset.venue,
           infoSections: dataset.infoSections,
@@ -129,14 +122,11 @@ export const useConferenceStore = create(
           devDatasetId: dataset.id,
         });
       },
-      toggleLocalTz: () => {
-        set((state) => ({ shouldUseLocalTz: !state.shouldUseLocalTz }));
-      },
     }),
     {
       name: `${conference.slug}-store`,
       storage: createJSONStorage(() => AsyncStorage),
-      version: 2,
+      version: 3,
       migrate: (persisted) => {
         // Strip config-derived fields and cached schedules that older
         // versions persisted; both re-initialize on launch.
@@ -150,6 +140,7 @@ export const useConferenceStore = create(
           devDatasetId: _devDatasetId,
           days: _days,
           speakers: _speakers,
+          shouldUseLocalTz: _shouldUseLocalTz,
           ...rest
         } = (persisted ?? {}) as Record<string, unknown>;
         return rest as ConfState;
@@ -160,7 +151,6 @@ export const useConferenceStore = create(
         const {
           isRefreshing: _isRefreshing,
           venueTimezone: _venueTimezone,
-          venueTimezoneAbbreviation: _venueTimezoneAbbreviation,
           displayName: _displayName,
           venue: _venue,
           infoSections: _infoSections,

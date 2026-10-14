@@ -46,13 +46,9 @@ export type ConferenceConfig = {
   /** Bundle identifier prefix, e.g. "com.example.myconf". */
   appIdPrefix: string;
   version: string;
-  /** IANA timezone of the venue, e.g. "Europe/Berlin". */
+  /** IANA timezone of the venue, e.g. "Europe/Berlin". All session times
+   * display in this timezone. */
   timezone: string;
-  /**
-   * Short label for venue time shown in the timezone switch, e.g. "PDT".
-   * Without it, the app shows a GMT offset such as "GMT-7".
-   */
-  timezoneAbbreviation?: string;
   /** Event website, appended to shared sessions. */
   website?: string;
   theme: {
@@ -90,8 +86,6 @@ export type ConferenceConfig = {
   /** Sponsor tiers shown on the Info tab. Empty array hides the section. */
   sponsorTiers: SponsorTier[];
   features: {
-    /** Toggle between venue time and device time. */
-    timezoneSwitch: boolean;
     /** "Currently live" indicator in the schedule header. */
     currentlyLive: boolean;
     /** Local notification before a bookmarked session starts. */

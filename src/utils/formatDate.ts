@@ -8,7 +8,6 @@ import { ScheduleDay, Session } from "@/types";
 // conferences in other timezones. Node scripts pass it from the config.
 
 const timeFormat = "h:mm aaa";
-const dateTimeFormat = `${timeFormat}, LLL d`;
 const fullDateFormat = `${timeFormat}, LLL d, yyyy`;
 
 const DAY_KEY_FORMAT = "yyyy-MM-dd";
@@ -22,20 +21,13 @@ export const toVenueDate = (date: string | Date, timezone: string) => {
   }
 };
 
-export const formatSessionTime = (
-  session: Session,
-  shouldUseLocalTz: boolean,
-  venueTimezone: string,
-) => {
+/** Session times, always in the venue timezone. */
+export const formatSessionTime = (session: Session, venueTimezone: string) => {
   try {
     const startsAtDate = new Date(session.startsAt);
     const endsAtDate = new Date(session.endsAt);
 
-    if (shouldUseLocalTz) {
-      return `${formatDate(startsAtDate, dateTimeFormat)} - ${formatDate(endsAtDate, dateTimeFormat)}`;
-    } else {
-      return `${formatInTimeZone(startsAtDate, venueTimezone, timeFormat)} - ${formatInTimeZone(endsAtDate, venueTimezone, timeFormat)}`;
-    }
+    return `${formatInTimeZone(startsAtDate, venueTimezone, timeFormat)} - ${formatInTimeZone(endsAtDate, venueTimezone, timeFormat)}`;
   } catch {
     return "...";
   }
@@ -44,29 +36,6 @@ export const formatSessionTime = (
 export const formatFullDate = (dateString: string) => {
   try {
     return formatDate(new Date(dateString), fullDateFormat);
-  } catch {
-    return "...";
-  }
-};
-
-export const getCurrentTimezone = () => {
-  try {
-    return formatDate(new Date(), "zzzz");
-  } catch {
-    return "...";
-  }
-};
-
-/** Short venue timezone label, e.g. "PDT" from config, else "GMT-7". */
-export const getVenueTimezoneAbbreviation = (
-  timezone: string,
-  abbreviation?: string,
-) => {
-  if (abbreviation) {
-    return abbreviation;
-  }
-  try {
-    return formatInTimeZone(new Date(), timezone, "zzz");
   } catch {
     return "...";
   }

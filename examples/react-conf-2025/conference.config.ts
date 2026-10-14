@@ -11,7 +11,6 @@ const config: ConferenceConfig = {
   appIdPrefix: "com.example.reactconf",
   version: "1.0.0",
   timezone: "America/Los_Angeles",
-  timezoneAbbreviation: "PDT",
   website: "https://conf.react.dev",
   theme: {
     primary: { light: "#087EA4", dark: "#58C4DC" },
@@ -46,7 +45,6 @@ const config: ConferenceConfig = {
   ],
   sponsorTiers: [],
   features: {
-    timezoneSwitch: true,
     currentlyLive: true,
     sessionReminders: true,
   },

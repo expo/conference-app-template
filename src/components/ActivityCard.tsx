@@ -12,9 +12,6 @@ type Props = {
 };
 
 export function ActivityCard({ session }: Props) {
-  const shouldUseLocalTz = useConferenceStore(
-    (state) => state.shouldUseLocalTz,
-  );
   const venueTimezone = useConferenceStore((state) => state.venueTimezone);
 
   return (
@@ -25,7 +22,7 @@ export function ActivityCard({ session }: Props) {
         color={theme.color.textSecondary}
         style={{ marginLeft: theme.space24 }}
       >
-        {formatSessionTime(session, shouldUseLocalTz, venueTimezone)}
+        {formatSessionTime(session, venueTimezone)}
       </ThemedText>
       <ThemedView style={styles.content} color={theme.color.backgroundTertiary}>
         <View style={styles.row}>

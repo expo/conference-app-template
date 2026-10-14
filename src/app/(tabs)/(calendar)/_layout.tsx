@@ -1,10 +1,8 @@
 import { ThemedText, useThemeColor } from "@/components/Themed";
-import { TimeZoneSwitch } from "@/components/TimeZoneSwitch";
 import { theme } from "@/theme";
 import { isLiquidGlassAvailable } from "expo-glass-effect";
 import { Stack, useRouter } from "expo-router";
 import { Platform } from "react-native";
-import conference from "../../../../conference.config";
 import { useConferenceStore } from "@/store/conferenceStore";
 
 export default function Layout() {
@@ -37,8 +35,6 @@ export default function Layout() {
               {displayName}
             </ThemedText>
           ),
-          headerRight: () =>
-            conference.features.timezoneSwitch ? <TimeZoneSwitch /> : null,
           headerSearchBarOptions: {
             headerIconColor: tabBarTintColor,
             tintColor: tabBarTintColor,

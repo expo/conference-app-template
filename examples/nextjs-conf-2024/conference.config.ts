@@ -12,7 +12,6 @@ const config: ConferenceConfig = {
   appIdPrefix: "com.example.nextconf",
   version: "1.0.0",
   timezone: "America/Los_Angeles",
-  timezoneAbbreviation: "PDT",
   website: "https://nextjs.org/conf",
   theme: {
     primary: { light: "#000000", dark: "#FFFFFF" },
@@ -42,7 +41,6 @@ const config: ConferenceConfig = {
   ],
   sponsorTiers: [],
   features: {
-    timezoneSwitch: true,
     currentlyLive: true,
     sessionReminders: true,
   },
