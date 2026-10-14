@@ -54,10 +54,8 @@ const config: ConferenceConfig = {
     currentlyLive: true,
     sessionReminders: true,
   },
-  eas: {
-    projectId: "80167601-096d-4e95-b3d6-c6b7ee60389a",
-    owner: "expokadi",
-  },
+  // To use EAS Build and Update, run `eas init` and add the values here:
+  // eas: { projectId: "...", owner: "..." },
 };
 
 export default config;
