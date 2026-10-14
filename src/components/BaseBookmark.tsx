@@ -24,13 +24,15 @@ export function BaseBookmark({
   const scale = useSharedValue(1);
 
   const animatedStyle = useAnimatedStyle(() => ({
-    transform: [{ scale: scale.value }],
+    transform: [{ scale: scale.get() }],
   }));
 
   const handlePress = async () => {
-    scale.value = withSequence(
-      withTiming(0.8, { duration: 100 }),
-      withTiming(1, { duration: 100 }),
+    scale.set(
+      withSequence(
+        withTiming(0.8, { duration: 100 }),
+        withTiming(1, { duration: 100 }),
+      ),
     );
     await toggleBookmark(session);
   };

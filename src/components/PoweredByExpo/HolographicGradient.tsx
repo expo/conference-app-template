@@ -27,14 +27,11 @@ export function HolographicGradient() {
     );
   }, [time, sheetAnim]);
 
-  const uniforms = useDerivedValue(
-    () => ({
-      time: time.value,
-      sheetAnim: sheetAnim.value,
-      size: vec(CONTAINER_SIZE, CONTAINER_SIZE),
-    }),
-    [time, sheetAnim],
-  );
+  const uniforms = useDerivedValue(() => ({
+    time: time.value,
+    sheetAnim: sheetAnim.value,
+    size: vec(CONTAINER_SIZE, CONTAINER_SIZE),
+  }));
 
   return (
     <Canvas style={{ width: CONTAINER_SIZE, height: CONTAINER_SIZE }}>

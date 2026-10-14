@@ -4,10 +4,14 @@ import {
   View,
   useColorScheme,
   TextStyle,
+  ViewStyle,
+  StyleProp,
   PressableProps,
   Pressable,
+  TextProps as RNTextProps,
+  ViewProps as RNViewProps,
 } from "react-native";
-import Animated from "react-native-reanimated";
+import Animated, { type AnimatedProps } from "react-native-reanimated";
 
 import { theme } from "../theme";
 
@@ -27,8 +31,13 @@ export type TextProps = ThemeProps & {
   fontWeight?: "light" | "medium" | "semiBold" | "bold";
   italic?: boolean;
   animated?: boolean;
-} & Text["props"];
-export type ViewProps = ThemeProps & View["props"] & { animated?: boolean };
+} & RNTextProps;
+export type ViewProps = ThemeProps &
+  Omit<RNViewProps, "style"> & {
+    animated?: boolean;
+    /** Accepts Reanimated animated styles when `animated` is set. */
+    style?: AnimatedProps<RNViewProps>["style"];
+  };
 
 export function useThemeColor<T, U>(props: { light: T; dark: U }) {
   const theme = useColorScheme() ?? "light";
@@ -91,7 +100,12 @@ export function ThemedView(props: ViewProps) {
     );
   }
 
-  return <View style={[{ backgroundColor }, style]} {...otherProps} />;
+  return (
+    <View
+      style={[{ backgroundColor }, style as StyleProp<ViewStyle>]}
+      {...otherProps}
+    />
+  );
 }
 
 export function ThemedPressable(

@@ -42,7 +42,6 @@ const config: ExpoConfig = {
   userInterfaceStyle: "automatic",
   scheme: conference.scheme,
   assetBundlePatterns: ["**/*"],
-  newArchEnabled: true,
   ios: {
     supportsTablet: true,
     bundleIdentifier: getAppId(),
@@ -59,7 +58,6 @@ const config: ExpoConfig = {
     },
     userInterfaceStyle: "automatic",
     package: getAppId(),
-    edgeToEdgeEnabled: true,
     softwareKeyboardLayoutMode: "pan",
   },
   web: {
@@ -100,6 +98,8 @@ const config: ExpoConfig = {
     ],
     "expo-web-browser",
     "expo-router",
+    "expo-image",
+    "expo-status-bar",
     [
       "expo-calendar",
       {

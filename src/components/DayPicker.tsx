@@ -1,7 +1,12 @@
 import { useThemeColor } from "./Themed";
 import { theme } from "@/theme";
 import { useWindowDimensions, View, StyleSheet, Platform } from "react-native";
-import { Picker } from "@expo/ui/jetpack-compose";
+import {
+  Host,
+  SegmentedButton,
+  SingleChoiceSegmentedButtonRow,
+  Text,
+} from "@expo/ui/jetpack-compose";
 
 interface DayPickerProps {
   options: string[];
@@ -41,27 +46,34 @@ export function DayPicker({
         backgroundColor: backgroundColor,
       }}
     >
-      <Picker
-        options={options}
-        selectedIndex={selectedIndex}
-        onOptionSelected={({ nativeEvent: { index } }) => {
-          onSelectDay(index);
-        }}
-        color={backgroundColor}
-        elementColors={{
-          activeContainerColor: tintColor,
-          activeContentColor: colorText,
-          activeBorderColor: "transparent",
-          inactiveContainerColor: backgroundSecondary,
-          inactiveContentColor: inactiveColorText,
-          inactiveBorderColor: "transparent",
-        }}
-        variant="segmented"
+      <Host
         style={{
           ...styles.picker,
           width: width - theme.space24 * 2,
         }}
-      />
+      >
+        <SingleChoiceSegmentedButtonRow>
+          {options.map((option, index) => (
+            <SegmentedButton
+              key={option}
+              selected={index === selectedIndex}
+              onClick={() => onSelectDay(index)}
+              colors={{
+                activeContainerColor: tintColor,
+                activeContentColor: colorText,
+                activeBorderColor: "transparent",
+                inactiveContainerColor: backgroundSecondary,
+                inactiveContentColor: inactiveColorText,
+                inactiveBorderColor: "transparent",
+              }}
+            >
+              <SegmentedButton.Label>
+                <Text>{option}</Text>
+              </SegmentedButton.Label>
+            </SegmentedButton>
+          ))}
+        </SingleChoiceSegmentedButtonRow>
+      </Host>
 
       {/* Used to prevent onPress events from being triggered in components behind the picker */}
       <View style={styles.overlay} pointerEvents="none" />
@@ -78,6 +90,5 @@ const styles = StyleSheet.create({
   picker: {
     alignSelf: "center",
     height: 40,
-    paddingVertical: theme.space24,
   },
 });

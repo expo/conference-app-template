@@ -1,14 +1,12 @@
 const { defineConfig, globalIgnores } = require("eslint/config");
 const expoConfig = require("eslint-config-expo/flat");
 const eslintPluginPrettierRecommended = require("eslint-plugin-prettier/recommended");
-const reactCompiler = require("eslint-plugin-react-compiler");
 const reactNativePlugin = require("eslint-plugin-react-native");
 
 module.exports = defineConfig([
   globalIgnores(["dist/*", "ios/*", "android/*", "lib/*"]),
   expoConfig,
   eslintPluginPrettierRecommended,
-  reactCompiler.configs.recommended,
   {
     plugins: {
       "react-native": reactNativePlugin,

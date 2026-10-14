@@ -1,4 +1,4 @@
-import { useScrollToTop } from "@react-navigation/native";
+import { useScrollToTop } from "expo-router/react-navigation";
 import { Stack, useFocusEffect, useLocalSearchParams } from "expo-router";
 import React, { useCallback, useMemo, useRef, useState } from "react";
 import { Keyboard, Platform, RefreshControl, StyleSheet } from "react-native";
@@ -211,7 +211,7 @@ export default function Schedule() {
                 <ThemedText fontWeight="bold">{searchText}</ThemedText>
               </ThemedText>
             </ThemedView>
-          ) : null
+          ) : undefined
         }
       />
     </>

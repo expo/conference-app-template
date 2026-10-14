@@ -118,13 +118,10 @@ export default function TalkDetail() {
     [],
   );
 
-  const uniforms = useDerivedValue(
-    () => ({
-      sheetAnim: sheetAnim.value,
-      size: vec(width, drawerHeight),
-    }),
-    [sheetAnim],
-  );
+  const uniforms = useDerivedValue(() => ({
+    sheetAnim: sheetAnim.value,
+    size: vec(width, drawerHeight),
+  }));
 
   const opacityStyle = useAnimatedStyle(() => ({
     opacity: sheetAnim.value * 0.4,
@@ -181,7 +178,7 @@ export default function TalkDetail() {
         }
       >
         {isLiquidGlassAvailable() && osName !== "iPadOS" ? (
-          <View style={{ height: drawerHeight }}>
+          <View style={[styles.absolute, { height: drawerHeight, width }]}>
             <Animated.View style={[opacityStyle, styles.absolute]}>
               <Canvas
                 style={{

@@ -2,7 +2,7 @@ import { theme } from "@/theme";
 import { Session } from "@/types";
 import { useBookmark } from "@/hooks/useBookmark";
 import { HeaderButton } from "./HeaderButtons/HeaderButton";
-import { frame } from "@expo/ui/swift-ui/modifiers";
+import { frame, tint } from "@expo/ui/swift-ui/modifiers";
 import { isLiquidGlassAvailable } from "expo-glass-effect";
 import { useThemeColor } from "./Themed";
 import * as Haptics from "expo-haptics";
@@ -62,7 +62,9 @@ function GlassBookmark({ session, size = "large", style }: BookmarkProps) {
       buttonProps={{
         onPress: handlePress,
         variant: "glassProminent",
-        color: colorScheme === "dark" ? "transparent" : backgroundColor,
+        modifiers: [
+          tint(colorScheme === "dark" ? "transparent" : backgroundColor),
+        ],
       }}
       style={style}
       imageProps={{

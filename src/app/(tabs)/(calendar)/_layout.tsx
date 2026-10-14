@@ -35,6 +35,19 @@ export default function Layout() {
               {displayName}
             </ThemedText>
           ),
+          // iOS 26 wraps custom header items in a shared glass background.
+          // Opt the plain text out of it.
+          unstable_headerLeftItems: () => [
+            {
+              type: "custom",
+              element: (
+                <ThemedText fontSize={theme.fontSize14} fontWeight="bold">
+                  {displayName}
+                </ThemedText>
+              ),
+              hidesSharedBackground: true,
+            },
+          ],
           headerSearchBarOptions: {
             headerIconColor: tabBarTintColor,
             tintColor: tabBarTintColor,

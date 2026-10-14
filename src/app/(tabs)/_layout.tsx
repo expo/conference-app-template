@@ -1,11 +1,5 @@
 import MaterialCommunityIcons from "@expo/vector-icons/MaterialCommunityIcons";
-import {
-  Badge,
-  Icon,
-  Label,
-  NativeTabs,
-  VectorIcon,
-} from "expo-router/unstable-native-tabs";
+import { NativeTabs } from "expo-router/unstable-native-tabs";
 import React from "react";
 import {
   ColorValue,
@@ -72,11 +66,11 @@ export default function TabLayout() {
     >
       <NativeTabs.Trigger name="(calendar)">
         {Platform.select({
-          ios: <Icon sf="calendar" />,
+          ios: <NativeTabs.Trigger.Icon sf="calendar" />,
           android: (
-            <Icon
+            <NativeTabs.Trigger.Icon
               src={
-                <VectorIcon
+                <NativeTabs.Trigger.VectorIcon
                   family={MaterialCommunityIcons as VectorIconFamily}
                   name="calendar-blank"
                 />
@@ -85,15 +79,19 @@ export default function TabLayout() {
             />
           ),
         })}
-        <Label selectedStyle={labelSelectedStyle}>Calendar</Label>
+        <NativeTabs.Trigger.Label selectedStyle={labelSelectedStyle}>
+          Calendar
+        </NativeTabs.Trigger.Label>
       </NativeTabs.Trigger>
       <NativeTabs.Trigger name="bookmarks">
         {Platform.select({
-          ios: <Icon sf="bookmark" selectedColor={tintColor} />,
+          ios: (
+            <NativeTabs.Trigger.Icon sf="bookmark" selectedColor={tintColor} />
+          ),
           android: (
-            <Icon
+            <NativeTabs.Trigger.Icon
               src={
-                <VectorIcon
+                <NativeTabs.Trigger.VectorIcon
                   family={MaterialCommunityIcons as VectorIconFamily}
                   name="bookmark"
                 />
@@ -102,9 +100,13 @@ export default function TabLayout() {
             />
           ),
         })}
-        <Label selectedStyle={labelSelectedStyle}>Bookmarked</Label>
+        <NativeTabs.Trigger.Label selectedStyle={labelSelectedStyle}>
+          Bookmarked
+        </NativeTabs.Trigger.Label>
         {hasBookmarks && !isLiquidGlassAvailable() && (
-          <Badge>{bookmarks.length.toString()}</Badge>
+          <NativeTabs.Trigger.Badge>
+            {bookmarks.length.toString()}
+          </NativeTabs.Trigger.Badge>
         )}
       </NativeTabs.Trigger>
       <NativeTabs.Trigger
@@ -112,11 +114,11 @@ export default function TabLayout() {
         role={isLiquidGlassAvailable() ? "search" : undefined}
       >
         {Platform.select({
-          ios: <Icon sf="person.2" />,
+          ios: <NativeTabs.Trigger.Icon sf="person.2" />,
           android: (
-            <Icon
+            <NativeTabs.Trigger.Icon
               src={
-                <VectorIcon
+                <NativeTabs.Trigger.VectorIcon
                   family={MaterialCommunityIcons as VectorIconFamily}
                   name="account-multiple"
                 />
@@ -125,15 +127,17 @@ export default function TabLayout() {
             />
           ),
         })}
-        <Label selectedStyle={labelSelectedStyle}>Speakers</Label>
+        <NativeTabs.Trigger.Label selectedStyle={labelSelectedStyle}>
+          Speakers
+        </NativeTabs.Trigger.Label>
       </NativeTabs.Trigger>
       <NativeTabs.Trigger name="info">
         {Platform.select({
-          ios: <Icon sf="map" selectedColor={tintColor} />,
+          ios: <NativeTabs.Trigger.Icon sf="map" selectedColor={tintColor} />,
           android: (
-            <Icon
+            <NativeTabs.Trigger.Icon
               src={
-                <VectorIcon
+                <NativeTabs.Trigger.VectorIcon
                   family={MaterialCommunityIcons as VectorIconFamily}
                   name="map-outline"
                 />
@@ -142,7 +146,9 @@ export default function TabLayout() {
             />
           ),
         })}
-        <Label selectedStyle={labelSelectedStyle}>Info</Label>
+        <NativeTabs.Trigger.Label selectedStyle={labelSelectedStyle}>
+          Info
+        </NativeTabs.Trigger.Label>
       </NativeTabs.Trigger>
     </NativeTabs>
   );

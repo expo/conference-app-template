@@ -108,6 +108,6 @@ const styles = StyleSheet.create({
   profileImage: {
     height: 70,
     width: 50,
-    ...StyleSheet.absoluteFillObject,
+    ...StyleSheet.absoluteFill,
   },
 });

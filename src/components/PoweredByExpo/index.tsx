@@ -212,7 +212,7 @@ const styles = StyleSheet.create({
     width: FLIPPED_CONTENT_SIZE,
   },
   flippedOverlay: {
-    ...StyleSheet.absoluteFillObject,
+    ...StyleSheet.absoluteFill,
     alignItems: "center",
     justifyContent: "center",
   },

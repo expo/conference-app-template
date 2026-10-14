@@ -1,6 +1,7 @@
 import { theme } from "@/theme";
 import { StyleSheet, View } from "react-native";
-import { Host, Picker } from "@expo/ui/swift-ui";
+import { Host, Picker, Text } from "@expo/ui/swift-ui";
+import { pickerStyle, tag } from "@expo/ui/swift-ui/modifiers";
 import { GlassView } from "expo-glass-effect";
 
 interface DayPickerProps {
@@ -21,15 +22,18 @@ export function DayPicker({
   return (
     <View style={{ paddingBottom: theme.space24 }}>
       <GlassView style={styles.glassView}>
-        <Host matchContents style={styles.dayPicker}>
-          <Picker
-            options={options}
-            selectedIndex={selectedIndex}
-            onOptionSelected={({ nativeEvent: { index } }) => {
-              onSelectDay(index);
-            }}
-            variant="segmented"
-          />
+        <Host matchContents={{ vertical: true }} style={styles.dayPicker}>
+          <Picker<number>
+            selection={selectedIndex}
+            onSelectionChange={onSelectDay}
+            modifiers={[pickerStyle("segmented")]}
+          >
+            {options.map((option, index) => (
+              <Text key={option} modifiers={[tag(index)]}>
+                {option}
+              </Text>
+            ))}
+          </Picker>
         </Host>
       </GlassView>
     </View>

@@ -4,7 +4,7 @@ Guidance for AI coding agents working in a project created from this template.
 
 ## What this project is
 
-A whitelabel conference app built with Expo (SDK 54, Expo Router, TypeScript, strict mode). Conference organizers customize it through one config file and one assets folder. The app code itself rarely needs changes.
+A whitelabel conference app built with Expo (SDK 58, Expo Router, TypeScript, strict mode). Conference organizers customize it through one config file and one assets folder. The app code itself rarely needs changes.
 
 ## Golden rules
 

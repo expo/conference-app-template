@@ -4,7 +4,7 @@ import { ThemedText } from "./Themed";
 import { useConferenceStore } from "@/store/conferenceStore";
 import { getCurrentDayIndex } from "@/utils/formatDate";
 import { ScheduleDay, Session } from "@/types";
-import { useCallback, useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import Animated, { FadeIn, FadeOutUp } from "react-native-reanimated";
 
 const AnimatedPressable = Animated.createAnimatedComponent(Pressable);
@@ -49,20 +49,19 @@ export function CurrentlyLive({
 }: {
   scrollToSession: (currentlyLive: CurrentlyLiveSession) => void;
 }) {
-  const [currentlyLive, setCurrentlyLive] =
-    useState<CurrentlyLiveSession | null>(null);
   const days = useConferenceStore((state) => state.days);
   const venueTimezone = useConferenceStore((state) => state.venueTimezone);
-  const checkCurrentlyLive = useCallback(() => {
-    const currentlyLive = getCurrentlyLive(days, venueTimezone);
-    setCurrentlyLive(currentlyLive);
-  }, [days, venueTimezone]);
+  const [currentlyLive, setCurrentlyLive] =
+    useState<CurrentlyLiveSession | null>(() =>
+      getCurrentlyLive(days, venueTimezone),
+    );
 
   useEffect(() => {
-    checkCurrentlyLive();
-    const interval = setInterval(checkCurrentlyLive, 5000);
+    const interval = setInterval(() => {
+      setCurrentlyLive(getCurrentlyLive(days, venueTimezone));
+    }, 5000);
     return () => clearInterval(interval);
-  }, [checkCurrentlyLive]);
+  }, [days, venueTimezone]);
 
   return (
     <AnimatedPressable

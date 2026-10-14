@@ -12,9 +12,11 @@ const AnimatedPressable = Animated.createAnimatedComponent(Pressable);
 
 export function HeaderButton({ imageProps, buttonProps }: HeaderButtonProps) {
   const scale = useSharedValue(1);
+  const color = imageProps?.color;
+  const iconColor = typeof color === "number" ? theme.colorGrey : color;
 
   const animatedStyle = useAnimatedStyle(() => ({
-    transform: [{ scale: scale.value }],
+    transform: [{ scale: scale.get() }],
   }));
 
   return (
@@ -22,10 +24,10 @@ export function HeaderButton({ imageProps, buttonProps }: HeaderButtonProps) {
       hitSlop={20}
       onPress={buttonProps?.onPress}
       onPressIn={() => {
-        scale.value = withTiming(0.8);
+        scale.set(withTiming(0.8));
       }}
       onPressOut={() => {
-        scale.value = withTiming(1);
+        scale.set(withTiming(1));
       }}
       style={animatedStyle}
     >
@@ -33,7 +35,7 @@ export function HeaderButton({ imageProps, buttonProps }: HeaderButtonProps) {
         // Todo: fix this type
         name={(imageProps?.systemName as any) || "cross"}
         size={theme.fontSize24}
-        color={imageProps?.color || theme.colorGrey}
+        color={iconColor || theme.colorGrey}
       />
     </AnimatedPressable>
   );

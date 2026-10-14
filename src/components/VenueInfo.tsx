@@ -59,7 +59,7 @@ export function VenueInfo() {
           start={{ x: 0.5, y: 0 }}
           end={{ x: 0.5, y: 1 }}
           colors={["transparent", backgroundColor]}
-          style={StyleSheet.absoluteFillObject}
+          style={StyleSheet.absoluteFill}
         />
         <ThemedView
           style={styles.venueDetails}

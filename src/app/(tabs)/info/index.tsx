@@ -1,4 +1,4 @@
-import { useScrollToTop } from "@react-navigation/native";
+import { useScrollToTop } from "expo-router/react-navigation";
 import React from "react";
 import { Platform } from "react-native";
 

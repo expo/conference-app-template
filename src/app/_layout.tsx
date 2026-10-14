@@ -2,12 +2,12 @@ import {
   DarkTheme,
   DefaultTheme,
   ThemeProvider,
-} from "@react-navigation/native";
+} from "expo-router/react-navigation";
 import { differenceInMinutes } from "date-fns";
 import { usePathname, useRouter } from "expo-router";
 import { Stack } from "expo-router/stack";
 import { StatusBar } from "expo-status-bar";
-import * as NavigationBar from "expo-navigation-bar";
+import { NavigationBar } from "expo-navigation-bar";
 import { useEffect } from "react";
 import { Platform, StyleSheet, useColorScheme } from "react-native";
 import { setBackgroundColorAsync } from "expo-system-ui";
@@ -54,9 +54,7 @@ export default function Layout() {
 
   useEffect(() => {
     if (Platform.OS === "android") {
-      NavigationBar.setButtonStyleAsync(
-        colorScheme === "light" ? "dark" : "light",
-      );
+      NavigationBar.setStyle(colorScheme === "light" ? "light" : "dark");
     }
   }, [colorScheme]);
 
@@ -78,13 +76,12 @@ export default function Layout() {
     ) {
       try {
         const url = lastNotificationResponse.notification.request.content.data
-          .url as string;
+          ?.url as string | undefined;
         if (url && pathName !== url) {
           router.push(url);
         }
       } catch {}
     }
-    // eslint-disable-next-line react-compiler/react-compiler
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [lastNotificationResponse]);
 
@@ -166,14 +163,17 @@ export default function Layout() {
                   : colorScheme === "dark"
                     ? "dark"
                     : "light",
-                headerTitle: Platform.select({
-                  android: (props) => (
-                    <ThemedText fontSize={theme.fontSize24} fontWeight="bold">
-                      {props.children}
-                    </ThemedText>
-                  ),
-                  default: undefined,
-                }),
+                headerTitle:
+                  Platform.OS === "android"
+                    ? (props: { children: string }) => (
+                        <ThemedText
+                          fontSize={theme.fontSize24}
+                          fontWeight="bold"
+                        >
+                          {props.children}
+                        </ThemedText>
+                      )
+                    : undefined,
               }}
             />
           </Stack>
