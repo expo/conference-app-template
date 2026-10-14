@@ -5,18 +5,22 @@ import { persist, createJSONStorage } from "zustand/middleware";
 import snapshot from "@/data/snapshot.json";
 import { getAdapter } from "@/data/adapters";
 import { NormalizedData } from "@/data/schema";
+import type { ConferenceConfig } from "@/config/types";
 import { ScheduleDay, Speaker } from "@/types";
 import { buildScheduleDays } from "@/utils/sessions";
 import conference from "../../conference.config";
 
 const adapter = getAdapter(conference.data);
 
-/** A bundled schedule the dev menu can load for testing. */
+/** A bundled conference the dev menu can load for testing. */
 export type DevDataset = {
   id: string;
   name: string;
   timezone: string;
   timezoneAbbreviation?: string;
+  venue?: ConferenceConfig["venue"];
+  infoSections: ConferenceConfig["infoSections"];
+  sponsorTiers: ConferenceConfig["sponsorTiers"];
   data: NormalizedData;
 };
 
@@ -28,6 +32,9 @@ type ConfState = {
   venueTimezoneAbbreviation?: string;
   /** Name shown in the schedule header. */
   displayName: string;
+  venue?: ConferenceConfig["venue"];
+  infoSections: ConferenceConfig["infoSections"];
+  sponsorTiers: ConferenceConfig["sponsorTiers"];
   /** Id of the dev dataset on screen, or null for the real data. */
   devDatasetId: string | null;
   isRefreshing?: boolean;
@@ -46,6 +53,9 @@ const getInitialSchedule = () => {
     venueTimezone: conference.timezone,
     venueTimezoneAbbreviation: conference.timezoneAbbreviation,
     displayName: conference.shortName ?? conference.name,
+    venue: conference.venue,
+    infoSections: conference.infoSections,
+    sponsorTiers: conference.sponsorTiers,
     devDatasetId: null,
   };
 };
@@ -113,6 +123,9 @@ export const useConferenceStore = create(
           venueTimezone: dataset.timezone,
           venueTimezoneAbbreviation: dataset.timezoneAbbreviation,
           displayName: dataset.name,
+          venue: dataset.venue,
+          infoSections: dataset.infoSections,
+          sponsorTiers: dataset.sponsorTiers,
           devDatasetId: dataset.id,
         });
       },
@@ -123,9 +136,42 @@ export const useConferenceStore = create(
     {
       name: `${conference.slug}-store`,
       storage: createJSONStorage(() => AsyncStorage),
+      version: 1,
+      migrate: (persisted) => {
+        // Strip config-derived fields that older versions persisted
+        const {
+          venueTimezone: _venueTimezone,
+          venueTimezoneAbbreviation: _venueTimezoneAbbreviation,
+          displayName: _displayName,
+          venue: _venue,
+          infoSections: _infoSections,
+          sponsorTiers: _sponsorTiers,
+          devDatasetId: _devDatasetId,
+          ...rest
+        } = (persisted ?? {}) as Record<string, unknown>;
+        return rest as ConfState;
+      },
       partialize: (state) => {
-        const { isRefreshing: _, ...dataToPersist } = state;
-        return dataToPersist;
+        // Config-derived and dev-only fields re-initialize on launch, so a
+        // config change is never masked by stale persisted values.
+        const {
+          isRefreshing: _isRefreshing,
+          venueTimezone: _venueTimezone,
+          venueTimezoneAbbreviation: _venueTimezoneAbbreviation,
+          displayName: _displayName,
+          venue: _venue,
+          infoSections: _infoSections,
+          sponsorTiers: _sponsorTiers,
+          devDatasetId,
+          ...rest
+        } = state;
+
+        if (devDatasetId) {
+          // Don't persist a dev dataset's schedule over the real one
+          const { days: _days, speakers: _speakers, ...withoutData } = rest;
+          return withoutData as ConfState;
+        }
+        return rest as ConfState;
       },
     },
   ),

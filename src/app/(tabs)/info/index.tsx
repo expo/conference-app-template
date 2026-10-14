@@ -10,10 +10,12 @@ import { ScrollView } from "react-native-gesture-handler";
 import { PoweredByExpo } from "@/components/PoweredByExpo";
 import { Sponsors } from "@/components/Sponsors";
 import { useSafeAreaInsets } from "react-native-safe-area-context";
+import { useConferenceStore } from "@/store/conferenceStore";
 import conference from "../../../../conference.config";
 
 export default function Info() {
   const backgroundColor = useThemeColor(theme.color.background);
+  const infoSections = useConferenceStore((state) => state.infoSections);
   const ref = React.useRef(null);
   const { bottom } = useSafeAreaInsets();
 
@@ -29,7 +31,7 @@ export default function Info() {
       }}
     >
       <VenueInfo />
-      {conference.infoSections.map((section) => (
+      {infoSections.map((section) => (
         <InfoCard key={section.id} section={section} />
       ))}
       <Sponsors />

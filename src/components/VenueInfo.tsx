@@ -8,7 +8,7 @@ import { ThemedText, ThemedView, useThemeColor } from "./Themed";
 
 import { theme } from "@/theme";
 import { osName } from "expo-device";
-import conference from "../../conference.config";
+import { useConferenceStore } from "@/store/conferenceStore";
 
 const BOTTOM_OFFSET = 50;
 
@@ -28,7 +28,7 @@ export function VenueInfo() {
 
   const backgroundColor = useThemeColor(theme.color.backgroundElement);
 
-  const venue = conference.venue;
+  const venue = useConferenceStore((state) => state.venue);
 
   if (!venue) {
     return null;

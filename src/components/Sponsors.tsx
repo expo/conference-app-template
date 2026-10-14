@@ -3,11 +3,13 @@ import { Pressable, StyleSheet, View } from "react-native";
 import { ThemedText, ThemedView } from "./Themed";
 import { Image } from "expo-image";
 import openWebBrowserAsync from "@/utils/openWebBrowserAsync";
-import conference from "../../conference.config";
+import { useConferenceStore } from "@/store/conferenceStore";
 import type { Sponsor } from "@/config/types";
 
 export function Sponsors() {
-  if (!conference.sponsorTiers.length) {
+  const sponsorTiers = useConferenceStore((state) => state.sponsorTiers);
+
+  if (!sponsorTiers.length) {
     return null;
   }
 
@@ -21,7 +23,7 @@ export function Sponsors() {
         Sponsors
       </ThemedText>
       <ThemedView style={styles.content} color={theme.color.backgroundElement}>
-        {conference.sponsorTiers.map((tier) => (
+        {sponsorTiers.map((tier) => (
           <View key={tier.title}>
             <ThemedText color={theme.color.textSecondary} style={styles.level}>
               {tier.title}
