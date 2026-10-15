@@ -1,28 +1,22 @@
 import MaterialCommunityIcons from "@expo/vector-icons/MaterialCommunityIcons";
 import { Image, ImageStyle } from "expo-image";
-import { StyleSheet, useWindowDimensions, View } from "react-native";
+import { StyleSheet, View } from "react-native";
 import { Pressable } from "react-native-gesture-handler";
 import * as Linking from "expo-linking";
 import { LinearGradient } from "expo-linear-gradient";
 import { ThemedText, ThemedView, useThemeColor } from "./Themed";
 
 import { theme } from "@/theme";
-import { osName } from "expo-device";
+import { useLayout } from "@/hooks/useLayout";
 import { useConferenceStore } from "@/store/conferenceStore";
 
 const BOTTOM_OFFSET = 50;
 
 export function VenueInfo() {
-  const { width } = useWindowDimensions();
-  const venueImageSize = width - theme.space24;
+  const { isWide } = useLayout();
 
-  const imageStyle: ImageStyle =
-    osName === "iPadOS"
-      ? {
-          width: venueImageSize,
-          height: venueImageSize / 2,
-        }
-      : { width: "100%", aspectRatio: 1 };
+  // A square image is too tall on wide windows, so use a banner there
+  const imageStyle: ImageStyle = { width: "100%", aspectRatio: isWide ? 2 : 1 };
 
   const iconColor = useThemeColor(theme.color.textSecondary);
 

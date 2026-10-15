@@ -1,6 +1,6 @@
 import MaterialCommunityIcons from "@expo/vector-icons/MaterialCommunityIcons";
 import { NativeTabs } from "expo-router/unstable-native-tabs";
-import React from "react";
+import React, { useEffect } from "react";
 import {
   ColorValue,
   ImageSourcePropType,
@@ -13,6 +13,7 @@ import { theme } from "@/theme";
 import { useBookmarkStore } from "@/store/bookmarkStore";
 import { isLiquidGlassAvailable } from "expo-glass-effect";
 import { useThemeColor } from "@/components/Themed";
+import { refreshVerticalBarTabs } from "../../../modules/vertical-bar/src";
 
 // Todo (betomoedano): In the future we can remove this type. Learn more: https://exponent-internal.slack.com/archives/C0447EFTS74/p1758042759724779?thread_ts=1758039375.241799&cid=C0447EFTS74
 type VectorIconFamily = {
@@ -30,6 +31,14 @@ export default function TabLayout() {
   const inactiveTintColor = useThemeColor({
     light: "#00000090",
     dark: "#FFFFFF90",
+  });
+
+  // On foldable iPhones the tab bar lives in the iOS vertical bar, which
+  // goes empty when the tabs mount or change after launch. Refresh it after
+  // every render, once the native tab bar has applied the update.
+  useEffect(() => {
+    const timeout = setTimeout(refreshVerticalBarTabs, 0);
+    return () => clearTimeout(timeout);
   });
 
   const labelSelectedStyle =
@@ -61,6 +70,9 @@ export default function TabLayout() {
           : inactiveTintColor
       }
       labelVisibilityMode="labeled"
+      // Regular width (iPad, unfolded iPhone Duo) gets a top tab bar that
+      // can expand into a sidebar. Compact width keeps the bottom tab bar.
+      sidebarAdaptable
       indicatorColor={tintColor + "25"}
       disableTransparentOnScrollEdge={true} // Used to prevent transparent background on iOS 18 and older
     >

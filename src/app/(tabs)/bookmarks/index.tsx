@@ -1,9 +1,12 @@
-import React, { useCallback } from "react";
+import React, { useCallback, useState } from "react";
 import { Platform, Pressable, StyleSheet, View } from "react-native";
 
 import { ThemedText, useThemeColor } from "@/components/Themed";
 import { theme } from "@/theme";
 import { TalkCard } from "@/components/TalkCard";
+import { SplitView } from "@/components/SplitView";
+import { TalkDetailPane } from "@/components/TalkDetailPane";
+import { useLayout } from "@/hooks/useLayout";
 import { useBookmarkStore } from "@/store/bookmarkStore";
 import { useConferenceStore } from "@/store/conferenceStore";
 import { Session } from "@/types";
@@ -23,11 +26,25 @@ export default function Bookmarks() {
   const backgroundColor = useThemeColor(theme.color.background);
 
   const { bottom } = useSafeAreaInsets();
+  const { isWide, horizontalInsets } = useLayout();
+  const [selectedTalkId, setSelectedTalkId] = useState<string>();
 
   const bookmarkedTalks = days.flatMap((day, dayIndex) =>
     day.sessions
       .filter((session) => !!bookmarks.find((b) => b.sessionId === session.id))
       .map((talk) => ({ talk, dayIndex })),
+  );
+
+  // Wide layouts show the picked bookmark, or else the first one
+  const selected = isWide
+    ? (bookmarkedTalks.find((item) => item.talk.id === selectedTalkId) ??
+      bookmarkedTalks[0])
+    : undefined;
+  const isSplit = isWide && !!selected;
+
+  const handleSelectTalk = useCallback(
+    (session: Session) => setSelectedTalkId(session.id),
+    [],
   );
 
   const renderItem = useCallback(
@@ -37,13 +54,15 @@ export default function Bookmarks() {
           session={item.talk}
           dayIndex={item.dayIndex}
           isBookmarked={true}
+          onPress={isWide ? handleSelectTalk : undefined}
+          isSelected={item.talk.id === selected?.talk.id}
         />
       </Animated.View>
     ),
-    [],
+    [isWide, handleSelectTalk, selected?.talk.id],
   );
 
-  return (
+  const list = (
     <Animated.FlatList
       contentInsetAdjustmentBehavior="automatic"
       style={{ backgroundColor }}
@@ -52,7 +71,9 @@ export default function Bookmarks() {
         {
           paddingBottom: Platform.select({ android: 100 + bottom, default: 0 }),
         },
+        !isSplit && horizontalInsets,
       ]}
+      extraData={selected?.talk.id}
       data={bookmarkedTalks}
       renderItem={renderItem}
       keyExtractor={(item) => item.talk.id}
@@ -82,6 +103,19 @@ export default function Bookmarks() {
             </Link>
           </View>
         </Animated.View>
+      }
+    />
+  );
+
+  if (!isSplit) {
+    return list;
+  }
+
+  return (
+    <SplitView
+      list={list}
+      detail={
+        <TalkDetailPane talk={selected.talk} dayIndex={selected.dayIndex} />
       }
     />
   );

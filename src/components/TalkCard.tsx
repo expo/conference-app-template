@@ -2,7 +2,7 @@ import { Link, useRouter } from "expo-router";
 import { StyleSheet, useWindowDimensions, View } from "react-native";
 
 import { Bookmark } from "./Bookmark";
-import { ThemedText, ThemedView } from "./Themed";
+import { ThemedText, ThemedView, useThemeColor } from "./Themed";
 import { theme } from "../theme";
 import { Session, Speaker } from "@/types";
 import { formatSessionTime } from "../utils/formatDate";
@@ -18,9 +18,24 @@ type Props = {
   session: Session;
   dayIndex: number;
   isBookmarked?: boolean;
+  /**
+   * Replaces the default action, which opens the talk sheet. Wide layouts
+   * use it to show the talk in a detail pane instead.
+   */
+  onPress?: (session: Session) => void;
+  /** Highlights the card as the talk shown in the detail pane. */
+  isSelected?: boolean;
 };
 
-export function TalkCard({ session, dayIndex, isBookmarked = false }: Props) {
+export function TalkCard({
+  session,
+  dayIndex,
+  isBookmarked = false,
+  onPress,
+  isSelected = false,
+}: Props) {
+  const selectedBorderColor = useThemeColor(theme.color.tint);
+  const borderColor = useThemeColor(theme.color.transparent);
   const venueTimezone = useConferenceStore((state) => state.venueTimezone);
   const { width } = useWindowDimensions();
   const router = useRouter();
@@ -32,12 +47,16 @@ export function TalkCard({ session, dayIndex, isBookmarked = false }: Props) {
         .runOnJS(true)
         .onEnd(() => {
           Haptics.impactAsync(Haptics.ImpactFeedbackStyle.Medium);
+          if (onPress) {
+            onPress(session);
+            return;
+          }
           router.push({
             pathname: "/talk/[talk]",
             params: { talk: session.id },
           });
         }),
-    [router, session.id],
+    [router, session, onPress],
   );
 
   const createSpeakerTapGesture = (speaker: Speaker) =>
@@ -69,7 +88,10 @@ export function TalkCard({ session, dayIndex, isBookmarked = false }: Props) {
           )}
           <ThemedView
             color={theme.color.backgroundSecondary}
-            style={styles.content}
+            style={[
+              styles.content,
+              { borderColor: isSelected ? selectedBorderColor : borderColor },
+            ]}
           >
             <View
               style={{
@@ -146,6 +168,8 @@ export function TalkCard({ session, dayIndex, isBookmarked = false }: Props) {
   );
 }
 
+const SELECTED_BORDER_WIDTH = 2;
+
 const styles = StyleSheet.create({
   bookmarkContainer: {
     position: "absolute",
@@ -158,9 +182,11 @@ const styles = StyleSheet.create({
     marginHorizontal: theme.space16,
   },
   content: {
+    // A transparent border keeps the size stable when the card is selected
     borderRadius: theme.borderRadius32,
+    borderWidth: SELECTED_BORDER_WIDTH,
     gap: theme.space24,
-    padding: theme.space24,
+    padding: theme.space24 - SELECTED_BORDER_WIDTH,
   },
   preview: {
     height: 420,

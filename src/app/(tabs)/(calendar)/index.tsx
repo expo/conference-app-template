@@ -14,6 +14,9 @@ import Animated, {
 import { ActivityCard } from "@/components/ActivityCard";
 import { NotFound } from "@/components/NotFound";
 import { TalkCard } from "@/components/TalkCard";
+import { SplitView } from "@/components/SplitView";
+import { TalkDetailPane } from "@/components/TalkDetailPane";
+import { useLayout } from "@/hooks/useLayout";
 import { matchesSearch } from "@/utils/search";
 import { useConferenceStore } from "@/store/conferenceStore";
 import { DayPicker } from "@/components/DayPicker";
@@ -45,6 +48,8 @@ export default function Schedule() {
   const isLiquidGlass = isLiquidGlassAvailable();
   const [isRefreshing, setIsRefreshing] = useState(false);
   const insets = useSafeAreaInsets();
+  const { isWide, horizontalInsets } = useLayout();
+  const [selectedTalkId, setSelectedTalkId] = useState<string>();
   const animatedTranslateY = useSharedValue(0);
   const isScrolledDown = useSharedValue(false);
 
@@ -76,17 +81,38 @@ export default function Schedule() {
     Math.max(days.length - 1, 0),
   );
 
+  const daySessions = days[activeDayIndex]?.sessions ?? [];
+
+  // Wide layouts always show a talk: the one the user picked on this day,
+  // or else the day's first talk
+  const selectedTalk = isWide
+    ? (daySessions.find(
+        (session) => session.id === selectedTalkId && !session.isServiceSession,
+      ) ?? daySessions.find((session) => !session.isServiceSession))
+    : undefined;
+
+  const handleSelectTalk = useCallback(
+    (session: Session) => setSelectedTalkId(session.id),
+    [],
+  );
+
   const renderItem = useCallback(
     ({ item }: { item: Session }) => {
       if (item.isServiceSession) {
         return <ActivityCard session={item} />;
       } else {
         return (
-          <TalkCard key={item.id} session={item} dayIndex={activeDayIndex} />
+          <TalkCard
+            key={item.id}
+            session={item}
+            dayIndex={activeDayIndex}
+            onPress={isWide ? handleSelectTalk : undefined}
+            isSelected={item.id === selectedTalk?.id}
+          />
         );
       }
     },
-    [activeDayIndex],
+    [activeDayIndex, isWide, handleSelectTalk, selectedTalk?.id],
   );
 
   const refreshSchedule = useConferenceStore((state) => state.refreshData);
@@ -94,7 +120,6 @@ export default function Schedule() {
   const params = useLocalSearchParams<{ q?: string }>();
   const searchText = params?.q ?? "";
 
-  const daySessions = days[activeDayIndex]?.sessions ?? [];
   const data = searchText
     ? daySessions.filter((session) => matchesSearch(session, searchText))
     : daySessions;
@@ -167,6 +192,49 @@ export default function Schedule() {
     }, 200);
   };
 
+  const list = (
+    <AnimatedFlatList
+      ref={scrollRef}
+      refreshControl={
+        <RefreshControl
+          refreshing={isRefreshing}
+          onRefresh={handleRefreshSchedule}
+        />
+      }
+      style={{ backgroundColor }}
+      contentContainerStyle={[
+        {
+          paddingBottom: Platform.select({
+            android: 100 + insets.bottom,
+            default: 0,
+          }),
+        },
+        !isWide && horizontalInsets,
+      ]}
+      extraData={selectedTalk?.id}
+      contentInsetAdjustmentBehavior="automatic"
+      scrollToOverflowEnabled
+      onScroll={scrollHandler}
+      onScrollBeginDrag={() => Keyboard.dismiss()}
+      keyboardShouldPersistTaps="handled"
+      data={data}
+      ListHeaderComponent={renderStickyHeader}
+      stickyHeaderIndices={[0]}
+      keyExtractor={(item: Session) => item.id}
+      renderItem={renderItem}
+      ListEmptyComponent={
+        searchText ? (
+          <ThemedView style={styles.noResultsContainer}>
+            <ThemedText>
+              No sessions found for{" "}
+              <ThemedText fontWeight="bold">{searchText}</ThemedText>
+            </ThemedText>
+          </ThemedView>
+        ) : undefined
+      }
+    />
+  );
+
   return (
     <>
       {conference.features.currentlyLive && (
@@ -178,42 +246,16 @@ export default function Schedule() {
           }}
         />
       )}
-      <AnimatedFlatList
-        ref={scrollRef}
-        refreshControl={
-          <RefreshControl
-            refreshing={isRefreshing}
-            onRefresh={handleRefreshSchedule}
-          />
-        }
-        style={{ backgroundColor }}
-        contentContainerStyle={{
-          paddingBottom: Platform.select({
-            android: 100 + insets.bottom,
-            default: 0,
-          }),
-        }}
-        contentInsetAdjustmentBehavior="automatic"
-        scrollToOverflowEnabled
-        onScroll={scrollHandler}
-        onScrollBeginDrag={() => Keyboard.dismiss()}
-        keyboardShouldPersistTaps="handled"
-        data={data}
-        ListHeaderComponent={renderStickyHeader}
-        stickyHeaderIndices={[0]}
-        keyExtractor={(item: Session) => item.id}
-        renderItem={renderItem}
-        ListEmptyComponent={
-          searchText ? (
-            <ThemedView style={styles.noResultsContainer}>
-              <ThemedText>
-                No sessions found for{" "}
-                <ThemedText fontWeight="bold">{searchText}</ThemedText>
-              </ThemedText>
-            </ThemedView>
-          ) : undefined
-        }
-      />
+      {isWide ? (
+        <SplitView
+          list={list}
+          detail={
+            <TalkDetailPane talk={selectedTalk} dayIndex={activeDayIndex} />
+          }
+        />
+      ) : (
+        list
+      )}
     </>
   );
 }

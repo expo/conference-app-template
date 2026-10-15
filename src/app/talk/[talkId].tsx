@@ -1,4 +1,4 @@
-import { Link, Stack, useLocalSearchParams, useRouter } from "expo-router";
+import { Stack, useLocalSearchParams, useRouter } from "expo-router";
 import React from "react";
 import { Platform, StyleSheet, View, useWindowDimensions } from "react-native";
 import { useSafeAreaInsets } from "react-native-safe-area-context";
@@ -12,20 +12,15 @@ import Animated, {
   withTiming,
   useAnimatedScrollHandler,
 } from "react-native-reanimated";
-import { Pressable, ScrollView } from "react-native-gesture-handler";
+import { ScrollView } from "react-native-gesture-handler";
 import { Canvas, Fill, Shader, Skia, vec } from "@shopify/react-native-skia";
 
 import { NotFound } from "@/components/NotFound";
-import { SpeakerImage } from "@/components/SpeakerImage";
-import { ThemedText, ThemedView, useThemeColor } from "@/components/Themed";
+import { ThemedView } from "@/components/Themed";
+import { TalkDetails } from "@/components/TalkDetails";
 import { useConferenceStore } from "@/store/conferenceStore";
 import { theme } from "@/theme";
-import { Speaker } from "@/types";
-import { formatDayLong, formatSessionTime } from "@/utils/formatDate";
 import { findSessionInDays } from "@/utils/sessions";
-import { shareSession } from "@/utils/shareSession";
-import { addSessionToCalendar } from "@/utils/addSessionToCalendar";
-import { Button } from "@/components/Button";
 import { HeaderButton } from "@/components/HeaderButtons/HeaderButton";
 import { isLiquidGlassAvailable } from "expo-glass-effect";
 import { scheduleOnRN } from "react-native-worklets";
@@ -72,10 +67,8 @@ export default function TalkDetail() {
     ? params.talkId[0]
     : params.talkId;
   const days = useConferenceStore((state) => state.days);
-  const venueTimezone = useConferenceStore((state) => state.venueTimezone);
   const { width, height } = useWindowDimensions();
   const drawerHeight = height * 0.8;
-  const highlightColor = useThemeColor(theme.color.tint);
 
   const triggerHaptic = () => {
     Haptics.impactAsync(Haptics.ImpactFeedbackStyle.Light);
@@ -220,106 +213,10 @@ export default function TalkDetail() {
             },
           ]}
         >
-          <View style={styles.header} collapsable={false}>
-            <ThemedText
-              fontWeight="bold"
-              fontSize={theme.fontSize32}
-              style={[
-                styles.talkTitle,
-                { textDecorationColor: highlightColor },
-              ]}
-            >
-              {talk?.title}
-            </ThemedText>
-          </View>
-          <ThemedView
-            color={
-              isLiquidGlassAvailable()
-                ? theme.color.transparent
-                : theme.color.background
-            }
-            style={styles.content}
-          >
-            {talk.speakers.map((speaker) => (
-              <Link
-                push
-                key={speaker.id}
-                href={{
-                  pathname: "/speaker/[speaker]",
-                  params: { speaker: speaker.id },
-                }}
-                asChild
-              >
-                <Pressable>
-                  <SpeakerDetails speaker={speaker} />
-                </Pressable>
-              </Link>
-            ))}
-            <Section
-              title="Date"
-              value={`${formatDayLong(days[dayIndex]?.date ?? "")} (Conference Day ${dayIndex + 1})`}
-            />
-            <Section
-              title="Time"
-              value={formatSessionTime(talk, venueTimezone)}
-            />
-            <Section title="Venue" value={talk.room} />
-            <Section title="Description" value={talk.description} />
-            <View style={styles.actions}>
-              <Button
-                title="Share session"
-                onPress={() => shareSession(talk)}
-              />
-              <Button
-                title="Add to calendar"
-                onPress={() => addSessionToCalendar(talk)}
-              />
-            </View>
-          </ThemedView>
+          <TalkDetails talk={talk} dayIndex={dayIndex} />
         </AnimatedScrollView>
       </ThemedView>
     </>
-  );
-}
-
-function SpeakerDetails({ speaker }: { speaker: Speaker }) {
-  return (
-    <View style={styles.speaker}>
-      <SpeakerImage profilePicture={speaker.profilePicture} />
-      <View style={styles.speakerDetails}>
-        <ThemedText fontSize={theme.fontSize18} fontWeight="semiBold">
-          {speaker.fullName}
-        </ThemedText>
-        <ThemedText
-          fontSize={theme.fontSize14}
-          fontWeight="medium"
-          color={theme.color.textSecondary}
-        >
-          {speaker.tagLine}
-        </ThemedText>
-      </View>
-    </View>
-  );
-}
-
-function Section({ title, value }: { title: string; value: string | null }) {
-  if (!value) {
-    return null;
-  }
-
-  return (
-    <View style={styles.sectionContainer}>
-      <ThemedText fontSize={theme.fontSize18} fontWeight="semiBold">
-        {title}
-      </ThemedText>
-      <ThemedText
-        fontSize={theme.fontSize16}
-        fontWeight="medium"
-        color={theme.color.textSecondary}
-      >
-        {value}
-      </ThemedText>
-    </View>
   );
 }
 
@@ -327,41 +224,11 @@ const styles = StyleSheet.create({
   absolute: {
     position: "absolute",
   },
-  actions: {
-    gap: theme.space12,
-    marginBottom: theme.space24,
-  },
   container: {
     flex: 1,
-  },
-  content: {
-    gap: theme.space8,
-    paddingHorizontal: theme.space24,
-    paddingTop: theme.space16,
   },
   contentContainer: {
     borderBottomLeftRadius: theme.borderRadius20,
     borderBottomRightRadius: theme.borderRadius20,
-  },
-  header: {
-    marginTop: Platform.select({ ios: 0, android: 30 }),
-    paddingHorizontal: theme.space24,
-  },
-  sectionContainer: {
-    gap: theme.space4,
-    marginBottom: theme.space24,
-  },
-  speaker: {
-    flexDirection: "row",
-    gap: theme.space8,
-    marginBottom: theme.space12,
-  },
-  speakerDetails: {
-    flex: 1,
-    justifyContent: "center",
-  },
-  talkTitle: {
-    marginBottom: theme.space12,
-    textAlign: "center",
   },
 });

@@ -17,6 +17,7 @@ import { SpeakerDetails } from "@/components/SpeakerDetails";
 import { useBookmark } from "@/hooks/useBookmark";
 import { Speaker } from "@/types";
 import { useSafeAreaInsets } from "react-native-safe-area-context";
+import { useLayout } from "@/hooks/useLayout";
 import Animated, {
   FadeIn,
   FadeOut,
@@ -26,7 +27,17 @@ import Animated, {
 export default function Speakers() {
   const speakers = useConferenceStore((state) => state.speakers);
   const { width, height } = useWindowDimensions();
-  const { bottom, top } = useSafeAreaInsets();
+  const { bottom, top, left, right } = useSafeAreaInsets();
+  const { isWide } = useLayout();
+  // Wide windows show a grid with columns of at least SPEAKER_COLUMN_MIN_WIDTH
+  const numColumns = isWide
+    ? Math.max(
+        2,
+        Math.floor(
+          (width - left - right - 2 * theme.space16) / SPEAKER_COLUMN_MIN_WIDTH,
+        ),
+      )
+    : 1;
   const { toggleBookmarkById, isBookmarked, getSessionById } = useBookmark();
   const backgroundColor = useThemeColor(theme.color.background);
 
@@ -48,7 +59,12 @@ export default function Speakers() {
   const renderItem = useCallback(
     ({ item }: { item: Speaker }) => {
       return (
-        <Animated.View key={item.id} entering={FadeIn} exiting={FadeOut}>
+        <Animated.View
+          key={item.id}
+          entering={FadeIn}
+          exiting={FadeOut}
+          style={{ width: `${100 / numColumns}%` }}
+        >
           <Link
             push
             key={item.id}
@@ -96,7 +112,7 @@ export default function Speakers() {
         </Animated.View>
       );
     },
-    [width, getSessionById, isBookmarked, toggleBookmarkById],
+    [width, numColumns, getSessionById, isBookmarked, toggleBookmarkById],
   );
 
   if (!speakers.length) {
@@ -105,6 +121,9 @@ export default function Speakers() {
 
   return (
     <Animated.FlatList
+      // FlatList cannot change numColumns on the fly, so remount instead
+      key={numColumns}
+      numColumns={numColumns}
       scrollToOverflowEnabled
       contentInsetAdjustmentBehavior="automatic"
       onScrollBeginDrag={dismissKeyboard}
@@ -116,6 +135,11 @@ export default function Speakers() {
           paddingBottom: Platform.select({ android: 100 + bottom, default: 0 }),
         },
         { minHeight: height - (bottom + top + 130) },
+        // Adds the safe area to the list's own side padding
+        {
+          paddingLeft: theme.space16 + left,
+          paddingRight: theme.space16 + right,
+        },
       ]}
       ItemSeparatorComponent={() => (
         <ThemedView style={styles.separator} color={theme.color.border} />
@@ -139,6 +163,8 @@ export default function Speakers() {
   );
 }
 
+const SPEAKER_COLUMN_MIN_WIDTH = 300;
+
 export const styles = StyleSheet.create({
   contentContainer: {
     paddingHorizontal: theme.space16,
@@ -153,6 +179,7 @@ export const styles = StyleSheet.create({
     height: 1,
   },
   speakerContainer: {
+    paddingRight: theme.space16,
     paddingVertical: theme.space16,
   },
 });
